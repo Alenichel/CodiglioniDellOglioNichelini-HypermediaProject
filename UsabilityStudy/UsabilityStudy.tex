@@ -346,79 +346,90 @@
 
 \chapter{Heuristic evaluation}
 
-\section{Codiglioni}
-
 \begin{center}
     \def\arraystretch{1.3}
-    \begin{tabular}{|l|l|r|m{7cm}|}
+    \begin{tabular}{|l|l|r|r|r|r|}
         \hline
-        \textbf{Category} & \textbf{Heuristics} & \textbf{Score} & \textbf{Comment} \\ \hline
-        \multirow{5}{*}{\textit{Navigation}} & Interaction consistency & 3 &
-        \begin{itemize}
-            \item When you click on entries under "Experience Monterosa", some have "proposals", others do not.
-            \item The entries shown when you click "Experience Monterosa" are different than the ones shown in the drop-down menu. In general, you cannot always reach 2nd level entries once you clicked on 1st level ones.
-            \item "Eventi" has no drop-down menu.
-            \item "Vacanze su misura" is not clickable.
-        \end{itemize} \\ \cline{2-4}
-        & Group navigation & 4 & You always have to come back or go through the landmarks. \\ \cline{2-4}
-        & Structural navigation & 3.5 & 
-        \begin{itemize}
-            \item Some 2nd level entries are accessible from the top bar, others are not.
-            \item Some entries are only accessible in one way (Monterosa Kids -> Aree gioco).
-        \end{itemize} \\ \cline{2-4}
-        & Semantic navigation & 4 & You have to come back. \\ \cline{2-4}
-        & Landmarks & 5 & \\ \hline
-        \multirow{2}{*}{\textit{Content}} & Information overload & 5 & \\ \cline{2-4}
-        & Quality of contents &  & 	\\ \hline
-        \multirow{4}{*}{\textit{Layout}} & Text layout & 4 & Could use some justification. \\ \cline{2-4}
-        & Interaction placeholder & 5 & \\ \cline{2-4}
-        & Spatial allocation & 5 & \\ \cline{2-4}
-        & Consistency of page structure & 5 & \\ \hline
+        \textbf{Category} & \textbf{Heuristics} & \textbf{Codiglioni} & \textbf{dell'Oglio} & \textbf{Nichelini} & \textbf{Total score} \\ \hline
+        \multirow{5}{*}{\textit{Navigation}} & Interaction consistency & 3 & 4 & 3 & 3 \\ \cline{2-6}
+        & Group navigation & 3 & 3 & 2 & 2 \\ \cline{2-6}
+        & Structural navigation & 5 & 5 & 5 & 5 \\ \cline{2-6}    % TODO
+        & Semantic navigation & 4 & 3 & 3 & 3 \\ \cline{2-6}
+        & Landmarks & 5 & 4 & 5 & 5 \\ \hline
+        \multirow{2}{*}{\textit{Content}} & Information overload & 5 & 5 & 4 & 5 \\ \cline{2-6}
+        \multirow{4}{*}{\textit{Layout}} & Text layout & 4 & 5 & 4 & 4 \\ \cline{2-6}
+        & Interaction placeholder & 4 & 3 & 3 & 3 \\ \cline{2-6}
+        & Spatial allocation & 5 & 4 & 3 & 4 \\ \cline{2-6}
+        & Consistency of page structure & 4 & 5 & 5 & 5 \\ \hline
     \end{tabular}
 \end{center}
 
-\section{dell'Oglio}
+% TODO: screenshots
 
-\begin{center}
-    \def\arraystretch{1.3}
-    \begin{tabular}{|l|l|l|m{7cm}|}
-        \hline
-        \textbf{Category} & \textbf{Heuristics} & \textbf{Score} & \textbf{Comment} \\ \hline
-        \multirow{5}{*}{\textit{Navigation}} & Interaction consistency & & \\ \cline{2-4}
-        & Group navigation & & \\ \cline{2-4}
-        & Structural navigation & & \\ \cline{2-4}
-        & Semantic navigation & & \\ \cline{2-4}
-        & Landmarks & & \\ \hline
-        \multirow{2}{*}{\textit{Content}} & Information overload &  & \\ \cline{2-4}
-        & Quality of contents &  & 							\\ \hline
-        \multirow{4}{*}{\textit{Layout}} & Text layout & & \\ \cline{2-4}
-        & Interaction placeholder & & \\ \cline{2-4}
-        & Spatial allocation & & \\ \cline{2-4}
-        & Consistency of page structure & 4 & Some tiles are missing a picture. \\ \hline
-    \end{tabular}
-\end{center}
+\section{Navigation}
 
-\section{Nichelini}
+\paragraph{Interaction consistency}
+\begin{itemize}
+    \item Link structure is consistent. % TODO
+    \item When you click on entries under "Experience Monterosa", some have "proposals", others do not.
+    \item The entries shown when you click "Experience Monterosa" are different than the ones shown in the drop-down menu. In general, you cannot always reach 2nd level entries once you clicked on 1st level ones.
+    \item "Eventi" has no drop-down menu.
+    \item "Potrebbe anche interessarti..." / "Qualche idea per te..." is only present sometimes.
+    \item The same links have different labels based on "Inverno"/"Estate".
+\end{itemize}
 
-\begin{center}
-    \def\arraystretch{1.3}
-    \begin{tabular}{|l|l|l|m{7cm}|}
-        \hline
-        \textbf{Category} & \textbf{Heuristics} & \textbf{Score} & \textbf{Comment} \\ \hline
-        \multirow{5}{*}{\textit{Navigation}} 
-        & Interaction consistency & 5 & \\ \cline{2-4}
-        & Group navigation & 2 & Non puoi navigare tra precedente/successivo di un gruppo ne tornare indietro. Ma neanche passare direttamente ad un'altra tipologia di gruppi\\ \cline{2-4}
-        & Structural navigation &  & \\ \cline{2-4}
-        & Semantic navigation & 3 & Ci sono alcune sezioni in cui va tutto bene come per esempio "experience" che presenta innumerevoli link a sezioni ad esso semanticamente collegate. Altre in cui mancano totalmente questo genere di collegamenti\\ \cline{2-4}
-        & Landmarks & 5 & \\ \hline
-        \multirow{2}{*}{\textit{Content}} & Information overload & 4 & In generale va tutto bene, ma ci sono alcune sezioni in cui le informazioni sono spezzettate su troppe pagine\\ \cline{2-4}
-        & Quality of contents & 4 & Missing images. A volte non si trova esattamente cosa si sta cercando. 							\\ \hline
-        \multirow{4}{*}{\textit{Layout}} & Text layout & 5 & \\ \cline{2-4}
-        & Interaction placeholder & 4 & Generalmennte si, con l'eccezione di "oleggio Attrezzature Sportive", "Maestri di sci" che proprio non si capiscono.\\ \cline{2-4}
-        & Spatial allocation & 3 & Il riquadro "vacanza su misura" nella sezione degli alloggi è eccessivamente grande rispetto alla sua importanza. Secondo me ha molta più rilevanza il contenuto e la descrizione. Secondo me anche tutti i loghi dei partner che sono ripetuti in ogni pagina sono eccessivamente grossi e distraggono dal contenuto.\\ \cline{2-4}
-        & Consistency of page structure & 5 & \\ \hline
-    \end{tabular}
-\end{center}
+\paragraph{Group navigation}
+\begin{itemize}
+    \item It is not possible to navigate among pages of the same group (e.g., among events).
+    \item It is not possible to navigate from a specific page to a group main page unless through browser capabilities.
+\end{itemize}
+
+\paragraph{Structural navigation}
+\begin{itemize}
+    \item Because each topic is only made of text, the website does not present particular structural navigation problems.
+\end{itemize}
+
+\paragraph{Semantic navigation}
+\begin{itemize}
+    \item It is not possible to navigate from a topic to a related one (e.g., among events).
+\end{itemize}
+
+\paragraph{Landmarks}
+\begin{itemize}
+    \item The majority of landmarks fulfill their purpose.
+    \item Newsletter as a landmark isn't useful to navigate the website.
+\end{itemize}
+
+\section{Content}
+
+\paragraph{Information overload}
+\begin{itemize}
+    \item Even if some pages have more content than other, the information load is not overwhelming overall.
+\end{itemize}
+
+\section{Layout}
+
+\paragraph{Text layout}
+\begin{itemize}
+    \item Not every paragraph is justified.
+\end{itemize}
+
+\paragraph{Interaction placeholder}
+\begin{itemize}
+    \item Some links are not immediately recognizable.
+    \item Some buttons are used in place of labels.
+\end{itemize}
+
+\paragraph{Spatial allocation}
+\begin{itemize}
+    \item The search bar is not properly placed -- bottom of the page.
+\end{itemize}
+
+\paragraph{Consistency of page structure}
+\begin{itemize}
+    \item The search bar can be found as an element of some specific page.
+    \item Some pages have missing images.
+\end{itemize}
 
 
 % TODO: Heuristics and scores used
