@@ -8,10 +8,6 @@
 \usepackage{graphicx}                           % Pictures
 \usepackage{listings}                           % Code snippets
 \usepackage{hyperref}                           % Make strings clickable
-% The following commented packages should be already imported by txfontsb
-%\usepackage{amsmath,amsfonts,stmaryrd,amssymb} % Math packages
-%\usepackage{amsthm}                            % Definitions, theorems, corollaries, ...
-%\usepackage{mathtools}                         % Math stuff
 \usepackage[usenames,dvipsnames,table]{xcolor}  % Colors
 \usepackage[toc,page]{appendix}                 % Support for appendices
 \usepackage[chapter]{algorithm}                 % Pseudocode headers
@@ -349,22 +345,28 @@
 
 % Body
 
-\chapter{Introduction}
+\chapter{Abstract}
+
+The subject of this report is the website \href{www.visitmonterosa.com}{www.visitmonterosa.com}. Section \ref{chapter:evaluation} reports the individual and group scores for each category, with screenshots relevant to the evaluation. Section \ref{chapter:results} reports aggregated results and overall comments. Finally, Section \ref{chapter:conclusions} reports the final observations of the results.
+
+\chapter{Inspection method}
+\label{chapter:method}
 
 % TODO: Todo
 
 \chapter{Heuristic evaluation}
+\label{chapter:evaluation}
 
 \begin{center}
     \def\arraystretch{1.3}
     \begin{tabular}{|l|l|c|c|c|c|}
         \hline
         \textbf{Category} & \textbf{Heuristics} & \textbf{Codiglioni} & \textbf{dell'Oglio} & \textbf{Nichelini} & \textbf{Total score} \\ \hline
-        \multirow{5}{*}{\textit{Navigation}} & Interaction consistency & 3 & 4 & 3 & 3 \\ \cline{2-6}
+        \multirow{5}{*}{\textit{Navigation}} & Interaction consistency & 2 & 3 & 3 & 2 \\ \cline{2-6}
         & Group navigation & 3 & 3 & 2 & 2 \\ \cline{2-6}
-        & Structural navigation & 5 & 5 & 5 & 5 \\ \cline{2-6}    % TODO
+        & Structural navigation & 3 & 3 & 3 & 3 \\ \cline{2-6}    % TODO
         & Semantic navigation & 4 & 3 & 3 & 3 \\ \cline{2-6}
-        & Landmarks & 5 & 4 & 5 & 5 \\ \hline
+        & Landmarks & 5 & 4 & 4 & 4 \\ \hline
         \multirow{1}{*}{\textit{Content}} & Information overload & 5 & 5 & 4 & 5 \\ \hline
         \multirow{4}{*}{\textit{Layout}} & Text layout & 4 & 5 & 4 & 4 \\ \cline{2-6}
         & Interaction placeholder & 4 & 3 & 3 & 3 \\ \cline{2-6}
@@ -381,7 +383,6 @@
 
 \paragraph{Interaction consistency}
 \begin{itemize}
-    \item Link structure is consistent. % TODO
     \item When you click on entries under "Experience Monterosa", some of these have a suggestions section, others do not (Figures \ref{fig:interaction-consistency-01} and \ref{fig:interaction-consistency-02}).
     \item The entries shown when you click "Experience Monterosa" are different than the ones shown in the drop-down menu. In general, you cannot always reach 2nd level entries once you clicked on 1st level ones (Figures \ref{fig:interaction-consistency-03} and \ref{fig:interaction-consistency-04}).
     \item "Eventi" has no drop-down menu.
@@ -462,7 +463,7 @@
 
 \paragraph{Information overload}
 \begin{itemize}
-    \item Even if some pages have more content than other, the information load is not overwhelming overall.
+    \item The amount of content is adequate.
 \end{itemize}
 
 \section{Layout}
@@ -482,14 +483,14 @@
     \begin{minipage}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=1\linewidth, keepaspectratio]{81-interaction-placeholders-links}
-        \caption{https://www.visitmonterosa.com/discover-monterosa/ristoranti-e-bar/}
+        \caption{\href{https://www.visitmonterosa.com/discover-monterosa/ristoranti-e-bar/}{link}}
         \label{fig:interaction-placeholder-01}
     \end{minipage}   
     \hspace*{\fill}
     \begin{minipage}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=1\linewidth, keepaspectratio]{82-interaction-placeholders-labels}
-        \caption{https://www.visitmonterosa.com/monterosa-ski/monterosa-liberamente-femminile/}
+        \caption{\href{https://www.visitmonterosa.com/monterosa-ski/monterosa-liberamente-femminile/}{link}}
         \label{fig:interaction-placeholder-02}
     \end{minipage} 
 \end{figure}
@@ -497,7 +498,7 @@
 
 \paragraph{Spatial allocation}
 \begin{itemize}
-	\item The search bar is placed on the bottom of the page, hence it is difficult to find. ((Figure \ref{fig:spatial-allocation-01}).)
+	\item The search bar is placed on the bottom of the page, hence it is difficult to find. (Figure \ref{fig:spatial-allocation-01}).
 \end{itemize}
 
 \begin{figure}[H]
@@ -505,7 +506,7 @@
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth, keepaspectratio]{91-spatial-allocation-searchbar}
-		\caption{https://www.visitmonterosa.com/}
+		\caption{\href{https://www.visitmonterosa.com/}{link}}
 		\label{fig:spatial-allocation-01}
 	\end{minipage} 
 \end{figure}
@@ -521,14 +522,14 @@
     \begin{minipage}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=1\linewidth, keepaspectratio]{101-consistency-missing-stuff}
-        \caption{https://www.visitmonterosa.com/accommodation/rifugio-dondena/}
+        \caption{\href{https://www.visitmonterosa.com/accommodation/rifugio-dondena/}{link}}
         \label{fig:consistency-01}
     \end{minipage}   
     \hspace*{\fill}
     \begin{minipage}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=1\linewidth, keepaspectratio]{102-consistency-missing-stuff}
-        \caption{https://www.visitmonterosa.com/experience/pinacoteca-di-varallo/}
+        \caption{\href{https://www.visitmonterosa.com/experience/pinacoteca-di-varallo/}{link}}
         \label{fig:consistency-02}
     \end{minipage} 
 \end{figure}
@@ -538,17 +539,68 @@
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth, keepaspectratio]{103-consistency-missing-images}
-		\caption{https://www.visitmonterosa.com/experience-monterosa/famigliare/fun-for-kids/}
+		\caption{\href{https://www.visitmonterosa.com/experience-monterosa/famigliare/fun-for-kids/}{link}}
 		\label{fig:consistency-03}
 	\end{minipage} 
 \end{figure}
 
 
-\chapter{Aggregated results and discussions}
+\chapter{Aggregated results and discussion}
+\label{chapter:results}
 
-% TODO: Aggregate data and visual representation
+% TODO: Istogramma singole euristiche noi 3 + totale
+% TODO: Istogramma per category
 
-\chapter{Conclusion}
+\section{Navigation}
+
+The main issue of the examined website is navigating among the different pages related to the same group. For example, the user should be able to move from a specific topic page to another one using \textit{previous} and \textit{next} button, or similar. Moreover, the site presents some inconsistencies in navigation.
+
+Each topic has a single component, i.e., a text block. Therefore, given the absence of inter-components navigation, the score given to the structural navigation heuristic is just a placeholder.
+
+\[ \mathrm{avg} = \frac{2+2+3+3+4}{5} = 2.8 \]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth, keepaspectratio]{navigation-graph-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth, keepaspectratio]{navigation-graph-2}
+\end{figure}
+
+\section{Content}
+
+Not all pages have the same amount of content, but in general the information load is neither underwhelming nor overwhelming. The most important information (contacts and prices) are present in almost all pages.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\linewidth, keepaspectratio]{content-graph}
+\end{figure}
+
+
+\section{Layout}
+
+The layout elements are easily recognizable, despite some imperfections.
+
+\[ \mathrm{avg} = \frac{4+3+4+5}{4} = 4 \]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth, keepaspectratio]{layout-graph-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth, keepaspectratio]{layout-graph-2}
+\end{figure}
+
+
+\chapter{Conclusions}
+\label{chapter:conclusions}
+
+The inspected website is characterized by a large quantity and variety of information and categories. This increases the overall design complexity, which, not being well handled, is reflected in a poor navigation experience. Crucial information for a skiing resort -- e.g., skipass and teachers -- are not given enough visibility, or, and pages belonging to the same group are not generally well connected. For all these reasons, depending on the profile of the user, one could find the website more or less usable. Generally speaking, we think the usability of the website needs some improvements.
+
 
 % TODO: todo
 
