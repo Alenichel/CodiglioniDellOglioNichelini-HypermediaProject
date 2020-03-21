@@ -1,8 +1,7 @@
 \documentclass[a4paper, 11pt, parskip=half]{scrreprt}
 
-\usepackage[automark]{scrlayer-scrpage}         % Headings
+\usepackage{scrlayer-scrpage}                   % Headings
 \usepackage{txfontsb}                           % Default font
-\usepackage{DejaVuSans}                         % Headers font
 \usepackage{sourcecodepro}                      % Monospace font
 \usepackage[utf8]{inputenc}                     % Input encoding
 \usepackage[T1]{fontenc}                        % Output encoding
@@ -55,6 +54,10 @@
     numbers=left,
     tabsize=4
 }
+
+\pagestyle{scrheadings}
+\ihead{Usability Evaluation Study 1: Inspection}
+\ohead{Codiglioni, dell'Oglio, Nichelini}
 
 
 %----------------------------------------------------------------------------------------
@@ -379,12 +382,59 @@
 \paragraph{Interaction consistency}
 \begin{itemize}
     \item Link structure is consistent. % TODO
-    \item When you click on entries under "Experience Monterosa", some of these have a suggestions section, others do not (Figures \ref{} and \ref{}).
-    \item The entries shown when you click "Experience Monterosa" are different than the ones shown in the drop-down menu. In general, you cannot always reach 2nd level entries once you clicked on 1st level ones.
+    \item When you click on entries under "Experience Monterosa", some of these have a suggestions section, others do not (Figures \ref{fig:interaction-consistency-01} and \ref{fig:interaction-consistency-02}).
+    \item The entries shown when you click "Experience Monterosa" are different than the ones shown in the drop-down menu. In general, you cannot always reach 2nd level entries once you clicked on 1st level ones (Figures \ref{fig:interaction-consistency-03} and \ref{fig:interaction-consistency-04}).
     \item "Eventi" has no drop-down menu.
-    \item "Potrebbe anche interessarti..." / "Qualche idea per te..." is only present sometimes.
-    \item The same links have different labels based on "Inverno"/"Estate".
+    \item The same links have different labels based on "Inverno"/"Estate" (Figures \ref{fig:interaction-consistency-05} and \ref{fig:interaction-consistency-06}).
 \end{itemize}
+
+\begin{figure}[H]
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth, keepaspectratio]{interaction-consistency-01}
+        \caption{}
+        \label{fig:interaction-consistency-01}
+    \end{minipage}   
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth, keepaspectratio]{interaction-consistency-02}
+        \caption{}
+        \label{fig:interaction-consistency-02}
+    \end{minipage} 
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth, keepaspectratio]{interaction-consistency-03}
+        \caption{}
+        \label{fig:interaction-consistency-03}
+    \end{minipage}   
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth, keepaspectratio]{interaction-consistency-04}
+        \caption{}
+        \label{fig:interaction-consistency-04}
+    \end{minipage} 
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth, keepaspectratio]{interaction-consistency-05}
+        \caption{}
+        \label{fig:interaction-consistency-05}
+    \end{minipage}   
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth, keepaspectratio]{interaction-consistency-06}
+        \caption{}
+        \label{fig:interaction-consistency-06}
+    \end{minipage} 
+\end{figure}
 
 \paragraph{Group navigation}
 \begin{itemize}
