@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-07T08:17:55.742Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15" etag="be8p3V_L9JCzFj89iLwZ" version="12.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-10T13:37:03.730Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15" etag="tqc0r8yrzfFUJebllqJQ" version="12.9.10" type="github">
   <diagram id="02oqcfpk3BLxGNDMRyXa" name="Page-1">
-    <mxGraphModel dx="1259" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2518" dy="1474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -113,9 +113,6 @@
         </mxCell>
         <mxCell id="QOGCJ_LkCqJadUe-3F2g-38" value="All Events" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="515" width="70" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="QOGCJ_LkCqJadUe-3F2g-40" value="Contact Form" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="280" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
