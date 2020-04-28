@@ -9,3 +9,13 @@
 .orientation-info {
     padding: 10px 15px;
 }
+
+
+.a {
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
