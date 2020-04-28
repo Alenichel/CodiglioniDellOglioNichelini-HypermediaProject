@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function() {
-    $('header').load('pages/navbar.html', function() {
+    $('header').load('pages/snippets/navbar.html', function() {
         let dropdown = $('.dropdown');
         dropdown.on('show.bs.dropdown', function() {
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -15,5 +15,5 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('footer').load('pages/footer.html');
+    $('footer').load('pages/snippets/footer.html');
 });
