@@ -2,6 +2,10 @@
     background-color: #81d4fa;
 }
 
+#orientation-info {
+    width: 100%;
+}
+
 .orientation-info {
     padding: 10px 15px;
 }
