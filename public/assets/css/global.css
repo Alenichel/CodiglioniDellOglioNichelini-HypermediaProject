@@ -22,3 +22,8 @@ main > .container {
 .btn:focus {
     box-shadow: none;
 }
+
+.btn-default:hover {
+    background-color: #71c4ea;
+    transition: background-color 0.3s;
+}

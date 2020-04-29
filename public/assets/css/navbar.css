@@ -14,6 +14,14 @@
     color: #29323dff;
 }
 
-/*.navbar-custom .nav-item:not(:last-child) {
-    border-right: 1px solid silver;
-}*/
+.dropdown-menu {
+    padding: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#search-dropdown {
+    width: 300px;
+}
