@@ -27,3 +27,7 @@ main > .container {
     background-color: #71c4ea;
     transition: background-color 0.3s;
 }
+
+.img-profile {
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+}
