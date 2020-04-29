@@ -15,5 +15,8 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('footer').load('/pages/snippets/footer.html');
+    $('footer').load('/pages/snippets/footer.html', function() {
+        let footerHeight = $('footer').height();
+        $('main').css('padding-bottom', footerHeight + 20);
+    });
 });
