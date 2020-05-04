@@ -28,6 +28,10 @@ main > .container {
     transition: background-color 0.3s;
 }
 
+img {
+    max-width: 100%;
+}
+
 .img-profile {
     border: 0.5rem solid rgba(150, 150, 150, 0.3);
 }

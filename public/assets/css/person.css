@@ -11,3 +11,7 @@
     font-size: 12px;
     margin: auto;
 }
+
+img {
+    max-width: 100%;
+}
