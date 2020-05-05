@@ -96,6 +96,22 @@ newsTableSetup = (database) => {
     })
 }
 
+serviceParticipationTableSetup = (database) => {
+    console.log("Checking if 'serviceParticipation' table exists");
+    return database.schema.hasClass("serviceParticipation").then(exists => {
+        if (!exists) {
+            console.log("It doesn't exist, so we create it");
+            return database.schema.createTable("news", table => {
+                table.integer("serviceId").references("service.id")
+                table.integer("personId").references("person.id")
+                table.primary(["serviceId", "personId"])
+            })
+        } else {
+            console.log("Actually it exists, remove it before applying changes")
+        }
+    })
+}
+
 //create the schema of each table, if not present already
 console.log("Setting up the database");
 personTableSetup(sqlDb);
