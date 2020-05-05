@@ -13,20 +13,21 @@ personTableSetup = (database) => {
         if (!exists) {
             console.log("It doesn't, so we create it");
             return database.schema.createTable("person", table => {
-                table.increments("id").unique();
+                table.increments("id").unique().notNullable();
                 table.string("firstName").notNullable();
                 table.string("lastName").notNullable();
-                table.string("description");
-                table.date("joinDate");
+                table.string("picture").notNullable();
+                table.string("description").notNullable();
+                table.date("joinDate").notNullable();
                 table.string("email").unique();
-                table.string("phone_number").unique();
+                table.string("phoneNumber").unique();
                 table.string("facebook").unique();
                 table.string("instagram").unique();
                 table.string("twitter").unique();
                 //table.primary(["id"]);
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes")
+            console.log("Actually it exists, remove it before applying changes");
         }
     });
 };
@@ -37,17 +38,18 @@ eventTableSetup = (database) => {
         if (!exists) {
             console.log("It doesn't exist, so we create it");
             return database.schema.createTable("event", table => {
-                table.increments("id").unique();
-                table.string("name");
-                table.dateTime("datetime");
-                table.string("place");
-                table.string("description");
+                table.increments("id").unique().notNullable();
+                table.string("name").notNullable();
+                table.dateTime("datetime").notNullable();
+                table.string("place").notNullable();
+                table.string("picture").notNullable();
+                table.string("description").notNullable();
                 table.integer("contact").references("person.id")
-                    .onUpdate("CASCADE").onDelete("CASCADE")
+                    .onUpdate("CASCADE").onDelete("SET NULL");
                 //table.primary(["id"])
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes")
+            console.log("Actually it exists, remove it before applying changes");
         }
     })
 }
@@ -58,16 +60,16 @@ serviceTableSetup = (database) => {
         if (!exists) {
             console.log("It doesn't exist, so we create it");
             return database.schema.createTable("service", table => {
-                table.increments("id").unique();
-                table.string("name");
-                table.string("infos");
-                table.string("description");
+                table.increments("id").unique().notNullable();
+                table.string("name").notNullable();
+                table.string("infos").notNullable();
+                table.string("description").notNullable();
                 table.integer("presentedInEvent").references("event.id")
-                    .onUpdate("CASCADE").onDelete("CASCADE")
+                    .onUpdate("CASCADE").onDelete("SET NULL");
                 //table.primary(["id"])
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes")
+            console.log("Actually it exists, remove it before applying changes");
         }
     })
 }
@@ -78,20 +80,20 @@ newsTableSetup = (database) => {
         if (!exists) {
             console.log("It doesn't exist, so we create it");
             return database.schema.createTable("news", table => {
-                table.increments("id").unique();
-                table.string("title");
-                table.string("body");
-                table.string("mediaURL");
+                table.increments("id").unique().notNullable();
+                table.string("title").notNullable();
+                table.string("body").notNullable();
+                table.string("mediaURL").notNullable();
                 table.integer("serviceId").references("service.id")
-                    .onUpdate("CASCADE").onDelete("CASCADE")
+                    .onUpdate("CASCADE").onDelete("SET NULL");
                 table.integer("eventId").references("event.id")
-                    .onUpdate("CASCADE").onDelete("CASCADE")
+                    .onUpdate("CASCADE").onDelete("SET NULL");
                 table.integer("personId").references("person.id")
-                    .onUpdate("CASCADE").onDelete("CASCADE")
+                    .onUpdate("CASCADE").onDelete("SET NULL");
                 //table.primary(["id"])
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes")
+            console.log("Actually it exists, remove it before applying changes");
         }
     })
 }
@@ -103,18 +105,23 @@ serviceParticipationTableSetup = (database) => {
             console.log("It doesn't exist, so we create it");
             return database.schema.createTable("news", table => {
                 table.integer("serviceId").references("service.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE");
                 table.integer("personId").references("person.id")
-                table.primary(["serviceId", "personId"])
+                    .onUpdate("CASCADE").onDelete("CASCADE");
+                table.string("description");
+                table.primary(["serviceId", "personId"]);
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes")
+            console.log("Actually it exists, remove it before applying changes");
         }
     })
 }
 
 //create the schema of each table, if not present already
-console.log("Setting up the database");
-personTableSetup(sqlDb);
-eventTableSetup(sqlDb)
-serviceTableSetup(sqlDb)
-newsTableSetup(sqlDb)
+function setupDatabase() {
+    console.log("Setting up the database");
+    personTableSetup(sqlDb);
+    eventTableSetup(sqlDb);
+    serviceTableSetup(sqlDb);
+    newsTableSetup(sqlDb);
+}
