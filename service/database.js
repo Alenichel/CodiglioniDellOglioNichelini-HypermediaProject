@@ -1,5 +1,6 @@
 const sqlDbFactory = require("knex");
 
+
 let sqlDb = sqlDbFactory({
     client: "pg",
     connection: process.env.DATABASE_URL || "postgres://localhost/qtb",
@@ -7,17 +8,17 @@ let sqlDb = sqlDbFactory({
     debug: true
 });
 
+
 personTableSetup = (database) => {
-    console.log("Checking if person table exists");
     return database.schema.hasTable("person").then(exists => {
         if (!exists) {
-            console.log("It doesn't, so we create it");
+            console.log("'person' table doesn't exist. Creation in progress");
             return database.schema.createTable("person", table => {
                 table.increments("id").unique().notNullable();
                 table.string("firstName").notNullable();
                 table.string("lastName").notNullable();
                 table.string("picture").notNullable();
-                table.string("description").notNullable();
+                table.text("description").notNullable();
                 table.date("joinDate").notNullable();
                 table.string("email").unique();
                 table.string("phoneNumber").unique();
@@ -27,58 +28,58 @@ personTableSetup = (database) => {
                 //table.primary(["id"]);
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes");
+            console.log("'person' table already exists");
         }
     });
 };
 
+
 eventTableSetup = (database) => {
-    console.log("Checking if 'event' table exists");
     return database.schema.hasTable("event").then(exists => {
         if (!exists) {
-            console.log("It doesn't exist, so we create it");
+            console.log("'event' table doesn't exist. Creation in progress");
             return database.schema.createTable("event", table => {
                 table.increments("id").unique().notNullable();
                 table.string("name").notNullable();
                 table.dateTime("datetime").notNullable();
                 table.string("place").notNullable();
                 table.string("picture").notNullable();
-                table.string("description").notNullable();
+                table.text("description").notNullable();
                 table.integer("contact").references("person.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
                 //table.primary(["id"])
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes");
+            console.log("'event' table already exists");
         }
     })
 }
 
+
 serviceTableSetup = (database) => {
-    console.log("Checking if 'service' table exists");
     return database.schema.hasTable("service").then(exists => {
         if (!exists) {
-            console.log("It doesn't exist, so we create it");
+            console.log("'service' table doesn't exist. Creation in progress");
             return database.schema.createTable("service", table => {
                 table.increments("id").unique().notNullable();
                 table.string("name").notNullable();
                 table.string("infos").notNullable();
-                table.string("description").notNullable();
+                table.text("description").notNullable();
                 table.integer("presentedInEvent").references("event.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
                 //table.primary(["id"])
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes");
+            console.log("'service' table already exists");
         }
     })
 }
 
+
 newsTableSetup = (database) => {
-    console.log("Checking if 'news' table exists");
     return database.schema.hasTable("news").then(exists => {
         if (!exists) {
-            console.log("It doesn't exist, so we create it");
+            console.log("'news' table doesn't exist. Creation in progress");
             return database.schema.createTable("news", table => {
                 table.increments("id").unique().notNullable();
                 table.string("title").notNullable();
@@ -93,29 +94,30 @@ newsTableSetup = (database) => {
                 //table.primary(["id"])
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes");
+            console.log("'news' table already exists");
         }
     })
 }
 
+
 serviceParticipationTableSetup = (database) => {
-    console.log("Checking if 'serviceParticipation' table exists");
-    return database.schema.hasClass("serviceParticipation").then(exists => {
+    return database.schema.hasTable("serviceParticipation").then(exists => {
         if (!exists) {
-            console.log("It doesn't exist, so we create it");
-            return database.schema.createTable("news", table => {
+            console.log("'serviceParticipation' table doesn't exist. Creation in progress");
+            return database.schema.createTable("serviceParticipation", table => {
                 table.integer("serviceId").references("service.id")
                     .onUpdate("CASCADE").onDelete("CASCADE");
                 table.integer("personId").references("person.id")
                     .onUpdate("CASCADE").onDelete("CASCADE");
-                table.string("description");
+                table.text("description");
                 table.primary(["serviceId", "personId"]);
             })
         } else {
-            console.log("Actually it exists, remove it before applying changes");
+            console.log("'serviceParticipation' table already exists");
         }
     })
 }
+
 
 //create the schema of each table, if not present already
 function setupDatabase() {
@@ -124,4 +126,8 @@ function setupDatabase() {
     eventTableSetup(sqlDb);
     serviceTableSetup(sqlDb);
     newsTableSetup(sqlDb);
+    serviceParticipationTableSetup(sqlDb);
 }
+
+
+module.exports = { database: sqlDb, setupDatabase };

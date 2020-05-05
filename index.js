@@ -9,6 +9,7 @@ var swaggerTools = require('swagger-tools');
 var jsyaml = require('js-yaml');
 var serverPort = 8080;
 var serveStatic = require('serve-static');
+var database = require('./service/database');
 
 // swaggerRouter configuration
 var options = {
@@ -38,6 +39,8 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
 
   // Serve static files from the public directory
   app.use(serveStatic(__dirname + '/public'));
+
+  database.setupDatabase();
 
   // Start the server
   http.createServer(app).listen(serverPort, function () {
