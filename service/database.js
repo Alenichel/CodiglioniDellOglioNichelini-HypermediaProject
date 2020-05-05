@@ -120,13 +120,13 @@ serviceParticipationTableSetup = (database) => {
 
 
 //create the schema of each table, if not present already
-function setupDatabase() {
+async function setupDatabase() {
     console.log("Setting up the database");
-    personTableSetup(sqlDb);
-    eventTableSetup(sqlDb);
-    serviceTableSetup(sqlDb);
-    newsTableSetup(sqlDb);
-    serviceParticipationTableSetup(sqlDb);
+    await personTableSetup(sqlDb);
+    await eventTableSetup(sqlDb);
+    await serviceTableSetup(sqlDb);
+    await newsTableSetup(sqlDb);
+    await serviceParticipationTableSetup(sqlDb);
 }
 
 
