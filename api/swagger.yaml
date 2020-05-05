@@ -10,11 +10,15 @@ info:
   license:
     name: "MIT"
     url: "http://opensource.org/licenses/MIT"
+host: "localhost:8080"
+basePath: "/api/v1"
 tags:
 - name: "People"
 - name: "Services"
 - name: "Events"
 - name: "News"
+schemes:
+- "https"
 paths:
   /people:
     get:
