@@ -7,29 +7,98 @@ let sqlDb = sqlDbFactory({
     debug: true
 });
 
-peopleSetup = (database) => {
-    console.log("Checking if account table exists");
+personTableSetup = (database) => {
+    console.log("Checking if person table exists");
     return database.schema.hasTable("person").then(exists => {
         if (!exists) {
             console.log("It doesn't, so we create it");
             return database.schema.createTable("person", table => {
                 table.increments("id").unique();
-                table.string("first_name").notNullable();
-                table.string("last_name").notNullable();
+                table.string("firstName").notNullable();
+                table.string("lastName").notNullable();
                 table.string("description");
-                table.date("join_date");
+                table.date("joinDate");
                 table.string("email").unique();
                 table.string("phone_number").unique();
                 table.string("facebook").unique();
                 table.string("instagram").unique();
                 table.string("twitter").unique();
+                //table.primary(["id"]);
             })
         } else {
-            console.log("Actually it exist, remove it before applying changes")
+            console.log("Actually it exists, remove it before applying changes")
         }
     });
 };
 
+eventTableSetup = (database) => {
+    console.log("Checking if 'event' table exists");
+    return database.schema.hasTable("event").then(exists => {
+        if (!exists) {
+            console.log("It doesn't exist, so we create it");
+            return database.schema.createTable("event", table => {
+                table.increments("id").unique();
+                table.string("name");
+                table.dateTime("datetime");
+                table.string("place");
+                table.string("description");
+                table.integer("contact").references("person.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE")
+                //table.primary(["id"])
+            })
+        } else {
+            console.log("Actually it exists, remove it before applying changes")
+        }
+    })
+}
+
+serviceTableSetup = (database) => {
+    console.log("Checking if 'service' table exists");
+    return database.schema.hasTable("service").then(exists => {
+        if (!exists) {
+            console.log("It doesn't exist, so we create it");
+            return database.schema.createTable("service", table => {
+                table.increments("id").unique();
+                table.string("name");
+                table.string("infos");
+                table.string("description");
+                table.integer("presentedInEvent").references("event.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE")
+                //table.primary(["id"])
+            })
+        } else {
+            console.log("Actually it exists, remove it before applying changes")
+        }
+    })
+}
+
+newsTableSetup = (database) => {
+    console.log("Checking if 'news' table exists");
+    return database.schema.hasTable("news").then(exists => {
+        if (!exists) {
+            console.log("It doesn't exist, so we create it");
+            return database.schema.createTable("news", table => {
+                table.increments("id").unique();
+                table.string("title");
+                table.string("body");
+                table.string("mediaURL");
+                table.integer("serviceId").references("service.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE")
+                table.integer("eventId").references("event.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE")
+                table.integer("personId").references("person.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE")
+                //table.primary(["id"])
+            })
+        } else {
+            console.log("Actually it exists, remove it before applying changes")
+        }
+    })
+}
+
 //create the schema of each table, if not present already
 console.log("Setting up the database");
-peopleSetup(sqlDb);
+personTableSetup(sqlDb);
+eventTableSetup(sqlDb)
+serviceTableSetup(sqlDb)
+newsTableSetup(sqlDb)
