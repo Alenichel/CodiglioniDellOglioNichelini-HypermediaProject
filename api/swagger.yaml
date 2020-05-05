@@ -1,0 +1,437 @@
+---
+swagger: "2.0"
+info:
+  description: "This is the API to access QualityTimeBank data"
+  version: "1.0.0"
+  title: "QualityTimeBankAPI"
+  contact:
+    name: "QualityTimeBank"
+    email: "info@qualitytimebank.com"
+  license:
+    name: "MIT"
+    url: "http://opensource.org/licenses/MIT"
+tags:
+- name: "People"
+- name: "Services"
+- name: "Events"
+- name: "News"
+paths:
+  /people:
+    get:
+      tags:
+      - "People"
+      summary: "Retrieve all people."
+      operationId: "peopleGET"
+      parameters:
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "integer"
+      - name: "offset"
+        in: "query"
+        required: false
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Person"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "People"
+  /people/{id}:
+    get:
+      tags:
+      - "People"
+      summary: "Retrieve a specific person"
+      operationId: "peopleIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Person"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "People"
+  /people/{id}/services:
+    get:
+      tags:
+      - "People"
+      summary: "Retrieve the person's services."
+      operationId: "peopleIdServicesGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Service"
+      x-swagger-router-controller: "People"
+  /people/{id}/event:
+    get:
+      tags:
+      - "People"
+      summary: "Retrieve the person's event."
+      operationId: "peopleIdEventGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Event"
+      x-swagger-router-controller: "People"
+  /services:
+    get:
+      tags:
+      - "Services"
+      summary: "Retrieve all services"
+      operationId: "servicesGET"
+      parameters:
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "integer"
+      - name: "offset"
+        in: "query"
+        required: false
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Service"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Services"
+  /services/{id}:
+    get:
+      tags:
+      - "Services"
+      summary: "Retrieve a specific service"
+      operationId: "servicesIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Service"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Services"
+  /services/{id}/people:
+    get:
+      tags:
+      - "Services"
+      summary: "Retrieve the service's people."
+      operationId: "servicesIdPeopleGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Person"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Services"
+  /services/{id}/event:
+    get:
+      tags:
+      - "Services"
+      summary: "Retrieve the service's event."
+      operationId: "servicesIdEventGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Event"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Services"
+  /events:
+    get:
+      tags:
+      - "Events"
+      summary: "Retrieve all events."
+      operationId: "eventsGET"
+      parameters:
+      - name: "month"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Event"
+      x-swagger-router-controller: "Events"
+  /events/{id}:
+    get:
+      tags:
+      - "Events"
+      summary: "Retrieve a specific event."
+      operationId: "eventsIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Event"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Events"
+  /events/{id}/person:
+    get:
+      tags:
+      - "Events"
+      summary: "Retrieve the event's contact."
+      operationId: "eventsIdPersonGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Person"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Events"
+  /events/{id}/service:
+    get:
+      tags:
+      - "Events"
+      summary: "Retrieve the event's presented service."
+      operationId: "eventsIdServiceGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Service"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "Events"
+  /news:
+    get:
+      tags:
+      - "News"
+      summary: "Retrieve all news"
+      operationId: "newsGET"
+      parameters:
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "integer"
+      - name: "offset"
+        in: "query"
+        required: false
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/News"
+      x-swagger-router-controller: "News"
+  /news/{id}:
+    get:
+      tags:
+      - "News"
+      summary: "Retrieve a specific news"
+      operationId: "newsIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/News"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "News"
+definitions:
+  Person:
+    type: "object"
+    required:
+    - "firstName"
+    - "id"
+    - "joinDate"
+    - "lastName"
+    - "picture"
+    properties:
+      id:
+        type: "integer"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      picture:
+        type: "string"
+      description:
+        type: "string"
+      joinDate:
+        type: "string"
+      email:
+        type: "string"
+      phoneNumber:
+        type: "string"
+      facebook:
+        type: "string"
+      instagram:
+        type: "string"
+      twitter:
+        type: "string"
+      serviceDetail:
+        type: "string"
+    example:
+      firstName: "firstName"
+      lastName: "lastName"
+      twitter: "twitter"
+      joinDate: "joinDate"
+      phoneNumber: "phoneNumber"
+      facebook: "facebook"
+      serviceDetail: "serviceDetail"
+      description: "description"
+      id: 0
+      instagram: "instagram"
+      picture: "picture"
+      email: "email"
+  Service:
+    type: "object"
+    required:
+    - "description"
+    - "id"
+    - "infos"
+    - "name"
+    - "pictures"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      infos:
+        type: "string"
+      pictures:
+        type: "array"
+        items:
+          type: "string"
+      description:
+        type: "string"
+      serviceDetail:
+        type: "string"
+    example:
+      name: "name"
+      serviceDetail: "serviceDetail"
+      description: "description"
+      id: 0
+      infos: "infos"
+      pictures:
+      - "pictures"
+      - "pictures"
+  Event:
+    type: "object"
+    required:
+    - "datetime"
+    - "description"
+    - "id"
+    - "name"
+    - "picture"
+    - "place"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      datetime:
+        type: "string"
+      place:
+        type: "string"
+      picture:
+        type: "string"
+      description:
+        type: "string"
+    example:
+      datetime: "datetime"
+      name: "name"
+      description: "description"
+      id: 0
+      place: "place"
+      picture: "picture"
+  News:
+    type: "object"
+    required:
+    - "body"
+    - "id"
+    - "title"
+    properties:
+      id:
+        type: "integer"
+      title:
+        type: "string"
+      body:
+        type: "string"
+      media:
+        type: "string"
+      service:
+        type: "integer"
+      person:
+        type: "integer"
+      event:
+        type: "integer"
+    example:
+      service: 6
+      person: 1
+      id: 0
+      media: "media"
+      title: "title"
+      body: "body"
+      event: 5
