@@ -306,6 +306,7 @@ definitions:
   Person:
     type: "object"
     required:
+    - "description"
     - "firstName"
     - "id"
     - "joinDate"
@@ -415,6 +416,7 @@ definitions:
     required:
     - "body"
     - "id"
+    - "media"
     - "title"
     properties:
       id:
