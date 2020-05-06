@@ -1,5 +1,7 @@
 'use strict';
 
+const {database} = require('./database');
+
 
 /**
  * Retrieve all people.
@@ -9,40 +11,10 @@
  * returns List
  **/
 exports.peopleGET = function(limit,offset) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "firstName" : "firstName",
-  "lastName" : "lastName",
-  "twitter" : "twitter",
-  "joinDate" : "joinDate",
-  "phoneNumber" : "phoneNumber",
-  "facebook" : "facebook",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "instagram" : "instagram",
-  "picture" : "picture",
-  "email" : "email"
-}, {
-  "firstName" : "firstName",
-  "lastName" : "lastName",
-  "twitter" : "twitter",
-  "joinDate" : "joinDate",
-  "phoneNumber" : "phoneNumber",
-  "facebook" : "facebook",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "instagram" : "instagram",
-  "picture" : "picture",
-  "email" : "email"
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+  if (!limit) limit = 100;
+  if (!offset) offset = 0;
+  return database("person").limit(limit).offset(offset).then(data => {
+    return data;
   });
 }
 

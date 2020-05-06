@@ -5,7 +5,8 @@ let sqlDb = sqlDbFactory({
     client: "pg",
     connection: process.env.DATABASE_URL || "postgres://localhost/qtb",
     ssl: false,
-    debug: true
+    debug: true,
+    useNullAsDefault: true
 });
 
 
@@ -25,8 +26,16 @@ personTableSetup = (database) => {
                 table.string("facebook").unique();
                 table.string("instagram").unique();
                 table.string("twitter").unique();
-                //table.primary(["id"]);
-            })
+            }).then(() => {
+                console.log("Creating ALESSANDRO NICHELINI");
+                return database("person").insert({
+                    firstName: "Alessandro",
+                    lastName: "Nichelini",
+                    picture: "/assets/img/laughing-grandma.jpg",
+                    description: "I'm a geek",
+                    joinDate: "Today"
+                });
+            });
         } else {
             console.log("'person' table already exists");
         }
@@ -47,8 +56,7 @@ eventTableSetup = (database) => {
                 table.text("description").notNullable();
                 table.integer("contact").references("person.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
-                //table.primary(["id"])
-            })
+            });
         } else {
             console.log("'event' table already exists");
         }
@@ -67,8 +75,7 @@ serviceTableSetup = (database) => {
                 table.text("description").notNullable();
                 table.integer("presentedInEvent").references("event.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
-                //table.primary(["id"])
-            })
+            });
         } else {
             console.log("'service' table already exists");
         }
@@ -91,8 +98,7 @@ newsTableSetup = (database) => {
                     .onUpdate("CASCADE").onDelete("SET NULL");
                 table.integer("personId").references("person.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
-                //table.primary(["id"])
-            })
+            });
         } else {
             console.log("'news' table already exists");
         }
@@ -111,7 +117,7 @@ serviceParticipationTableSetup = (database) => {
                     .onUpdate("CASCADE").onDelete("CASCADE");
                 table.text("description");
                 table.primary(["serviceId", "personId"]);
-            })
+            });
         } else {
             console.log("'serviceParticipation' table already exists");
         }
