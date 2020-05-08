@@ -16,12 +16,16 @@ exports.servicesGET = function(limit,offset) {
   if (!limit) limit = 100;
   if (!offset) offset = 0;
   return new Promise(async (resolve, reject) => {
-    let data = await database(tables.service).limit(limit).offset(offset);
-    for (let s of data) {
-      let pictures = await database.select('filename').from(tables.servicePicture).where('serviceId', s.id);
-      s.pictures = pictures.map(p => { return p.filename });
+    try {
+      let data = await database(tables.service).limit(limit).offset(offset);
+      for (let s of data) {
+        let pictures = await database.select('filename').from(tables.servicePicture).where('serviceId', s.id);
+        s.pictures = pictures.map(p => { return p.filename });
+      }
+      resolve(data);
+    } catch(error) {
+      reject(error);
     }
-    resolve(data);
   });
 }
 

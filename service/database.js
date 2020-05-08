@@ -66,7 +66,41 @@ eventTableSetup = database => {
                 table.text("description").notNullable();
                 table.integer("contact").references("person.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
-            });
+            }).then(() => {
+                return database(tables.event).insert({
+                    name: "Tech together",
+                    datetime: new Date(2019, 12-1, 7, 16, 0),
+                    place: "Headquarters",
+                    picture: "/assets/img/elderly-computer.jpg",
+                    description: "Presentation of the Tech Support service.",
+                    contact: 1
+                });
+            }).then(() => {
+                return database(tables.event).insert({
+                    name: "Christmas party",
+                    datetime: new Date(2019, 12-1, 25, 19, 30),
+                    place: "Fancy disco",
+                    picture: "/assets/img/christmas-party.jpg",
+                    description: "Come celebrate Christmas with us!",
+                    contact: 1
+                });
+            }).then(() => {
+                return database(tables.event).insert({
+                    name: "Talking together",
+                    datetime: new Date(2020, 1-1, 14, 11, 0),
+                    place: "Headquarters",
+                    picture: "/assets/img/talking-together.jpg",
+                    description: "We are proud to announce the launch of our new service, that will help ..."
+                });
+            }).then(() => {
+                return database(tables.event).insert({
+                    name: "Caring together",
+                    datetime: new Date(2020, 1-1, 23, 17, 0),
+                    place: "Headquarters",
+                    picture: "/assets/img/laughing-grandma.jpg",
+                    description: "Presentation of the Carers Training service."
+                })
+            })
         } else {
             console.log("'event' table already exists");
         }

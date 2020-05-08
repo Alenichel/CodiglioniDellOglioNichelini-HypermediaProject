@@ -1,5 +1,9 @@
 'use strict';
 
+const databaseService = require('./database');
+let database = databaseService.database
+let tables = databaseService.tables
+
 
 /**
  * Retrieve all events.
@@ -8,29 +12,12 @@
  * returns List
  **/
 exports.eventsGET = function(month) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "datetime" : "datetime",
-  "name" : "name",
-  "description" : "description",
-  "id" : 0,
-  "place" : "place",
-  "picture" : "picture"
-}, {
-  "datetime" : "datetime",
-  "name" : "name",
-  "description" : "description",
-  "id" : 0,
-  "place" : "place",
-  "picture" : "picture"
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  month = parseInt(month);
+  return database(tables.event).then(data => {
+    return data.filter(e => {
+      return e.datetime.getMonth() === month;
+    });
+  })
 }
 
 

@@ -4,6 +4,18 @@ function append_event_card(card) {
     $('#event-cards').append(card);
 }
 
+function getEvents(month) {
+    fetch(`/api/v1/events?month=${month}`).then(response => {
+        response.json().then(json => {
+            $('#event-cards').empty();
+            for (let e of json) {
+                let card = generate_card(e.name, e.description, e.picture, e.datetime);
+                append_event_card(card);
+            }
+        })
+    })
+}
+
 $(document).ready(function() {
     $('.slider').slick({
         infinite: true,
@@ -42,8 +54,6 @@ $(document).ready(function() {
             }
         ]
     });
-    append_event_card(generate_card('Christmas party', 'Come celebrate Christmas with us!', '/assets/img/christmas-party.jpg', 'Dec 22nd, 2020'));
-    append_event_card(generate_card('Tech together', 'Presentation of the Tech Support service', '/assets/img/elderly-computer.jpg', 'Dec 7th, 2020'));
-    append_event_card(generate_card('Talking together', 'We are proud to announce the launch of our new service, which will help...', '/assets/img/talking-together.jpg', 'Jan 14th, 2020'));
-    append_event_card(generate_card('Caring together', 'Presentation of the Carers Training service', '/assets/img/laughing-grandma.jpg', 'Jan 23rd, 2020'));
+    let today = new Date();
+    getEvents(today.getMonth());
 })
