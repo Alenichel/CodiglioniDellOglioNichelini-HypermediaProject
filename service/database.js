@@ -37,7 +37,6 @@ personTableSetup = database => {
                 table.string("instagram").unique();
                 table.string("twitter").unique();
             }).then(() => {
-                console.log("Creating ALESSANDRO NICHELINI");
                 return database(tables.person).insert({
                     firstName: "Alessandro",
                     lastName: "Nichelini",
@@ -187,7 +186,7 @@ serviceParticipationTableSetup = database => {
                 table.primary(["serviceId", "personId"]);
             });
         } else {
-            console.log("'serviceParticipation' table already exists");
+            console.log("'service_participation' table already exists");
         }
     })
 }
@@ -196,7 +195,7 @@ serviceParticipationTableSetup = database => {
 servicePictureTableSetup = database => {
     return database.schema.hasTable(tables.servicePicture).then(exists => {
         if (!exists) {
-            console.log("'servicePicture' table doesn't exist. Creation in progress");
+            console.log("'service_picture' table doesn't exist. Creation in progress");
             return database.schema.createTable(tables.servicePicture, table => {
                 table.increments("id").unique().notNullable();
                 table.integer("serviceId").references("service.id")
@@ -223,6 +222,8 @@ servicePictureTableSetup = database => {
                     filename: "/assets/img/elderly-computer.jpg"
                 })
             })
+        } else {
+            console.log("'service_picture' table already exists")
         }
     })
 }
