@@ -1,16 +1,17 @@
 "use strict";
 
-function append_event_card(card) {
-    $('#event-cards').append(card);
-}
-
 function getEvents(month) {
     fetch(`/api/v1/events?month=${month}`).then(response => {
         response.json().then(json => {
-            $('#event-cards').empty();
-            for (let e of json) {
-                let card = generate_card(e.name, e.description, e.picture, e.datetime);
-                append_event_card(card);
+            let eventsDiv = $('#event-cards');
+            eventsDiv.empty();
+            if (json.length > 0) {
+                for (let e of json) {
+                    let card = generate_card(e.name, e.description, e.picture, e.datetime);
+                    eventsDiv.append(card);
+                }
+            } else {
+                eventsDiv.append($('<div class="col-12 text-center mt-2">Sorry, no events this month.</div>'));
             }
         })
     })
