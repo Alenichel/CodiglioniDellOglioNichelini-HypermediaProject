@@ -17,6 +17,7 @@ tags:
 - name: "Services"
 - name: "Events"
 - name: "News"
+- name: "Contact us"
 schemes:
 - "https"
 paths:
@@ -26,6 +27,10 @@ paths:
       - "People"
       summary: "Retrieve all people."
       operationId: "peopleGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "limit"
         in: "query"
@@ -51,6 +56,10 @@ paths:
       - "People"
       summary: "Retrieve a specific person"
       operationId: "peopleIdGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -70,6 +79,10 @@ paths:
       - "People"
       summary: "Retrieve the person's services."
       operationId: "peopleIdServicesGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -89,6 +102,10 @@ paths:
       - "People"
       summary: "Retrieve the person's event."
       operationId: "peopleIdEventGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -106,6 +123,10 @@ paths:
       - "Services"
       summary: "Retrieve all services"
       operationId: "servicesGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "limit"
         in: "query"
@@ -131,6 +152,10 @@ paths:
       - "Services"
       summary: "Retrieve a specific service"
       operationId: "servicesIdGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -150,6 +175,10 @@ paths:
       - "Services"
       summary: "Retrieve the service's people."
       operationId: "servicesIdPeopleGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -171,6 +200,10 @@ paths:
       - "Services"
       summary: "Retrieve the service's event."
       operationId: "servicesIdEventGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -190,6 +223,10 @@ paths:
       - "Events"
       summary: "Retrieve all events."
       operationId: "eventsGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "month"
         in: "query"
@@ -209,6 +246,10 @@ paths:
       - "Events"
       summary: "Retrieve a specific event."
       operationId: "eventsIdGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -228,6 +269,10 @@ paths:
       - "Events"
       summary: "Retrieve the event's contact."
       operationId: "eventsIdPersonGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -247,6 +292,10 @@ paths:
       - "Events"
       summary: "Retrieve the event's presented service."
       operationId: "eventsIdServiceGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -266,6 +315,10 @@ paths:
       - "News"
       summary: "Retrieve all news"
       operationId: "newsGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "limit"
         in: "query"
@@ -289,6 +342,10 @@ paths:
       - "News"
       summary: "Retrieve a specific news"
       operationId: "newsIdGET"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - name: "id"
         in: "path"
@@ -302,6 +359,37 @@ paths:
         default:
           description: "Error"
       x-swagger-router-controller: "News"
+  /contact:
+    post:
+      tags:
+      - "Contact us"
+      summary: "Send a message via a form"
+      operationId: "contactPOST"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      parameters:
+      - name: "name"
+        in: "formData"
+        required: true
+        type: "string"
+      - name: "email"
+        in: "formData"
+        required: true
+        type: "string"
+      - name: "subject"
+        in: "formData"
+        required: true
+        type: "string"
+      - name: "message"
+        in: "formData"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "OK"
+        default:
+          description: "Error"
+      x-swagger-router-controller: "ContactUs"
 definitions:
   Person:
     type: "object"
