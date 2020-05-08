@@ -5,6 +5,12 @@ function append_service_card(card) {
 }
 
 $(document).ready(function() {
-    append_service_card(generate_card('English lessons', 'The goal of this project is to offer informal, functional English teaching to marginalized citizens ...', '/assets/img/talking-together.jpg'));
-    append_service_card(generate_card('Private tutoring', 'QualityTimeBank groups volunteers who have been offering tutoring to young people for multiple ...', '/assets/img/tutoring.jpg'));
+    fetch('/api/v1/services').then(response => {
+        response.json().then( json => {
+            for (let s of json) {
+                let card = generate_card(s.name, s.description, s.pictures[0]);
+                append_service_card(card);
+            }
+        });
+    });
 })

@@ -5,16 +5,26 @@ let sqlDb = sqlDbFactory({
     client: "pg",
     connection: process.env.DATABASE_URL || "postgres://localhost/qtb",
     ssl: false,
-    debug: true,
+    debug: false,
     useNullAsDefault: true
 });
 
 
-personTableSetup = (database) => {
+const tables = {
+    person: 'person',
+    event: 'event',
+    service: 'service',
+    news: 'news',
+    serviceParticipation: 'service_participation',
+    servicePicture: 'service_picture'
+};
+
+
+personTableSetup = database => {
     return database.schema.hasTable("person").then(exists => {
         if (!exists) {
             console.log("'person' table doesn't exist. Creation in progress");
-            return database.schema.createTable("person", table => {
+            return database.schema.createTable(tables.person, table => {
                 table.increments("id").unique().notNullable();
                 table.string("firstName").notNullable();
                 table.string("lastName").notNullable();
@@ -28,7 +38,7 @@ personTableSetup = (database) => {
                 table.string("twitter").unique();
             }).then(() => {
                 console.log("Creating ALESSANDRO NICHELINI");
-                return database("person").insert({
+                return database(tables.person).insert({
                     firstName: "Alessandro",
                     lastName: "Nichelini",
                     picture: "/assets/img/laughing-grandma.jpg",
@@ -43,11 +53,11 @@ personTableSetup = (database) => {
 };
 
 
-eventTableSetup = (database) => {
-    return database.schema.hasTable("event").then(exists => {
+eventTableSetup = database => {
+    return database.schema.hasTable(tables.event).then(exists => {
         if (!exists) {
             console.log("'event' table doesn't exist. Creation in progress");
-            return database.schema.createTable("event", table => {
+            return database.schema.createTable(tables.event, table => {
                 table.increments("id").unique().notNullable();
                 table.string("name").notNullable();
                 table.dateTime("datetime").notNullable();
@@ -64,18 +74,42 @@ eventTableSetup = (database) => {
 }
 
 
-serviceTableSetup = (database) => {
-    return database.schema.hasTable("service").then(exists => {
+serviceTableSetup = database => {
+    return database.schema.hasTable(tables.service).then(exists => {
         if (!exists) {
             console.log("'service' table doesn't exist. Creation in progress");
-            return database.schema.createTable("service", table => {
+            return database.schema.createTable(tables.service, table => {
                 table.increments("id").unique().notNullable();
                 table.string("name").notNullable();
-                table.string("infos").notNullable();
+                table.text("infos").notNullable();
                 table.text("description").notNullable();
                 table.integer("presentedInEvent").references("event.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
-            });
+            }).then(() => {
+                return database(tables.service).insert({
+                    name: "Private tutoring",
+                    infos: "To decide when and where to meet, contact a tutor.",
+                    description: "QualityTimeBank groups volunteers who have been offering tutoring to young people for multiple years."
+                });
+            }).then(() => {
+                return database(tables.service).insert({
+                    name: "English lessons",
+                    infos: "",
+                    description: "The goal of the project is to offer informal functional English teaching to marginalized citizens."
+                });
+            }).then(() => {
+                return database(tables.service).insert({
+                    name: "Carers training",
+                    infos: "",
+                    description: "There are more than six millions carers across the UK - and one in four Birmingham homes is in need of those carers."
+                });
+            }).then(() => {
+                return database(tables.service).insert({
+                    name: "Tech support",
+                    infos: "",
+                    description: "Our volunteers offer their knowledge to assist elderly people in using electronic devices."
+                })
+            })
         } else {
             console.log("'service' table already exists");
         }
@@ -83,11 +117,11 @@ serviceTableSetup = (database) => {
 }
 
 
-newsTableSetup = (database) => {
-    return database.schema.hasTable("news").then(exists => {
+newsTableSetup = database => {
+    return database.schema.hasTable(tables.news).then(exists => {
         if (!exists) {
             console.log("'news' table doesn't exist. Creation in progress");
-            return database.schema.createTable("news", table => {
+            return database.schema.createTable(tables.news, table => {
                 table.increments("id").unique().notNullable();
                 table.string("title").notNullable();
                 table.string("body").notNullable();
@@ -106,11 +140,11 @@ newsTableSetup = (database) => {
 }
 
 
-serviceParticipationTableSetup = (database) => {
-    return database.schema.hasTable("serviceParticipation").then(exists => {
+serviceParticipationTableSetup = database => {
+    return database.schema.hasTable(tables.serviceParticipation).then(exists => {
         if (!exists) {
-            console.log("'serviceParticipation' table doesn't exist. Creation in progress");
-            return database.schema.createTable("serviceParticipation", table => {
+            console.log("'service_participation' table doesn't exist. Creation in progress");
+            return database.schema.createTable(tables.serviceParticipation, table => {
                 table.integer("serviceId").references("service.id")
                     .onUpdate("CASCADE").onDelete("CASCADE");
                 table.integer("personId").references("person.id")
@@ -125,6 +159,41 @@ serviceParticipationTableSetup = (database) => {
 }
 
 
+servicePictureTableSetup = database => {
+    return database.schema.hasTable(tables.servicePicture).then(exists => {
+        if (!exists) {
+            console.log("'servicePicture' table doesn't exist. Creation in progress");
+            return database.schema.createTable(tables.servicePicture, table => {
+                table.increments("id").unique().notNullable();
+                table.integer("serviceId").references("service.id")
+                    .onUpdate("CASCADE").onDelete("CASCADE").notNullable();
+                table.string("filename").notNullable();
+            }).then(() => {
+                return database(tables.servicePicture).insert({
+                    serviceId: 1,
+                    filename: "/assets/img/tutoring.jpg"
+                });
+            }).then(() => {
+                return database(tables.servicePicture).insert({
+                    serviceId: 2,
+                    filename: "/assets/img/talking-together.jpg"
+                });
+            }).then(() => {
+                return database(tables.servicePicture).insert({
+                    serviceId: 3,
+                    filename: "/assets/img/laughing-grandma.jpg"
+                });
+            }).then(() => {
+                return database(tables.servicePicture).insert({
+                    serviceId: 4,
+                    filename: "/assets/img/elderly-computer.jpg"
+                })
+            })
+        }
+    })
+}
+
+
 //create the schema of each table, if not present already
 async function setupDatabase() {
     console.log("Setting up the database");
@@ -133,7 +202,8 @@ async function setupDatabase() {
     await serviceTableSetup(sqlDb);
     await newsTableSetup(sqlDb);
     await serviceParticipationTableSetup(sqlDb);
+    await servicePictureTableSetup(sqlDb);
 }
 
 
-module.exports = { database: sqlDb, setupDatabase };
+module.exports = {database: sqlDb, setupDatabase, tables};
