@@ -16,8 +16,21 @@ function getEvents(month) {
     })
 }
 
+const months = [
+    'January', 'February', 'March', 'April',
+    'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December'
+]
+
 $(document).ready(function() {
-    $('.slider').slick({
+    let month = new Date().getMonth();
+    let slider = $('.slider');
+    for (let i = 0; i < 12; i++) {
+        let m = (i + month) % 12;
+        let e = $('<button class="btn btn-link text-center" onclick="getEvents(' + m + ')">' + months[m] + '</button>')
+        slider.append(e);
+    }
+    slider.slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -54,6 +67,5 @@ $(document).ready(function() {
             }
         ]
     });
-    let today = new Date();
-    getEvents(today.getMonth());
+    getEvents(month);
 })
