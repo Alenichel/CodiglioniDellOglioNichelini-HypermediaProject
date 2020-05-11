@@ -7,7 +7,7 @@ function getEvents(month) {
             eventsDiv.empty();
             if (json.length > 0) {
                 for (let e of json) {
-                    let card = generate_card(e.name, e.description, e.picture, e.datetime);
+                    let card = generate_card(e.id, e.name, e.description, e.picture, e.datetime);
                     eventsDiv.append(card);
                 }
             } else {

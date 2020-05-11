@@ -1,6 +1,6 @@
 "use strict";
 
-function generate_card(title, body, img, date = null) {
+function generate_card(id, title, body, img, date = null) {
     return $('<div class="col-12 col-md-6 mb-4">').append(
         $('<div class="card">').append(
             $('<div class="card-body row">').append(
@@ -13,7 +13,7 @@ function generate_card(title, body, img, date = null) {
                     $('<p class="card-text">').text(body),
                 )
             ),
-            $('<a class="stretched-link" href="/pages/event.html"></a>')
+            $('<a class="stretched-link" href="/pages/event.html?id=' + id + '"></a>')
         )
     );
 }
