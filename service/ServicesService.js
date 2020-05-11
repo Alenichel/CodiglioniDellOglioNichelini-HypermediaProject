@@ -12,12 +12,16 @@ let tables = databaseService.tables
  * offset Integer  (optional)
  * returns List
  **/
-exports.servicesGET = function(limit,offset) {
-  if (!limit) limit = 100;
+exports.servicesGET = function(limit, offset) {
   if (!offset) offset = 0;
   return new Promise(async (resolve, reject) => {
     try {
-      let data = await database(tables.service).limit(limit).offset(offset);
+      let data;
+      if (limit) {
+        data = await database(tables.service).limit(limit).offset(offset);
+      } else {
+        data = await database(tables.service).offset(offset);
+      }
       for (let s of data) {
         let pictures = await database.select('filename').from(tables.servicePicture).where('serviceId', s.id);
         s.pictures = pictures.map(p => { return p.filename });
