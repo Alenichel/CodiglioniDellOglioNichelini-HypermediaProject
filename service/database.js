@@ -49,6 +49,14 @@ personTableSetup = database => {
                     firstName: "Fabio",
                     lastName: "Codiglioni",
                     picture: "/assets/img/fabiocody.jpeg",
+                    description: "The team leader",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Luca",
+                    lastName: "dell'Oglio",
+                    picture: "/assets/img/lucadll.png",
                     description: "I'm a geek",
                     joinDate: "Today"
                 });
@@ -114,6 +122,30 @@ personTableSetup = database => {
                     lastName: "Pots",
                     picture: "/assets/img/pots.png",
                     description: "Top manager",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Peter",
+                    lastName: "Parker",
+                    picture: "/assets/img/parker.png",
+                    description: "Friendly neighbour's guy",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Maria",
+                    lastName: "Hill",
+                    picture: "/assets/img/hill.png",
+                    description: "The assistant",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Clint",
+                    lastName: "Barton",
+                    picture: "/assets/img/barton.png",
+                    description: "The husband",
                     joinDate: "Today"
                 });
             })
