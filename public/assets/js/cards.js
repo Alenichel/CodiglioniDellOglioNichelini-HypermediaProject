@@ -12,7 +12,8 @@ function generate_card(title, body, img, date = null) {
                     date ? $('<small class="text-muted">').text(date) : null,
                     $('<p class="card-text">').text(body),
                 )
-            )
+            ),
+            $('<a class="stretched-link" href="/pages/event.html"></a>')
         )
     );
 }
