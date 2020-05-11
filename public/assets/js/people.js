@@ -12,8 +12,14 @@ $(document).ready(function() {
     /*
         call api people. for person in person, do:
      */
-    let img = "https://media-exp1.licdn.com/dms/image/C5603AQEMhbtxEDwGLg/profile-displayphoto-shrink_200_200/0?e=1593648000&v=beta&t=0JrjJp-vXnjamt_KpbquJAWtpUJWMtRRM1sWT2utuiE"
-    let name = "Alessandro"
-    let surname = "Nichelini"
-    $('#people-fr').append(append_person(img, name, surname));
+    fetch('/api/v1/people').then(response => {
+        response.json().then( json => {
+            for (let s of json){
+                let fs = s.firstName
+                let ln = s.lastName
+                let img = s.picture
+                $('#people-fr').append(append_person(img, fs, ln));
+            }
+        })
+    })
 })

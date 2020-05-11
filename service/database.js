@@ -40,11 +40,35 @@ personTableSetup = database => {
                 return database(tables.person).insert({
                     firstName: "Alessandro",
                     lastName: "Nichelini",
-                    picture: "/assets/img/laughing-grandma.jpg",
+                    picture: "/assets/img/alenichel.png",
                     description: "I'm a geek",
                     joinDate: "Today"
                 });
-            });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Fabio",
+                    lastName: "Codiglioni",
+                    picture: "/assets/img/fabiocody.jpeg",
+                    description: "I'm a geek",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Anthony",
+                    lastName: "Stark",
+                    picture: "/assets/img/tony.jpg",
+                    description: "The smartest avengers",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Natasha",
+                    lastName: "Romanoff",
+                    picture: "/assets/img/natasha.jpg",
+                    description: "The most beautiful avengers",
+                    joinDate: "Today"
+                });
+            })
         } else {
             console.log("'person' table already exists");
         }
