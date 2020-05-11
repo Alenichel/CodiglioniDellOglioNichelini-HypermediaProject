@@ -68,6 +68,54 @@ personTableSetup = database => {
                     description: "The most beautiful avengers",
                     joinDate: "Today"
                 });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Bruce",
+                    lastName: "Banner",
+                    picture: "/assets/img/banner.png",
+                    description: "The strongest Avenger",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Steve",
+                    lastName: "Rogers",
+                    picture: "/assets/img/rogers.png",
+                    description: "The captain",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Jane",
+                    lastName: "Foster",
+                    picture: "/assets/img/foster.png",
+                    description: "The scientist",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Carol",
+                    lastName: "Danvers",
+                    picture: "/assets/img/danvers.png",
+                    description: "From another universe",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Margaret",
+                    lastName: "Carter",
+                    picture: "/assets/img/carter.png",
+                    description: "Secretary",
+                    joinDate: "Today"
+                });
+            }).then(() => {
+                return database(tables.person).insert({
+                    firstName: "Pepper",
+                    lastName: "Pots",
+                    picture: "/assets/img/pots.png",
+                    description: "Top manager",
+                    joinDate: "Today"
+                });
             })
         } else {
             console.log("'person' table already exists");

@@ -23,9 +23,9 @@ $(document).ready(function() {
                 let ln = s.lastName
                 let img = s.picture
                 $('#people-fr').append(append_person(img, fs, ln));
+                img_dimension();
             }
         })
-        img_dimension();
     })
 })
 
