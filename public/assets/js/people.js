@@ -1,4 +1,4 @@
-"use-strict";
+"use strict";
 
 function img_dimension(){
     let height = $('.magic-column').height();
@@ -22,7 +22,7 @@ $(document).ready(function() {
                 let fs = s.firstName
                 let ln = s.lastName
                 let img = s.picture
-                $('#people-fr').append(append_person(img, fs, ln));
+                $('#people-row').append(append_person(img, fs, ln));
                 img_dimension();
             }
         })
