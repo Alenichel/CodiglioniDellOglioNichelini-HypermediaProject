@@ -1,3 +1,5 @@
+"use strict";
+
 const sqlDbFactory = require("knex");
 const longStrings = require("./database_long_strings");
 
@@ -21,7 +23,7 @@ const tables = {
 };
 
 
-personTableSetup = database => {
+function personTableSetup(database) {
     return database.schema.hasTable("person").then(exists => {
         if (!exists) {
             console.log("'person' table doesn't exist. Creation in progress");
@@ -154,10 +156,10 @@ personTableSetup = database => {
             console.log("'person' table already exists");
         }
     });
-};
+}
 
 
-eventTableSetup = database => {
+function eventTableSetup(database) {
     return database.schema.hasTable(tables.event).then(exists => {
         if (!exists) {
             console.log("'event' table doesn't exist. Creation in progress");
@@ -212,7 +214,7 @@ eventTableSetup = database => {
 }
 
 
-serviceTableSetup = database => {
+function serviceTableSetup(database) {
     return database.schema.hasTable(tables.service).then(exists => {
         if (!exists) {
             console.log("'service' table doesn't exist. Creation in progress");
@@ -255,7 +257,7 @@ serviceTableSetup = database => {
 }
 
 
-newsTableSetup = database => {
+function newsTableSetup(database) {
     return database.schema.hasTable(tables.news).then(exists => {
         if (!exists) {
             console.log("'news' table doesn't exist. Creation in progress");
@@ -292,7 +294,7 @@ newsTableSetup = database => {
 }
 
 
-serviceParticipationTableSetup = database => {
+function serviceParticipationTableSetup(database) {
     return database.schema.hasTable(tables.serviceParticipation).then(exists => {
         if (!exists) {
             console.log("'service_participation' table doesn't exist. Creation in progress");
@@ -311,7 +313,7 @@ serviceParticipationTableSetup = database => {
 }
 
 
-servicePictureTableSetup = database => {
+function servicePictureTableSetup(database) {
     return database.schema.hasTable(tables.servicePicture).then(exists => {
         if (!exists) {
             console.log("'service_picture' table doesn't exist. Creation in progress");

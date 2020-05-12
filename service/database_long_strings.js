@@ -1,7 +1,6 @@
 "use strict";
 
-exports.newsBody1 = `
-National volunteering charity TimeBank has been awarded a grant of £629,203 by the Ministry of Housing, Communities and Local Government (MHCLG) to deliver an innovative volunteer-led project to teach informal, everyday English to marginalised residents with little or no knowledge of the language.
+exports.newsBody1 = `National volunteering charity TimeBank has been awarded a grant of £629,203 by the Ministry of Housing, Communities and Local Government (MHCLG) to deliver an innovative volunteer-led project to teach informal, everyday English to marginalised residents with little or no knowledge of the language.
 
 The funding is part of MHCLG’s £4.5 million Integrated Communities English Language Programme which aims to tackle the key causes of poor integration.
 
@@ -20,8 +19,7 @@ Phil Pyatt, Chief Executive of TimeBank said: “This new funding recognises Tim
 Communities Minister Lord Bourne said: “Speaking English is so crucial in our day-to-day lives – whether we’re helping our children with their homework or traveling on a bus to do the shopping. This new programme is focused on those people who may be isolated by their inability to speak the language and help them better integrate into life in this country by making good use of local services, becoming part of community life and mixing and making friendships with people from different backgrounds.”
 `;
 
-exports.newsBody2 = `
-Organise a day of corporate volunteering on the same day as your Christmas party and you’ll have a real reason to celebrate says TimeBank
+exports.newsBody2 = `Organise a day of corporate volunteering on the same day as your Christmas party and you’ll have a real reason to celebrate says TimeBank
 
 Helen Walker, Chief Executive of volunteering charity TimeBank, says: “Wouldn’t the work party be so much better if you’d got to know people from the office over a shared experience – if you’d spent the day together serving lunch to the homeless, sharing digital skills with the older generation, wrapping gift boxes for children overseas or putting on a party for lonely older people.
 
