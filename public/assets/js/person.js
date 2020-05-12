@@ -1,14 +1,14 @@
 "use strict";
 
-function build_st_column(imgURL) {
+function build_st_column(imgURL, id) {
     return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                $('<button type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-left"></i></button>')
+                $(`<a href="/pages/person.html?id=${id-1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-left"></i></a>`)
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                $('<button type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-right"></i></button>')
+                $(`<a href="/pages/person.html?id=${id+1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-right"></i></a>`)
             )
         ),
         $('<div class="mt-3">').append(
@@ -64,7 +64,7 @@ $(document).ready(function() {
                 let picture = s.picture
                 console.log(fs)
                 $('#person-row').append(
-                    build_st_column(picture),
+                    build_st_column(picture, id),
                     build_nd_column(fs, ln, description)
                 );
             }
