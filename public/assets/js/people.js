@@ -7,11 +7,12 @@ function img_dimension(){
     $(".img-profile").css('width', Math.min(height, width));
 }
 
-function append_person(img, name, surname){
+function append_person(img, name, surname, id){
     return $('<div class="col-sm-6 col-md-4 col-lg-2 col-12 text-center magic-column">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + img + '">'),
         $('<h4>').text(name),
-        $('<h5>').text(surname)
+        $('<h5>').text(surname),
+        $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
     );
 }
 
@@ -22,7 +23,8 @@ $(document).ready(function() {
                 let fs = s.firstName
                 let ln = s.lastName
                 let img = s.picture
-                $('#people-row').append(append_person(img, fs, ln));
+                let id = s.id
+                $('#people-row').append(append_person(img, fs, ln, id));
                 img_dimension();
             }
         })
