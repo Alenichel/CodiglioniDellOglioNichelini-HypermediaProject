@@ -67,21 +67,8 @@ exports.servicesIdEventGET = function(id) {
  * returns Service
  **/
 exports.servicesIdGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "name" : "name",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "infos" : "infos",
-  "pictures" : [ "pictures", "pictures" ]
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+  return database(tables.service).where("id", id).then(data => {
+    return data[0];
   });
 }
 

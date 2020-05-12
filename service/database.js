@@ -1,4 +1,5 @@
 const sqlDbFactory = require("knex");
+const longStrings = require("./database_long_strings");
 
 
 let sqlDb = sqlDbFactory({
@@ -261,14 +262,28 @@ newsTableSetup = database => {
             return database.schema.createTable(tables.news, table => {
                 table.increments("id").unique().notNullable();
                 table.string("title").notNullable();
-                table.string("body").notNullable();
-                table.string("mediaURL").notNullable();
+                table.text("body").notNullable();
+                table.string("media").notNullable();
                 table.integer("serviceId").references("service.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
                 table.integer("eventId").references("event.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
                 table.integer("personId").references("person.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
+            }).then(() => {
+                return database(tables.news).insert({
+                    title: "Government backs QTB to deliver language project",
+                    body: longStrings.newsBody1,
+                    media: "https://timebank.org.uk/wp-content/uploads/2019/10/housing-communities-local-government-logo-350x263-c-default.png",
+                    serviceId: 2
+                });
+            }).then(() => {
+                return database(tables.news).insert({
+                    title: "Christmas volunteering – it's a party!",
+                    body: longStrings.newsBody2,
+                    media: "https://timebank.org.uk/wp-content/uploads/2019/12/TB-Christmas-volunteering-Acorns-2016_0-scaled-350x263-c-default.jpg",
+                    eventId: 2
+                });
             });
         } else {
             console.log("'news' table already exists");

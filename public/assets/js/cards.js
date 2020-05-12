@@ -3,10 +3,20 @@
 const CardType = {
     service: 1,
     event: 2,
+    news: 3,
 }
 
 function generate_card(id, title, body, img, cardType, date = null) {
-    let linkBaseURL = cardType === CardType.service ? "/pages/service.html?id=" : "/pages/event.html?id=";
+    let link;
+    if (cardType === CardType.service) {
+        link = `/pages/service.html?id=${id}`;
+    } else if (cardType === CardType.event) {
+        link = `/pages/event.html?id=${id}`;
+    } else if (cardType === CardType.news) {
+        link = `/pages/news.html?id=${id}`;
+    } else {
+        link = "#";
+    }
     return $('<div class="col-12 col-md-6 mb-4">').append(
         $('<div class="card">').append(
             $('<div class="card-body row">').append(
@@ -19,7 +29,7 @@ function generate_card(id, title, body, img, cardType, date = null) {
                     $('<p class="card-text">').text(body),
                 )
             ),
-            $(`<a class="stretched-link" href="${linkBaseURL}${id}"></a>`)
+            $(`<a class="stretched-link" href="${link}"></a>`)
         )
     );
 }
