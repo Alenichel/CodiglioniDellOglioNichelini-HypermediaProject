@@ -1,6 +1,6 @@
 "use strict";
 
-const eventsPerPage = 3;
+const eventsPerPage = 4;
 
 $(document).ready(function() {
     let searchParams = new URLSearchParams(window.location.search);
