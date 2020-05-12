@@ -1,11 +1,17 @@
 "use strict";
 
-function generate_card(id, title, body, img, date = null) {
+const CardType = {
+    service: 1,
+    event: 2,
+}
+
+function generate_card(id, title, body, img, cardType, date = null) {
+    let linkBaseURL = cardType === CardType.service ? "/pages/service.html?id=" : "/pages/event.html?id=";
     return $('<div class="col-12 col-md-6 mb-4">').append(
         $('<div class="card">').append(
             $('<div class="card-body row">').append(
                 $('<div class="col-sm-6">').append(
-                    $('<img class="card-img" src="' + img + '" alt="">')
+                    $(`<img class="card-img" src="${img}" alt="">`)
                 ),
                 $('<div class="col-sm-6">').append(
                     $('<h4 class="card-title mt-2 mt-md-0">').text(title),
@@ -13,7 +19,7 @@ function generate_card(id, title, body, img, date = null) {
                     $('<p class="card-text">').text(body),
                 )
             ),
-            $('<a class="stretched-link" href="/pages/event.html?id=' + id + '"></a>')
+            $(`<a class="stretched-link" href="${linkBaseURL}${id}"></a>`)
         )
     );
 }
