@@ -1,6 +1,8 @@
 'use strict';
 
-const {database} = require('./database');
+const databaseService = require('./database');
+let database = databaseService.database
+let tables = databaseService.tables
 
 
 /**
@@ -52,28 +54,10 @@ exports.peopleIdEventGET = function(id) {
  * returns Person
  **/
 exports.peopleIdGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "firstName" : "firstName",
-  "lastName" : "lastName",
-  "twitter" : "twitter",
-  "joinDate" : "joinDate",
-  "phoneNumber" : "phoneNumber",
-  "facebook" : "facebook",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "instagram" : "instagram",
-  "picture" : "picture",
-  "email" : "email"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  return database(tables.person).where("id", id).then( data => {
+    return data
+  })
+
 }
 
 
