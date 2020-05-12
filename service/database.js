@@ -342,6 +342,7 @@ async function setupDatabase() {
     await newsTableSetup(sqlDb);
     await serviceParticipationTableSetup(sqlDb);
     await servicePictureTableSetup(sqlDb);
+    console.log("..done")
 }
 
 
