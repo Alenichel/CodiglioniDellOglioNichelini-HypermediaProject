@@ -67,8 +67,17 @@ exports.servicesIdEventGET = function(id) {
  * returns Service
  **/
 exports.servicesIdGET = function(id) {
-  return database(tables.service).where("id", id).then(data => {
-    return data[0];
+  return new Promise(async (resolve, reject) => {
+    try {
+      let data = await database(tables.service).where('id', id);
+      let s = data[0];
+      let pictures = await database.select('filename').from(tables.servicePicture).where('serviceId', s.id);
+      s.pictures = pictures.map(p => { return p.filename });
+      console.log(s);
+      resolve(s);
+    } catch(error) {
+      reject(error);
+    }
   });
 }
 
