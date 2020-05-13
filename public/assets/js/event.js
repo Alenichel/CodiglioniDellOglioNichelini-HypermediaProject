@@ -1,7 +1,26 @@
 "use strict";
 
-function build_st_column(imgURL, id) {
-    if(id !== 1 ) { //if intermediate event: back and forward button
+function build_st_column(imgURL, id, eventsSize) {
+
+    if (id === 1) { //if initial service: only next button
+        return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
+            $('<img class="img-profile rounded" alt="Missing" src="' + imgURL + '">'),
+            $('<div class="row mt-3">').append(
+                $('<div class="col text-right mr-0 mr-md-5">').append(
+                    $(`<a href="/pages/event.html?id=${id+1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-right"></i></a>`)
+                )
+            )
+        )
+    } else if (id === eventsSize) { //if final event: only previous button
+        return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
+            $('<img class="img-profile rounded" alt="Missing" src="' + imgURL + '">'),
+            $('<div class="row mt-3">').append(
+                $('<div class="col text-left ml-0 ml-md-5">').append(
+                    $(`<a href="/pages/event.html?id=${id-1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-left"></i></a>`)
+                )
+            )
+        )
+    } else { //if intermediate event: previous and next buttons
         return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
             $('<img class="img-profile rounded" alt="Missing" src="' + imgURL + '">'),
             $('<div class="row mt-3">').append(
@@ -14,17 +33,6 @@ function build_st_column(imgURL, id) {
             )
         )
     }
-    else if (id === 1) { //if initial event: only forward button
-        return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
-            $('<img class="img-profile rounded" alt="Missing" src="' + imgURL + '">'),
-            $('<div class="row mt-3">').append(
-                $('<div class="col text-right mr-0 mr-md-5">').append(
-                    $(`<a href="/pages/event.html?id=${id+1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-right"></i></a>`)
-                )
-            )
-        )
-    }
-    //TODO else if id=lastEvent
 }
 
 function build_nd_column(name, description, dateTime, place) {
@@ -41,6 +49,7 @@ function build_nd_column(name, description, dateTime, place) {
 $(document).ready(function() {
     let searchParams = new URLSearchParams(window.location.search);
     let id;
+    let eventsSize;
     if (searchParams.has("id")) {
         id = parseInt(searchParams.get("id"));
     } else {
@@ -49,19 +58,23 @@ $(document).ready(function() {
 
     console.log(id)
 
+    fetch('/api/v1/events').then(response => {
+        response.json().then( json => {
+            eventsSize = json.length;
+        })
+    })
+
     fetch('/api/v1/events/' + String(id)).then(response => {
         response.json().then( json => {
-            for (let s of json){
-                let picture = s.picture;
-                let name = s.name;
-                let description = s.description;
-                let dateTime = s.dateTime;
-                let place = s.place;
-                $('#event-row').append(
-                    build_st_column(picture, id),
-                    build_nd_column(name, description, dateTime, place)
-                );
-            }
+            let picture = json.picture;
+            let name = json.name;
+            let description = json.description;
+            let dateTime = json.dateTime;
+            let place = json.place;
+            $('#event-row').append(
+                build_st_column(picture, id, eventsSize),
+                build_nd_column(name, description, dateTime, place)
+            );
         })
     })
 })

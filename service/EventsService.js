@@ -29,7 +29,7 @@ exports.eventsGET = function(month) {
  **/
 exports.eventsIdGET = function(id) {
   return database(tables.event).where("id", id).then( data => {
-    return data
+    return data[0];
   })
 }
 

@@ -55,7 +55,7 @@ exports.peopleIdEventGET = function(id) {
  **/
 exports.peopleIdGET = function(id) {
   return database(tables.person).where("id", id).then( data => {
-    return data
+    return data[0];
   })
 
 }
