@@ -1,0 +1,100 @@
+[
+    {
+        "firstName": "Alessandro",
+        "lastName": "Nichelini",
+        "picture": "/assets/img/alenichel.png",
+        "description": "I'm a geek",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Fabio",
+        "lastName": "Codiglioni",
+        "picture": "/assets/img/fabiocody.jpeg",
+        "description": "The team leader",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Luca",
+        "lastName": "dell'Oglio",
+        "picture": "/assets/img/lucadll.png",
+        "description": "I'm a geek",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Anthony",
+        "lastName": "Stark",
+        "picture": "/assets/img/tony.jpg",
+        "description": "The smartest avengers",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Natasha",
+        "lastName": "Romanoff",
+        "picture": "/assets/img/natasha.jpg",
+        "description": "The most beautiful avengers",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Bruce",
+        "lastName": "Banner",
+        "picture": "/assets/img/banner.png",
+        "description": "The strongest Avenger",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Steve",
+        "lastName": "Rogers",
+        "picture": "/assets/img/rogers.png",
+        "description": "The captain",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Jane",
+        "lastName": "Foster",
+        "picture": "/assets/img/foster.png",
+        "description": "The scientist",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Carol",
+        "lastName": "Danvers",
+        "picture": "/assets/img/danvers.png",
+        "description": "From another universe",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Margaret",
+        "lastName": "Carter",
+        "picture": "/assets/img/carter.png",
+        "description": "Secretary",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Pepper",
+        "lastName": "Pots",
+        "picture": "/assets/img/pots.png",
+        "description": "Top manager",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Peter",
+        "lastName": "Parker",
+        "picture": "/assets/img/parker.png",
+        "description": "Friendly neighbour's guy",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Maria",
+        "lastName": "Hill",
+        "picture": "/assets/img/hill.png",
+        "description": "The assistant",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    },
+    {
+        "firstName": "Clint",
+        "lastName": "Barton",
+        "picture": "/assets/img/barton.png",
+        "description": "The husband",
+        "joinDate": "2020-05-11T22:00:00.000Z"
+    }
+]

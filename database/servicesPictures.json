@@ -1,0 +1,18 @@
+[
+    {
+        "serviceId": 1,
+        "filename": "/assets/img/tutoring.jpg"
+    },
+    {
+        "serviceId": 2,
+        "filename": "/assets/img/talking-together.jpg"
+    },
+    {
+        "serviceId": 3,
+        "filename": "/assets/img/laughing-grandma.jpg"
+    },
+    {
+        "serviceId": 4,
+        "filename": "/assets/img/elderly-computer.jpg"
+    }
+  ]

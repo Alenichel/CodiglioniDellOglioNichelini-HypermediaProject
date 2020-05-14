@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Tech together",
+        "datetime": "2019-12-07T15:00:00.000Z",
+        "place": "Headquarters",
+        "picture": "/assets/img/elderly-computer.jpg",
+        "description": "Presentation of the Tech Support service.",
+        "contact": 1
+    },
+    {
+        "name": "Christmas party",
+        "datetime": "2019-12-25T18:30:00.000Z",
+        "place": "Fancy disco",
+        "picture": "/assets/img/christmas-party.jpg",
+        "description": "Come celebrate Christmas with us!",
+        "contact": 1
+    },
+    {
+        "name": "Talking together",
+        "datetime": "2020-01-14T10:00:00.000Z",
+        "place": "Headquarters",
+        "picture": "/assets/img/talking-together.jpg",
+        "description": "We are proud to announce the launch of our new service, that will help ..."
+    },
+    {
+        "name": "Caring together",
+        "datetime": "2020-01-23T16:00:00.000Z",
+        "place": "Headquarters",
+        "picture": "/assets/img/laughing-grandma.jpg",
+        "description": "Presentation of the Carers Training service."
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Private tutoring",
+        "infos": "To decide when and where to meet, contact a tutor.",
+        "description": "QualityTimeBank groups volunteers who have been offering tutoring to young people for multiple years."
+    },
+    {
+        "name": "English lessons",
+        "infos": "",
+        "description": "The goal of the project is to offer informal functional English teaching to marginalized citizens."
+    },
+    {
+        "name": "Carers training",
+        "infos": "",
+        "description": "There are more than six millions carers across the UK - and one in four Birmingham homes is in need of those carers."
+    },
+    {
+        "name": "Tech support",
+        "infos": "",
+        "description": "Our volunteers offer their knowledge to assist elderly people in using electronic devices."
+    }
+  ]
