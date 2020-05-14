@@ -28,22 +28,9 @@ exports.peopleGET = function(limit,offset) {
  * returns Event
  **/
 exports.peopleIdEventGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "datetime" : "datetime",
-  "name" : "name",
-  "description" : "description",
-  "id" : 0,
-  "place" : "place",
-  "picture" : "picture"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  return database(tables.event).select('id', 'name').limit(1).where('contact', id).then( data => {
+    return data[0]
+  })
 }
 
 

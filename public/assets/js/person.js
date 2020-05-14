@@ -35,10 +35,10 @@ function build_services() {
     )
 }
 
-function build_nd_column(first_name, last_name, description) {
+function build_nd_column(first_name, last_name, description, event_id, event_name) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(first_name + " " + last_name),
-        $('<p>(HARDCODED)Contact for: <a href="#"> Christmas Party</a></p>'),
+        $(`<p>Contact for: <a href="/pages/event.html?id=${event_id}">${event_name}</a></p>`),
         $('<p>').text(description),
         build_services()
     )
@@ -54,27 +54,30 @@ $(document).ready(function() {
         id = 1;
     }
 
-    console.log(id)
-
     fetch('/api/v1/people').then(response => {
         response.json().then( json => {
             peopleSize = json.length;
-            fetch('/api/v1/people/' + String(id)).then(response => {
+            fetch(`/api/v1/people/${id}/event`).then(response => {
                 response.json().then( json => {
-                    let fs = json.firstName
-                    let ln = json.lastName
-                    let description = json.description
-                    let picture = json.picture
-                    let email = json.email
-                    let phone_number = json.phoneNumber
-                    let facebook = json.facebook
-                    let instagram = json.instagram
-                    let twitter = json.twitter
-                    console.log(fs)
-                    $('#person-row').append(
-                        build_st_column(picture, id, peopleSize, email, phone_number, facebook, instagram, twitter),
-                        build_nd_column(fs, ln, description)
-                    );
+                    let event_id = json.id
+                    let event_name = json.name
+                    fetch('/api/v1/people/' + String(id)).then(response => {
+                        response.json().then( json => {
+                            let fs = json.firstName
+                            let ln = json.lastName
+                            let description = json.description
+                            let picture = json.picture
+                            let email = json.email
+                            let phone_number = json.phoneNumber
+                            let facebook = json.facebook
+                            let instagram = json.instagram
+                            let twitter = json.twitter
+                            $('#person-row').append(
+                                build_st_column(picture, id, peopleSize, email, phone_number, facebook, instagram, twitter),
+                                build_nd_column(fs, ln, description, event_id, event_name)
+                            );
+                        })
+                    })
                 })
             })
         })
