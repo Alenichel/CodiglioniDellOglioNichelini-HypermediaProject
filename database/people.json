@@ -3,8 +3,11 @@
         "firstName": "Alessandro",
         "lastName": "Nichelini",
         "picture": "/assets/img/alenichel.png",
-        "description": "I'm a geek",
-        "joinDate": "2020-05-11T22:00:00.000Z"
+        "description": "Geek, CSE student, Steve Jobs wanna be, temporarily math teacher. Unforgivable romantic. I can help with computers and with private lessons in scientific fields.",
+        "joinDate": "2020-05-11T22:00:00.000Z",
+        "email": "ale.nichelg@gmail.com",
+        "phoneNumber": "3992345787",
+        "facebook":"https://www.facebook.com/anichelini"
     },
     {
         "firstName": "Fabio",
@@ -24,7 +27,7 @@
         "firstName": "Anthony",
         "lastName": "Stark",
         "picture": "/assets/img/tony.jpg",
-        "description": "The smartest avengers",
+        "description": "Anthony Edward \"Tony\" Stark was a billionaire industrialist, a founding member of the Avengers, and the former CEO of Stark Industries. A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and philanthropist.\nI can help with private lessons and with hardware.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
