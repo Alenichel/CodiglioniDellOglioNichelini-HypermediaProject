@@ -29,7 +29,10 @@ exports.peopleGET = function(limit,offset) {
  **/
 exports.peopleIdEventGET = function(id) {
   return database(tables.event).select('id', 'name').limit(1).where('contact', id).then( data => {
-    return data[0]
+    if (data.length > 0) {
+      return data[0];
+    }
+    return {};
   })
 }
 

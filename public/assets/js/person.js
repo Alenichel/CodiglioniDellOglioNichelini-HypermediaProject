@@ -38,7 +38,7 @@ function build_services() {
 function build_nd_column(first_name, last_name, description, event_id, event_name) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(first_name + " " + last_name),
-        $(`<p>Contact for: <a href="/pages/event.html?id=${event_id}">${event_name}</a></p>`),
+        event_id ? $(`<p>Contact for: <a href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
         $('<p>').text(description),
         build_services()
     )
@@ -61,6 +61,7 @@ $(document).ready(function() {
                 response.json().then( json => {
                     let event_id = json.id
                     let event_name = json.name
+
                     fetch('/api/v1/people/' + String(id)).then(response => {
                         response.json().then( json => {
                             let fs = json.firstName
