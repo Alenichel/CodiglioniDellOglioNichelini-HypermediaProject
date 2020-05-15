@@ -19,16 +19,44 @@ $(document).ready(function() {
             related.append(
                 $('<h3 class="mt-5">').text("Related"),
             )
+            let relatedRow = $('<div class="row">')
+            related.append(relatedRow);
             if (news.personId != null) {
-                console.log("PERSON");
+                addRelatedPerson(news.personId, relatedRow);
             }
             if (news.serviceId != null) {
-                console.log("SERVICE");
+                addRelatedService(news.serviceId, relatedRow);
             }
             if (news.eventId != null) {
-                console.log("EVENT");
+                addRelatedEvent(news.eventId, relatedRow);
             }
         }
-        console.log(news);
     });
-})
+});
+
+function addRelatedPerson(id, div) {
+    fetch(`/api/v1/people/${id}`).then(response => {
+        return response.json();
+    }).then(person => {
+        let card = generate_card(person.id, person.name, null, person.picture, CardType.person);
+        div.append(card);
+    });
+}
+
+function addRelatedService(id, div) {
+    fetch(`/api/v1/services/${id}`).then(response => {
+        return response.json();
+    }).then(service => {
+        let card = generate_card(service.id, service.name, null, service.pictures[0], CardType.service);
+        div.append(card);
+    })
+}
+
+function addRelatedEvent(id, div) {
+    fetch(`/api/v1/events/${id}`).then(response => {
+        return response.json();
+    }).then(event => {
+        let card = generate_card(event.id, event.name, null, event.picture, CardType.event);
+        div.append(card);
+    })
+}

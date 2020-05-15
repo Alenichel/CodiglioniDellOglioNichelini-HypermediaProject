@@ -4,6 +4,7 @@ const CardType = {
     service: 1,
     event: 2,
     news: 3,
+    person: 4,
 }
 
 function generate_card(id, title, body, img, cardType, date = null) {
@@ -14,6 +15,8 @@ function generate_card(id, title, body, img, cardType, date = null) {
         link = `/pages/event.html?id=${id}`;
     } else if (cardType === CardType.news) {
         link = `/pages/news.html?id=${id}`;
+    } else if (cardType === CardType.person) {
+        link = `/pages/person.html?id=${id}`;
     } else {
         link = "#";
     }
