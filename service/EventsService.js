@@ -8,16 +8,15 @@ let tables = databaseService.tables
 /**
  * Retrieve all events.
  *
- * month String 
+ * month Integer 
  * returns List
  **/
 exports.eventsGET = function(month) {
-  month = parseInt(month);
-  return database(tables.event).then(data => {
+  database(tables.event).then(data => {
     return data.filter(e => {
       return e.datetime.getMonth() === month;
     });
-  })
+  });
 }
 
 
@@ -33,7 +32,7 @@ exports.eventsIdGET = function(id) {
     if (data.length > 0) {
       resolve(data[0]);
     } else {
-      reject({error: `No event with id ${id} found`});
+      reject({code: 404});
     }
   });
 }
@@ -51,7 +50,7 @@ exports.eventsIdServiceGET = function(id) {
     if (data.length > 0) {
       resolve(data[0]);
     } else {
-      reject({error: "This event has no related service"})
+      reject({code: 404})
     }
   });
 }

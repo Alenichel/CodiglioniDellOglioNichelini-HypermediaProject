@@ -21,7 +21,8 @@ module.exports.eventsIdGET = function eventsIdGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
 
@@ -32,6 +33,7 @@ module.exports.eventsIdServiceGET = function eventsIdServiceGET (req, res, next)
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };

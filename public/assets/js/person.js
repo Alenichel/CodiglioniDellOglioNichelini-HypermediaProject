@@ -21,26 +21,28 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
     )
 }
 
-function build_services() {
-    return (
-        $('<div class="row">').append(
+function build_services(services) {
+    var services_row = $('<div class="row">')
+    for (let s of services){
+        services_row.append(
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
                     $('<a href="#" target="_blank" class="btn-social btn-instagram" style="background-color: lightgray"><i class="fas fa-chalkboard-teacher"></i></a>'),
-                    $('<p>Private tutoring</p>'),
-                    $('<p>Math, Computer science, Physics</p>')
+                    $(`<p>${s.name}</p>`),
+                    $(`<p>${s.serviceDetail}</p>`)
                 )
             )
         )
-    )
+    }
+    return services_row
 }
 
-function build_nd_column(first_name, last_name, description, event_id, event_name) {
+function build_nd_column(first_name, last_name, description, event_id, event_name, services) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(first_name + " " + last_name),
         event_id ? $(`<p>Contact for: <a href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
         $('<p>').text(description),
-        build_services()
+        build_services(services)
     )
 }
 
@@ -62,21 +64,29 @@ $(document).ready(function() {
                     let event_id = json.id
                     let event_name = json.name
 
-                    fetch('/api/v1/people/' + String(id)).then(response => {
+                    fetch(`/api/v1/people/${id}/services`).then(response => {
                         response.json().then( json => {
-                            let fs = json.firstName
-                            let ln = json.lastName
-                            let description = json.description
-                            let picture = json.picture
-                            let email = json.email
-                            let phone_number = json.phoneNumber
-                            let facebook = json.facebook
-                            let instagram = json.instagram
-                            let twitter = json.twitter
-                            $('#person-row').append(
-                                build_st_column(picture, id, peopleSize, email, phone_number, facebook, instagram, twitter),
-                                build_nd_column(fs, ln, description, event_id, event_name)
-                            );
+                            var services = []
+                            for (let s of json) {
+                                services.push(s)
+                            }
+                            fetch('/api/v1/people/' + String(id)).then(response => {
+                                response.json().then( json => {
+                                    let fs = json.firstName
+                                    let ln = json.lastName
+                                    let description = json.description
+                                    let picture = json.picture
+                                    let email = json.email
+                                    let phone_number = json.phoneNumber
+                                    let facebook = json.facebook
+                                    let instagram = json.instagram
+                                    let twitter = json.twitter
+                                    $('#person-row').append(
+                                        build_st_column(picture, id, peopleSize, email, phone_number, facebook, instagram, twitter),
+                                        build_nd_column(fs, ln, description, event_id, event_name, services)
+                                    );
+                                })
+                            })
                         })
                     })
                 })

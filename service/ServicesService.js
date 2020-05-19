@@ -28,7 +28,7 @@ exports.servicesGET = function(limit, offset) {
       }
       resolve(data);
     } catch(error) {
-      reject(error);
+      reject({code: 400});
     }
   });
 }
@@ -50,7 +50,7 @@ exports.servicesIdGET = function(id) {
       console.log(s);
       resolve(s);
     } catch(error) {
-      reject(error);
+      reject({code: 404});
     }
   });
 }
@@ -63,9 +63,22 @@ exports.servicesIdGET = function(id) {
  * returns List
  **/
 exports.servicesIdPeopleGET = function(id) {
-  return database.select('personId', 'description').from(tables.serviceParticipation).where('serviceId', id).then(data => {
-    console.log(data);
-    return data;
+  return new Promise(async (resolve, reject) => {
+    let participations = await database(tables.serviceParticipation).where("serviceId", id);
+    if (participations.length > 0) {
+      let people = [];
+      for (let sp of participations) {
+        let pp = await database(tables.person).where('id', sp.personId);
+        if (pp.length > 0) {
+          let p = pp[0];
+          p.serviceDetail = sp.description;
+          people.push(p);
+        }
+      }
+      resolve(people);
+    } else {
+      reject({code: 404});
+    }
   });
 }
 
