@@ -25,17 +25,6 @@ module.exports.eventsIdGET = function eventsIdGET (req, res, next) {
     });
 };
 
-module.exports.eventsIdPersonGET = function eventsIdPersonGET (req, res, next) {
-  var id = req.swagger.params['id'].value;
-  Events.eventsIdPersonGET(id)
-    .then(function (response) {
-      utils.writeJson(res, response);
-    })
-    .catch(function (response) {
-      utils.writeJson(res, response);
-    });
-};
-
 module.exports.eventsIdServiceGET = function eventsIdServiceGET (req, res, next) {
   var id = req.swagger.params['id'].value;
   Events.eventsIdServiceGET(id)
