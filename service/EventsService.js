@@ -28,9 +28,14 @@ exports.eventsGET = function(month) {
  * returns Event
  **/
 exports.eventsIdGET = function(id) {
-  return database(tables.event).where("id", id).limit(1).then( data => {
-    return data[0];
-  })
+  return new Promise(async (resolve, reject) => {
+    let data = await database(tables.event).where("id", id).limit(1);
+    if (data.length > 0) {
+      resolve(data[0]);
+    } else {
+      reject({error: `No event with id ${id} found`});
+    }
+  });
 }
 
 
@@ -41,8 +46,13 @@ exports.eventsIdGET = function(id) {
  * returns Service
  **/
 exports.eventsIdServiceGET = function(id) {
-  return database(tables.service).where('presentedInEvent', id).limit(1).then(data => {
-    return data[0];
+  return new Promise(async (resolve, reject) => {
+    let data = await database(tables.service).where('presentedInEvent', id).limit(1);
+    if (data.length > 0) {
+      resolve(data[0]);
+    } else {
+      reject({error: "This event has no related service"})
+    }
   });
 }
 
