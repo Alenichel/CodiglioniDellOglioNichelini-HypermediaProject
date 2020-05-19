@@ -31,15 +31,7 @@ paths:
       - "application/json"
       produces:
       - "application/json"
-      parameters:
-      - name: "limit"
-        in: "query"
-        required: false
-        type: "integer"
-      - name: "offset"
-        in: "query"
-        required: false
-        type: "integer"
+      parameters: []
       responses:
         "200":
           description: "OK"
@@ -208,7 +200,7 @@ paths:
       - name: "month"
         in: "query"
         required: true
-        type: "string"
+        type: "integer"
       responses:
         "200":
           description: "OK"
@@ -273,15 +265,7 @@ paths:
       - "application/json"
       produces:
       - "application/json"
-      parameters:
-      - name: "limit"
-        in: "query"
-        required: false
-        type: "integer"
-      - name: "offset"
-        in: "query"
-        required: false
-        type: "integer"
+      parameters: []
       responses:
         "200":
           description: "OK"

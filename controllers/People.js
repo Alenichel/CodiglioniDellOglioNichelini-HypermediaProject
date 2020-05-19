@@ -4,9 +4,7 @@ var utils = require('../utils/writer.js');
 var People = require('../service/PeopleService');
 
 module.exports.peopleGET = function peopleGET (req, res, next) {
-  var limit = req.swagger.params['limit'].value;
-  var offset = req.swagger.params['offset'].value;
-  People.peopleGET(limit,offset)
+  People.peopleGET()
     .then(function (response) {
       utils.writeJson(res, response);
     })

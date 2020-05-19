@@ -8,11 +8,9 @@ let tables = databaseService.tables
 /**
  * Retrieve all people.
  *
- * limit Integer  (optional)
- * offset Integer  (optional)
  * returns List
  **/
-exports.peopleGET = function(limit,offset) {
+exports.peopleGET = function() {
   return database("person").then(data => {
     return data;
   });

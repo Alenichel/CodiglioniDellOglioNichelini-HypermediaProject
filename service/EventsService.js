@@ -8,7 +8,7 @@ let tables = databaseService.tables
 /**
  * Retrieve all events.
  *
- * month String 
+ * month Integer 
  * returns List
  **/
 exports.eventsGET = function(month) {

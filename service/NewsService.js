@@ -8,11 +8,9 @@ let tables = databaseService.tables
 /**
  * Retrieve all news
  *
- * limit Integer  (optional)
- * offset Integer  (optional)
  * returns List
  **/
-exports.newsGET = function(limit, offset) {
+exports.newsGET = function() {
   return database(tables.news).then(data => {
     return data;
   });
