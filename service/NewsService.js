@@ -15,6 +15,8 @@ let tables = databaseService.tables
 exports.newsGET = function(limit, offset) {
   return database(tables.news).then(data => {
     return data;
+  }).catch(error => {
+    return {code: 404};
   })
 }
 
@@ -26,8 +28,13 @@ exports.newsGET = function(limit, offset) {
  * returns News
  **/
 exports.newsIdGET = function(id) {
-  return database(tables.news).where('id', id).then(data => {
-    return data[0];
-  });
+  return new Promise(async (resolve, reject) => {
+    let data = await database(tables.news).where('id', id).limit(1);
+    if (data.length > 0) {
+      resolve(data[0]);
+    } else {
+      reject({code: 404});
+    }
+  })
 }
 
