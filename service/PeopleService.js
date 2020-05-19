@@ -13,11 +13,11 @@ let tables = databaseService.tables
  * returns List
  **/
 exports.peopleGET = function(limit,offset) {
-  if (!limit) limit = 100;
-  if (!offset) offset = 0;
-  return database("person").limit(limit).offset(offset).then(data => {
+  return database("person").then(data => {
     return data;
-  });
+  }).catch(error => {
+    return {code: 404};
+  })
 }
 
 
@@ -28,12 +28,14 @@ exports.peopleGET = function(limit,offset) {
  * returns Event
  **/
 exports.peopleIdEventGET = function(id) {
-  return database(tables.event).select('id', 'name').limit(1).where('contact', id).then( data => {
+  return new Promise(async (resolve, reject) => {
+    let data = await database(tables.event).select('id', 'name').limit(1).where('contact', id);
     if (data.length > 0) {
-      return data[0];
+      resolve(data[0]);
+    } else {
+      reject({code: 404});
     }
-    return {};
-  })
+  });
 }
 
 
@@ -44,10 +46,14 @@ exports.peopleIdEventGET = function(id) {
  * returns Person
  **/
 exports.peopleIdGET = function(id) {
-  return database(tables.person).where("id", id).then( data => {
-    return data[0];
-  })
-
+  return new Promise(async (resolve, reject) => {
+    let data = await database(tables.person).where("id", id);
+    if (data.length > 0) {
+      resolve(data[0]);
+    } else {
+      reject({code: 404});
+    }
+  });
 }
 
 
@@ -58,28 +64,17 @@ exports.peopleIdGET = function(id) {
  * returns List
  **/
 exports.peopleIdServicesGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "name" : "name",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "infos" : "infos",
-  "pictures" : [ "pictures", "pictures" ]
-}, {
-  "name" : "name",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "infos" : "infos",
-  "pictures" : [ "pictures", "pictures" ]
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
+  return database(tables.serviceParticipation).where("personId", id).then(async participations => {
+    let services = [];
+    for (let sp of participations) {
+      let ss = await database(tables.service).where('id', sp.serviceId).limit(1);
+      if (ss.length > 0) {
+        let s = ss[0];
+        s.serviceDetail = sp.description;
+        services.push(s);
+      }
     }
+    return services;
   });
 }
 

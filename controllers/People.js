@@ -11,7 +11,8 @@ module.exports.peopleGET = function peopleGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
 
@@ -22,7 +23,8 @@ module.exports.peopleIdEventGET = function peopleIdEventGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
 
@@ -33,7 +35,8 @@ module.exports.peopleIdGET = function peopleIdGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
 
@@ -44,6 +47,7 @@ module.exports.peopleIdServicesGET = function peopleIdServicesGET (req, res, nex
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
