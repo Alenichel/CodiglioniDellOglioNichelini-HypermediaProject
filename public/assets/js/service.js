@@ -30,67 +30,74 @@ function build_nd_row_header(servicePeople) {
     )
 }
 
-function append_person(firstName, lastName, picture, description,id){
+function append_person(firstName, lastName, picture, serviceDetail, id){
     return $('<div class=" col-12 col-sm-6 col-md-4 col-lg-2 text-center magic-column">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + picture + '">'),
         $('<h4>').text(firstName),
         $('<h5>').text(lastName),
-        $('<p>').text(description),
+        $('<p>').text(serviceDetail),
         $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
     );
-
 }
 
 $(document).ready(function() {
     let searchParams = new URLSearchParams(window.location.search);
-    let id, servicesSize;
+    let id, servicesSize, name, infos, description, picture, presentedInEventId, eventName;
+    var servicePeople = [];
+
     if (searchParams.has("id")) {
         id = parseInt(searchParams.get("id"));
     } else {
         id = 1;
     }
 
-    console.log(id)
-
-    fetch('/api/v1/services').then(response => {
-        response.json().then( json => {
-            servicesSize = json.length;
-            fetch('/api/v1/services/' + String(id)).then(response => {
-                response.json().then( json => {
-                    let name = json.name;
-                    let infos = json.infos;
-                    let description = json.description;
-                    let picture = json.pictures[0];
-                    let presentedInEventId = json.presentedInEvent ? json.presentedInEvent : 0;
-                    
-                    fetch('/api/v1/events/' + String(presentedInEventId)).then(response => {
-                        response.json().then( json => {
-                            let eventName = json.name;
-                            $('#service-info-row').append(
-                                build_st_column(picture, id, servicesSize),
-                                build_nd_column(name, description, infos, presentedInEventId, eventName)
-                            );
-                            $('#service-offeredBy-header-row').append(
-                                build_nd_row_header(),
-                            );
-                            fetch('/api/v1/services/' + String(id) + "/people").then(response => {
-                                response.json().then( json => {
-                                    for (let s of json){
-                                        let id = s.personId;
-                                        let description = s.description;
-                                        fetch('/api/v1/people/' + String(id)).then(response => {
-                                            response.json().then( json => {
-                                                $('#service-offeredBy-row').append(append_person(json.firstName, json.lastName, json.picture, description, id));
-                                            })
-                                        }) 
-                                    }
-                                })
-                            })
-                        })
-                    })     
-                })
-            })
+    Promise.all([ 
+        fetch('/api/v1/services'), 
+        fetch('/api/v1/services/' + String(id)),
+        fetch('/api/v1/services/' + String(id) + "/people")
+    ])
+        .then( responses => Promise.all(responses.map(response => response.json())))
+        .then( data => {
+            servicesSize = data[0].length;
+            name = data[1].name;
+            infos = data[1].infos;
+            description = data[1].description;
+            picture = data[1].pictures[0];
+            presentedInEventId = data[1].presentedInEvent;
+            servicePeople = data[2];
+            return presentedInEventId;
         })
-    })
-
+        .then( presentedInEventId => {
+            if(!presentedInEventId) 
+                throw "Not presented in any event";
+            else
+                return fetch('/api/v1/events/' + String(presentedInEventId));
+        })
+        .then( (response) => {
+            return response.json();
+        })
+        .then( json => {
+            eventName = json.name;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .finally( () =>{
+            $('#service-info-row').append(
+                build_st_column(picture, id, servicesSize),
+                build_nd_column(name, description, infos, presentedInEventId, eventName)
+            );
+            $('#service-offeredBy-header-row').append(
+                build_nd_row_header(),
+            );
+            for (let s of servicePeople){
+                let personId = s.id;
+                let serviceDetail = s.serviceDetail;
+                fetch('/api/v1/people/' + String(personId)).then(response => {
+                    response.json().then( json => {
+                        $('#service-offeredBy-row').append(append_person(json.firstName, json.lastName, json.picture, serviceDetail, personId));
+                    })
+                }) 
+            }
+        })
 })
