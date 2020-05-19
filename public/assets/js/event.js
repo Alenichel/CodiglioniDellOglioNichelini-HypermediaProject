@@ -14,21 +14,22 @@ function build_st_column(imgURL, id, eventsSize) {
     )    
 }
 
-function build_nd_column(name, description, dateTime, place) {
+function build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(name),
-        $('<h5>(HARDCODED)Presenting: <a href="#"> English Lessons</a></h5>'),
+        presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}">${presentedServiceName}</a></h5>`) : $('<br>'),
         $('<p>').text(description),
         $('<h5>').text("Date:" + dateTime),
         $('<h5>').text("Place:" + place),
-        $('<h5>(HARDCODED)Contact: <a href="#"> Bruce Banner</a></h5>')
+        $(`<h5>Contact: <a href="/pages/people.html?id=${contactId}">${contactName}</a></h5>`)
     )
 }
 
 $(document).ready(function() {
     let searchParams = new URLSearchParams(window.location.search);
-    let id;
+    let id, picture, name, description, dateTime, place, contactId, contactName, presentedServiceId, presentedServiceName;
     let eventsSize = 4; //TODO obtain eventsSize from DB
+
     if (searchParams.has("id")) {
         id = parseInt(searchParams.get("id"));
     } else {
@@ -37,38 +38,49 @@ $(document).ready(function() {
 
     console.log(id)
 
-    fetch('/api/v1/events/' + String(id)).then(response => {
-        response.json().then( json => {
-            let picture = json.picture;
-            let name = json.name;
-            let description = json.description;
-            let dateTime = json.dateTime;
-            let place = json.place;
-            let contactId = json.contact;
-
-            fetch('/api/v1/people/' + String(contactId)).then(response => {
-                response.json().then( json => {
-                    let contactName = json.name;
-
-                    $('#event-row').append(
-                        build_st_column(picture, id, eventsSize),
-                        build_nd_column(name, description, dateTime, place)
-                    );
-
-                })
-            })
-
-            
+    fetch('/api/v1/events/' + String(id))
+        .then( response => {
+            return response.json();
         })
-    })
+        .then( json => {
+            picture = json.picture;
+            name = json.name;
+            description = json.description;
+            dateTime = json.dateTime;
+            place = json.place;
+            contactId = json.contact;
+            return contactId;
+        })
+        .then( contactId => {
+            return fetch('/api/v1/people/' + String(contactId));
+        })
+        .then( response => {
+            return response.json();
+        })
+        .then( json => {
+            contactName = json.firstName + " " + json.lastName;
+        })
+        .then( () => {
+            return fetch('/api/v1/events/' + String(id) + "/service"); //TODO 404 error in Chrome
+        })
+        .then( response => {
+            if(response.status === 404) 
+                throw ("No service presented")
+            else
+                return response.json();
+        })
+        .then( json => {
+            presentedServiceId = json.id;
+            presentedServiceName = json.name;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .finally( () =>{
+            $('#event-row').append(
+                build_st_column(picture, id, eventsSize),
+                build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId),
+            ); 
+        })
+        
 })
-
-/*
-
-    fetch('').then(response => {
-        response.json().then( json => {
-            
-        })
-    })
-
-*/

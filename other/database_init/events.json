@@ -20,13 +20,15 @@
         "datetime": "2020-01-14T10:00:00.000Z",
         "place": "Headquarters",
         "picture": "/assets/img/talking-together.jpg",
-        "description": "We are proud to announce the launch of our new service, that will help ..."
+        "description": "We are proud to announce the launch of our new service, that will help ...",
+        "contact": 8
     },
     {
         "name": "Caring together",
         "datetime": "2020-01-23T16:00:00.000Z",
         "place": "Headquarters",
         "picture": "/assets/img/laughing-grandma.jpg",
-        "description": "Presentation of the Carers Training service."
+        "description": "Presentation of the Carers Training service.",
+        "contact": 9
     }
 ]
