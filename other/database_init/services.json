@@ -7,16 +7,19 @@
     {
         "name": "English lessons",
         "infos": "",
-        "description": "The goal of the project is to offer informal functional English teaching to marginalized citizens."
+        "description": "The goal of the project is to offer informal functional English teaching to marginalized citizens.",
+        "presentedInEvent": 3
     },
     {
         "name": "Carers training",
         "infos": "",
-        "description": "There are more than six millions carers across the UK - and one in four Birmingham homes is in need of those carers."
+        "description": "There are more than six millions carers across the UK - and one in four Birmingham homes is in need of those carers.",
+        "presentedInEvent": 4
     },
     {
         "name": "Tech support",
         "infos": "",
-        "description": "Our volunteers offer their knowledge to assist elderly people in using electronic devices."
+        "description": "Our volunteers offer their knowledge to assist elderly people in using electronic devices.",
+        "presentedInEvent": 1
     }
   ]

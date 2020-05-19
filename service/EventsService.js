@@ -28,7 +28,7 @@ exports.eventsGET = function(month) {
  * returns Event
  **/
 exports.eventsIdGET = function(id) {
-  return database(tables.event).where("id", id).then( data => {
+  return database(tables.event).where("id", id).limit(1).then( data => {
     return data[0];
   })
 }
@@ -41,21 +41,8 @@ exports.eventsIdGET = function(id) {
  * returns Service
  **/
 exports.eventsIdServiceGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "name" : "name",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "infos" : "infos",
-  "pictures" : [ "pictures", "pictures" ]
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+  return database(tables.service).where('presentedInEvent', id).limit(1).then(data => {
+    return data[0];
   });
 }
 
