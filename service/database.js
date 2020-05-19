@@ -1,7 +1,6 @@
 "use strict";
 
 const sqlDbFactory = require("knex");
-const longStrings = require("./database_long_strings");
 
 
 let sqlDb = sqlDbFactory({
@@ -22,12 +21,12 @@ const tables = {
     servicePicture: 'service_picture'
 };
 
+
 function personTableSetup(database) {
     return database.schema.hasTable("person").then(exists => {
         if (!exists) {
             console.log("'person' table doesn't exist. Creation in progress");
-            var peopleJson = require('../database/people.json');
-
+            let peopleJson = require('../other/database_init/people.json');
             return database.schema.createTable(tables.person, table => {
                 table.increments("id").unique().notNullable();
                 table.string("firstName").notNullable();
@@ -52,8 +51,7 @@ function eventTableSetup(database) {
     return database.schema.hasTable(tables.event).then(exists => {
         if (!exists) {
             console.log("'event' table doesn't exist. Creation in progress");
-            var eventsJson = require('../database/events.json');
-
+            let eventsJson = require('../other/database_init/events.json');
             return database.schema.createTable(tables.event, table => {
                 table.increments("id").unique().notNullable();
                 table.string("name").notNullable();
@@ -75,8 +73,7 @@ function serviceTableSetup(database) {
     return database.schema.hasTable(tables.service).then(exists => {
         if (!exists) {
             console.log("'service' table doesn't exist. Creation in progress");
-            var servicesJson = require('../database/services.json');
-
+            let servicesJson = require('../other/database_init/services.json');
             return database.schema.createTable(tables.service, table => {
                 table.increments("id").unique().notNullable();
                 table.string("name").notNullable();
@@ -96,8 +93,7 @@ function newsTableSetup(database) {
     return database.schema.hasTable(tables.news).then(exists => {
         if (!exists) {
             console.log("'news' table doesn't exist. Creation in progress");
-            var newsJson = require('../database/news.json');
-
+            let newsJson = require('../other/database_init/news.json');
             return database.schema.createTable(tables.news, table => {
                 table.increments("id").unique().notNullable();
                 table.string("title").notNullable();
@@ -140,8 +136,7 @@ function servicePictureTableSetup(database) {
     return database.schema.hasTable(tables.servicePicture).then(exists => {
         if (!exists) {
             console.log("'service_picture' table doesn't exist. Creation in progress");
-            var servicesPicturesJson = require('../database/servicesPictures.json');
-
+            let servicesPicturesJson = require('../other/database_init/servicesPictures.json');
             return database.schema.createTable(tables.servicePicture, table => {
                 table.increments("id").unique().notNullable();
                 table.integer("serviceId").references("service.id")
