@@ -15,9 +15,7 @@ let tables = databaseService.tables
 exports.peopleGET = function(limit,offset) {
   return database("person").then(data => {
     return data;
-  }).catch(error => {
-    return {code: 404};
-  })
+  });
 }
 
 
@@ -64,17 +62,22 @@ exports.peopleIdGET = function(id) {
  * returns List
  **/
 exports.peopleIdServicesGET = function(id) {
-  return database(tables.serviceParticipation).where("personId", id).then(async participations => {
-    let services = [];
-    for (let sp of participations) {
-      let ss = await database(tables.service).where('id', sp.serviceId).limit(1);
-      if (ss.length > 0) {
-        let s = ss[0];
-        s.serviceDetail = sp.description;
-        services.push(s);
+  return new Promise(async (resolve, reject) => {
+    let participations = await database(tables.serviceParticipation).where("personId", id);
+    if (participations.length > 0) {
+      let services = [];
+      for (let sp of participations) {
+        let ss = await database(tables.service).where('id', sp.serviceId).limit(1);
+        if (ss.length > 0) {
+          let s = ss[0];
+          s.serviceDetail = sp.description;
+          services.push(s);
+        }
       }
+      resolve(services);
+    } else {
+      reject({code: 404});
     }
-    return services;
   });
 }
 

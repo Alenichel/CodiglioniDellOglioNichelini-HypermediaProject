@@ -15,9 +15,7 @@ let tables = databaseService.tables
 exports.newsGET = function(limit, offset) {
   return database(tables.news).then(data => {
     return data;
-  }).catch(error => {
-    return {code: 404};
-  })
+  });
 }
 
 

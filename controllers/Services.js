@@ -11,7 +11,8 @@ module.exports.servicesGET = function servicesGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
 
@@ -22,7 +23,8 @@ module.exports.servicesIdGET = function servicesIdGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };
 
@@ -33,6 +35,7 @@ module.exports.servicesIdPeopleGET = function servicesIdPeopleGET (req, res, nex
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      utils.writeJson(res, response);
+      res.writeHead(response.code);
+      res.end();
     });
 };

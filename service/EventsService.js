@@ -12,17 +12,10 @@ let tables = databaseService.tables
  * returns List
  **/
 exports.eventsGET = function(month) {
-  return new Promise(async (resolve, reject) => {
-    month = parseInt(month);
-    if (isNaN(month)) {
-      reject({code: 400});
-    } else {
-      let data = await database(tables.event);
-      data = data.filter(e => {
-        return e.datetime.getMonth() === month;
-      });
-      resolve(data);
-    }
+  database(tables.event).then(data => {
+    return data.filter(e => {
+      return e.datetime.getMonth() === month;
+    });
   });
 }
 

@@ -11,8 +11,7 @@ module.exports.peopleGET = function peopleGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      res.writeHead(response.code);
-      res.end();
+      utils.writeJson(res, response);
     });
 };
 

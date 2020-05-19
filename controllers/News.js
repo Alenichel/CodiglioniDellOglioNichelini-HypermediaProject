@@ -11,8 +11,7 @@ module.exports.newsGET = function newsGET (req, res, next) {
       utils.writeJson(res, response);
     })
     .catch(function (response) {
-      res.writeHead(response.code);
-      res.end();
+      utils.writeJson(res, response);
     });
 };
 
