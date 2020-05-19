@@ -2,6 +2,11 @@
     padding: 100px;
 }
 
+#service-offeredBy-header-row {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 img {
     max-width: 100%;
 }
