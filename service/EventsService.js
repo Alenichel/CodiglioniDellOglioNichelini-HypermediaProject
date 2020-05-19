@@ -35,38 +35,6 @@ exports.eventsIdGET = function(id) {
 
 
 /**
- * Retrieve the event's contact.
- *
- * id Integer 
- * returns Person
- **/
-exports.eventsIdPersonGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "firstName" : "firstName",
-  "lastName" : "lastName",
-  "twitter" : "twitter",
-  "joinDate" : "joinDate",
-  "phoneNumber" : "phoneNumber",
-  "facebook" : "facebook",
-  "serviceDetail" : "serviceDetail",
-  "description" : "description",
-  "id" : 0,
-  "instagram" : "instagram",
-  "picture" : "picture",
-  "email" : "email"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
-}
-
-
-/**
  * Retrieve the event's presented service.
  *
  * id Integer 

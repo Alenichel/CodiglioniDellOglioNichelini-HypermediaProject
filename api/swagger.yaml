@@ -10,7 +10,7 @@ info:
   license:
     name: "MIT"
     url: "http://opensource.org/licenses/MIT"
-host: "localhost:8080"
+host: "quality-time-bank.herokuapp.com"
 basePath: "/api/v1"
 tags:
 - name: "People"
@@ -194,29 +194,6 @@ paths:
         default:
           description: "Error"
       x-swagger-router-controller: "Services"
-  /services/{id}/event:
-    get:
-      tags:
-      - "Services"
-      summary: "Retrieve the service's event."
-      operationId: "servicesIdEventGET"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "OK"
-          schema:
-            $ref: "#/definitions/Event"
-        default:
-          description: "Error"
-      x-swagger-router-controller: "Services"
   /events:
     get:
       tags:
@@ -260,29 +237,6 @@ paths:
           description: "OK"
           schema:
             $ref: "#/definitions/Event"
-        default:
-          description: "Error"
-      x-swagger-router-controller: "Events"
-  /events/{id}/person:
-    get:
-      tags:
-      - "Events"
-      summary: "Retrieve the event's contact."
-      operationId: "eventsIdPersonGET"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "OK"
-          schema:
-            $ref: "#/definitions/Person"
         default:
           description: "Error"
       x-swagger-router-controller: "Events"
@@ -461,6 +415,8 @@ definitions:
         type: "string"
       serviceDetail:
         type: "string"
+      presentedInEvent:
+        type: "integer"
     example:
       name: "name"
       serviceDetail: "serviceDetail"
@@ -492,6 +448,8 @@ definitions:
         type: "string"
       description:
         type: "string"
+      contact:
+        type: "integer"
     example:
       datetime: "datetime"
       name: "name"

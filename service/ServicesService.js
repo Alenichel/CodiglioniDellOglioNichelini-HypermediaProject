@@ -35,32 +35,6 @@ exports.servicesGET = function(limit, offset) {
 
 
 /**
- * Retrieve the service's event.
- *
- * id Integer 
- * returns Event
- **/
-exports.servicesIdEventGET = function(id) {   // TODO: Remove
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "datetime" : "datetime",
-  "name" : "name",
-  "description" : "description",
-  "id" : 0,
-  "place" : "place",
-  "picture" : "picture"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
-}
-
-
-/**
  * Retrieve a specific service
  *
  * id Integer 

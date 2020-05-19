@@ -15,17 +15,6 @@ module.exports.servicesGET = function servicesGET (req, res, next) {
     });
 };
 
-module.exports.servicesIdEventGET = function servicesIdEventGET (req, res, next) {
-  var id = req.swagger.params['id'].value;
-  Services.servicesIdEventGET(id)
-    .then(function (response) {
-      utils.writeJson(res, response);
-    })
-    .catch(function (response) {
-      utils.writeJson(res, response);
-    });
-};
-
 module.exports.servicesIdGET = function servicesIdGET (req, res, next) {
   var id = req.swagger.params['id'].value;
   Services.servicesIdGET(id)
