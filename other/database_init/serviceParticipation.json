@@ -1,0 +1,32 @@
+[
+  {
+    "serviceId": 1,
+    "personId": 1,
+    "description": "Math, computer science, physics"
+  },
+  {
+    "serviceId": 1,
+    "personId": 2,
+    "description": "Math, physics, chemistry"
+  },
+  {
+    "serviceId": 1,
+    "personId": 3,
+    "description": "History and Maths"
+  },
+  {
+    "serviceId": 2,
+    "personId": 3,
+    "description": "Level C1"
+  },
+  {
+    "serviceId": 1,
+    "personId": 4,
+    "description": "Entrepreneurship"
+  },
+  {
+    "serviceId": 4,
+    "personId": 4,
+    "description": "High-tech devices"
+  }
+]

@@ -39,7 +39,7 @@ function personTableSetup(database) {
                 table.string("facebook").unique();
                 table.string("instagram").unique();
                 table.string("twitter").unique();
-            }).then(() =>{ return database(tables.person).insert(peopleJson);})
+            }).then(() => { return database(tables.person).insert(peopleJson); })
         } else {
             console.log("'person' table already exists");
         }
@@ -61,7 +61,7 @@ function eventTableSetup(database) {
                 table.text("description").notNullable();
                 table.integer("contact").references("person.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
-            }).then(() =>{ return database(tables.event).insert(eventsJson); })
+            }).then(() => { return database(tables.event).insert(eventsJson); })
         } else {
             console.log("'event' table already exists");
         }
@@ -117,6 +117,7 @@ function serviceParticipationTableSetup(database) {
     return database.schema.hasTable(tables.serviceParticipation).then(exists => {
         if (!exists) {
             console.log("'service_participation' table doesn't exist. Creation in progress");
+            let serviceParticipationJson = require('../other/database_init/serviceParticipation.json');
             return database.schema.createTable(tables.serviceParticipation, table => {
                 table.integer("serviceId").references("service.id")
                     .onUpdate("CASCADE").onDelete("CASCADE");
@@ -124,7 +125,7 @@ function serviceParticipationTableSetup(database) {
                     .onUpdate("CASCADE").onDelete("CASCADE");
                 table.text("description");
                 table.primary(["serviceId", "personId"]);
-            });
+            }).then(() => { return database(tables.serviceParticipation).insert(serviceParticipationJson); });
         } else {
             console.log("'service_participation' table already exists");
         }
