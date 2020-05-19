@@ -4,11 +4,9 @@
 /**
  * Retrieve all news
  *
- * limit Integer  (optional)
- * offset Integer  (optional)
  * returns List
  **/
-exports.newsGET = function(limit,offset) {
+exports.newsGET = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = [ {

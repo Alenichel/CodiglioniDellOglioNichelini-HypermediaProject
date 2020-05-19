@@ -4,11 +4,9 @@
 /**
  * Retrieve all people.
  *
- * limit Integer  (optional)
- * offset Integer  (optional)
  * returns List
  **/
-exports.peopleGET = function(limit,offset) {
+exports.peopleGET = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = [ {
