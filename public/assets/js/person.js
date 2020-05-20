@@ -27,7 +27,7 @@ function build_services(services) {
         services_row.append(
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
-                    $('<a href="#" target="_blank" class="btn-social btn-instagram" style="background-color: lightgray"><i class="fas fa-chalkboard-teacher"></i></a>'),
+                    $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social btn-instagram" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
                     $(`<p>${s.name}</p>`),
                     $(`<p>${s.serviceDetail}</p>`)
                 )

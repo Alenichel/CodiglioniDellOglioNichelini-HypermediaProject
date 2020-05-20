@@ -29,7 +29,7 @@ exports.peopleIdEventGET = function(id) {
     if (data.length > 0) {
       resolve(data[0]);
     } else {
-      reject({code: 404});
+      resolve({})
     }
   });
 }
@@ -74,7 +74,7 @@ exports.peopleIdServicesGET = function(id) {
       }
       resolve(services);
     } else {
-      reject({code: 404});
+      resolve({});
     }
   });
 }

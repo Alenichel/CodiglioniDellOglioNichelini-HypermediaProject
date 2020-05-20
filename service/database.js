@@ -79,6 +79,7 @@ function serviceTableSetup(database) {
                 table.string("name").notNullable();
                 table.text("infos").notNullable();
                 table.text("description").notNullable();
+                table.text("icon").notNullable();
                 table.integer("presentedInEvent").references("event.id")
                     .onUpdate("CASCADE").onDelete("SET NULL");
             }).then(() => { return database(tables.service).insert(servicesJson); })
