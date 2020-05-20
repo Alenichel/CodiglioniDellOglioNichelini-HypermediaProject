@@ -67,8 +67,12 @@ $(document).ready(function() {
                     fetch(`/api/v1/people/${id}/services`).then(response => {
                         response.json().then( json => {
                             var services = []
-                            for (let s of json) {
-                                services.push(s)
+                            try {
+                                for (let s of json) {
+                                    services.push(s)
+                                }
+                            } catch (e) {
+                                services = []
                             }
                             fetch('/api/v1/people/' + String(id)).then(response => {
                                 response.json().then( json => {
