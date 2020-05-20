@@ -3,7 +3,7 @@
         "firstName": "Alessandro",
         "lastName": "Nichelini",
         "picture": "/assets/img/alenichel.png",
-        "description": "Geek, CSE student, Steve Jobs wanna be, temporarily math teacher. Unforgivable romantic. I can help with computers and with private lessons in scientific fields.",
+        "description": "Geek, CSE student, Steve Jobs wanna be, temporarily math teacher. Unforgivable romantic.\n I can help with computers and with private lessons in scientific fields.",
         "joinDate": "2020-05-11T22:00:00.000Z",
         "email": "ale.nichelg@gmail.com",
         "phoneNumber": "3992345787",
@@ -41,63 +41,63 @@
         "firstName": "Bruce",
         "lastName": "Banner",
         "picture": "/assets/img/banner.png",
-        "description": "The strongest Avenger",
+        "description": "Robert Bruce Banner is the son of Dr. Brian Banner, an atomic physicist, and his wife Rebecca. Although Rebecca deeply loved Bruce, who returned her affection, Brian hated their child. After graduating from Science High School, Bruce studied nuclear physics in Navapo, New Mexico, at Desert State University as the star student of Professor Herbert Josiah Weller.[45] He also studied for a time at Harvard University.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Steve",
         "lastName": "Rogers",
         "picture": "/assets/img/rogers.png",
-        "description": "The captain",
+        "description": "During the dark days of the early 1940's, a covert U.S. Military experiment turned Steve Rogers into America's first Super-Soldier, Captain America. Throughout the war, Cap and his partner, Bucky fought alongside infantry and with a group of heroes known as the Invaders. In the closing months of World War II, Captain America and Bucky were both presumed dead in an explosion. Decades later, Captain America was found trapped in ice and revived in the modern world. ",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Jane",
         "lastName": "Foster",
         "picture": "/assets/img/foster.png",
-        "description": "The scientist",
+        "description": "Risultati di ricerca\nSnippet in primo piano dal Web\nJane Foster was a student at Culver University, where her father and Erik Selvig worked together. She later graduated and became an astronomer, dedicating her life to her research, where she built most of her equipment herself.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Carol",
         "lastName": "Danvers",
         "picture": "/assets/img/danvers.png",
-        "description": "From another universe",
+        "description": "CAPTAIN MARVEL. Former Air Force pilot and intelligence agent Carol Danvers pursued her dream of space exploration as a NASA employee, but her life forever changed when she was accidentally transformed into a human-Kree hybrid with extraordinary powers.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Margaret",
         "lastName": "Carter",
         "picture": "/assets/img/carter.png",
-        "description": "Secretary",
+        "description": "Margaret Elizabeth \"Peggy\" Carter was one of the most prominent agents of the Strategic Scientific Reserve during and after World War II and one of the founders of S.H.I.E.L.D.. Originally a code-breaker working at Bletchley Park, she joined the Special Operations Executive following her brother's death.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Pepper",
         "lastName": "Pots",
         "picture": "/assets/img/pots.png",
-        "description": "Top manager",
+        "description": "Virginia \"Pepper\" Potts is the CEO of Stark Industries. Originally working as Tony Stark's personal assistant, she would take care of his schedule and perform any task he wished. During this time, Potts became good friends with Stark and soon, they had begun developing romantic feelings for each other. However, neither was able to act on these feelings, as they each feared that the other would not accept them. ",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Peter",
         "lastName": "Parker",
         "picture": "/assets/img/parker.png",
-        "description": "Friendly neighbour's guy",
+        "description": "Peter Parker was an orphaned teenage boy who lived in Queens, New York with his Aunt May and Uncle Ben. He was a shy boy, but highly intelligent and excelled in science. He was often teased by other more popular kids like longtime nemesis Flash Thompson, but his life was soon to change on a visit to the science museum.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Maria",
         "lastName": "Hill",
         "picture": "/assets/img/hill.png",
-        "description": "The assistant",
+        "description": "Maria Hill is the former Deputy Director of S.H.I.E.L.D., and also held the title of \"Commander\". She enjoyed a well-deserved reputation as tough-minded and by the book. Her clearheaded pragmatism was a valued source of reason during the critical discourse surrounding the Avengers Initiative. After Nick Fury faked his death, Hill worked with him and was a part of the assault team that took down the Helicarriers from Project Insight. ",
         "joinDate": "2020-05-11T22:00:00.000Z"
     },
     {
         "firstName": "Clint",
         "lastName": "Barton",
         "picture": "/assets/img/barton.png",
-        "description": "The husband",
+        "description": "Clinton Francis \"Clint\" Barton, also known as Hawkeye, is a skilled marksman, a former special agent of S.H.I.E.L.D. and one of the founding members of the Avengers.",
         "joinDate": "2020-05-11T22:00:00.000Z"
     }
 ]
