@@ -19,9 +19,9 @@ function build_nd_column(name, description, dateTime, place, contactName, contac
         $('<h2>').text(name),
         presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}">${presentedServiceName}</a></h5>`) : $('<br>'),
         $('<p>').text(description),
-        $('<h5>').text("Date:" + dateTime),
-        $('<h5>').text("Place:" + place),
-        $(`<h5>Contact: <a href="/pages/people.html?id=${contactId}">${contactName}</a></h5>`)
+        $('<h5>').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
+        $('<h5>').text("Place: " + place),
+        $(`<h5>Contact: <a href="/pages/person.html?id=${contactId}">${contactName}</a></h5>`)
     )
 }
 
@@ -33,6 +33,7 @@ $(document).ready(function() {
         );
     });
     load_footer();
+
     let searchParams = new URLSearchParams(window.location.search);
     let id, picture, name, description, dateTime, place, contactId, contactName, presentedServiceId, presentedServiceName;
     let eventsSize = 4; //TODO obtain eventsSize from DB
@@ -53,7 +54,7 @@ $(document).ready(function() {
             picture = json.picture;
             name = json.name;
             description = json.description;
-            dateTime = json.dateTime;
+            dateTime = json.datetime;
             place = json.place;
             contactId = json.contact;
             return contactId;
