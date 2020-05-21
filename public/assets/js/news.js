@@ -16,6 +16,7 @@ $(document).ready(function() {
     fetch(`/api/v1/news/${id}`).then(response => {
         return response.json();
     }).then(news => {
+        $('title').text(`QualityTimeBank | ${news.title}`);
         $('#news-title').text(news.title);
         $('#news-body').append(
             $(`<img src="${news.media}" alt="" class="text-wrap" width="400">`),

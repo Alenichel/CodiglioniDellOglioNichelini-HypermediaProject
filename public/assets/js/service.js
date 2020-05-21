@@ -99,6 +99,7 @@ $(document).ready(function() {
             pictures = data[1].pictures;
             presentedInEventId = data[1].presentedInEvent;
             servicePeople = data[2];
+            $('title').text(`QualityTimeBank | ${name}`);
             return presentedInEventId;
         })
         .then( presentedInEventId => {

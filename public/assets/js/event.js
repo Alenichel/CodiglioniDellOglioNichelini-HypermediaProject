@@ -87,7 +87,7 @@ $(document).ready(function() {
             $('#event-row').append(
                 build_st_column(picture, id, eventsSize),
                 build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId),
-            ); 
+            );
+            $('title').text(`QualityTimeBank | ${name}`)
         })
-        
 })

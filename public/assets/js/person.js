@@ -83,7 +83,7 @@ $(document).ready(function() {
                             }
                             fetch('/api/v1/people/' + String(id)).then(response => {
                                 response.json().then( json => {
-                                    let fs = json.firstName
+                                    let fn = json.firstName
                                     let ln = json.lastName
                                     let description = json.description
                                     let picture = json.picture
@@ -92,9 +92,10 @@ $(document).ready(function() {
                                     let facebook = json.facebook
                                     let instagram = json.instagram
                                     let twitter = json.twitter
+                                    $('title').text(`QualityTimeBank | ${fn} ${ln}`)
                                     $('#person-row').append(
                                         build_st_column(picture, id, peopleSize, email, phone_number, facebook, instagram, twitter),
-                                        build_nd_column(fs, ln, description, event_id, event_name, services)
+                                        build_nd_column(fn, ln, description, event_id, event_name, services)
                                     );
                                 })
                             })
