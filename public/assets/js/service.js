@@ -1,8 +1,35 @@
 "use strict";
 
-function build_st_column(imgURL, id, servicesSize) {
+function build_carousel(pictures) {
+    let carousel = $('<div id="service-carousel" class="carousel slide img-profile rounded" data-ride="carousel">');
+    let carouselInner = $('<div class="carousel-inner">');
+    for (let i = 0; i < pictures.length; i++) {
+        let p = pictures[i];
+        carouselInner.append(
+            $(`<div class="carousel-item${i === 0 ? ' active' : ''}">`).append(
+                $(`<img class="d-block w-100" src="${p}" alt="">`)
+            )
+        );
+    }
+    carousel.append(carouselInner);
+    if (pictures.length > 1) {
+        carousel.append(
+            $('<a class="carousel-control-prev" href="#service-carousel" role="button" data-slide="prev">').append(
+                $('<span class="carousel-control-prev-icon" aria-hidden="true">'),
+                $('<span class="sr-only">').text('Previous')
+            ),
+            $('<a class="carousel-control-next" href="#service-carousel" role="button" data-slide="next">').append(
+                $('<span class="carousel-control-next-icon" aria-hidden="true">'),
+                $('<span class="sr-only">').text('Next')
+            )
+        );
+    }
+    return carousel;
+}
+
+function build_st_column(pictures, id, servicesSize) {
     return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
-        $('<img class="img-profile rounded" alt="Missing" src="' + imgURL + '">'),
+        build_carousel(pictures),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
                 id !== 1 ? $(`<a href="/pages/service.html?id=${id-1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
@@ -42,8 +69,8 @@ function append_person(firstName, lastName, picture, serviceDetail, id){
 
 $(document).ready(function() {
     let searchParams = new URLSearchParams(window.location.search);
-    let id, servicesSize, name, infos, description, picture, presentedInEventId, eventName;
-    var servicePeople = [];
+    let id, servicesSize, name, infos, description, pictures, presentedInEventId, eventName;
+    let servicePeople = [];
 
     if (searchParams.has("id")) {
         id = parseInt(searchParams.get("id"));
@@ -62,7 +89,7 @@ $(document).ready(function() {
             name = data[1].name;
             infos = data[1].infos;
             description = data[1].description;
-            picture = data[1].pictures[0];
+            pictures = data[1].pictures;
             presentedInEventId = data[1].presentedInEvent;
             servicePeople = data[2];
             return presentedInEventId;
@@ -84,7 +111,7 @@ $(document).ready(function() {
         })
         .finally( () =>{
             $('#service-info-row').append(
-                build_st_column(picture, id, servicesSize),
+                build_st_column(pictures, id, servicesSize),
                 build_nd_column(name, description, infos, presentedInEventId, eventName)
             );
             $('#service-offeredBy-header-row').append(
