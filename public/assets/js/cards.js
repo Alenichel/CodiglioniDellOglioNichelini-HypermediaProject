@@ -28,7 +28,7 @@ function generate_card(id, title, body, img, cardType, date = null) {
                 ),
                 $('<div class="col-sm-6">').append(
                     $('<h4 class="card-title mt-2 mt-md-0">').text(title),
-                    date ? $('<small class="text-muted">').text(date) : null,
+                    date ? $('<small class="text-muted">').text(getDateTimeFormatter().format(new Date(date))) : null,
                     $('<p class="card-text">').text(body),
                 )
             ),

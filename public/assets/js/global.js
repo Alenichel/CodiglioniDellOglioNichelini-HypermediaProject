@@ -26,3 +26,20 @@ function load_footer(callback = null) {
         }
     });
 }
+
+function getDateTimeFormatter() {
+    let formatterOptions = {
+        year: 'numeric', month: 'short', day: 'numeric',
+        hour: 'numeric', minute: 'numeric',
+        hour12: false,
+    };
+    return new Intl.DateTimeFormat('default', formatterOptions);
+}
+
+
+function getDateFormatter() {
+    let formatterOptions = {
+        year: 'numeric', month: 'short', day: 'numeric',
+    };
+    return new Intl.DateTimeFormat('default', formatterOptions);
+}

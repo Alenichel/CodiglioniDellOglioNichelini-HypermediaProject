@@ -7,7 +7,7 @@ function build_person_row(name, img, join_date, i){
             $(`<img class="img-profile rounded-circle" alt="Missing img" src="${img}">`)
         ),
         $('<div class="col col-md-auto align-self-center">').append(
-            $(`<p>${name}<br>Joined ${join_date}</p>`)
+            $(`<p>${name}<br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`)
         )
     )
     return person_row;
@@ -29,7 +29,7 @@ $(document).ready(function() {
                     return;
                 }
                 $('#last_joined').append(
-                    build_person_row(fs, img,join_date, i)
+                    build_person_row(fs, img, join_date, i)
                 );
                 i++;
             }
