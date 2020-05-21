@@ -47,6 +47,13 @@ function build_nd_column(first_name, last_name, description, event_id, event_nam
 }
 
 $(document).ready(function() {
+    load_navbar(() => {
+        $('#orientation-info').append(
+            $('<span>').text("> "),
+            $('<a href="/pages/people.html">').text('People')
+        );
+    });
+    load_footer();
     let searchParams = new URLSearchParams(window.location.search);
     let id;
     let peopleSize;

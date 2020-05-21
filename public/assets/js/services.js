@@ -3,6 +3,8 @@
 const eventsPerPage = 4;
 
 $(document).ready(function() {
+    load_navbar();
+    load_footer();
     let searchParams = new URLSearchParams(window.location.search);
     let page;
     if (searchParams.has("page")) {

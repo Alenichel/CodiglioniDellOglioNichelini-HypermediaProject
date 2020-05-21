@@ -26,6 +26,13 @@ function build_nd_column(name, description, dateTime, place, contactName, contac
 }
 
 $(document).ready(function() {
+    load_navbar(() => {
+        $('#orientation-info').append(
+            $('<span>').text('> '),
+            $('<a href="/pages/events.html">').text('Events')
+        );
+    });
+    load_footer();
     let searchParams = new URLSearchParams(window.location.search);
     let id, picture, name, description, dateTime, place, contactId, contactName, presentedServiceId, presentedServiceName;
     let eventsSize = 4; //TODO obtain eventsSize from DB

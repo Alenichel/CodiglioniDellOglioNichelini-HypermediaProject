@@ -17,6 +17,8 @@ function append_person(img, name, surname, id){
 }
 
 $(document).ready(function() {
+    load_navbar();
+    load_footer();
     fetch('/api/v1/people').then(response => {
         response.json().then( json => {
             for (let s of json){

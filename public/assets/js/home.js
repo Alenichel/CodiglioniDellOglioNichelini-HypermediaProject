@@ -14,14 +14,17 @@ function build_person_row(name, img, join_date, i){
 }
 
 $(document).ready(function() {
-
+    load_navbar(() => {
+        $('#orientation-info').text('hello, world');
+    });
+    load_footer();
     fetch('/api/v1/people').then(response => {
         response.json().then( json => {
             let i = 0;
             for (let s of json){
                 let fs = s.firstName
                 let img = s.picture
-                let join_date = s.joinDate.
+                let join_date = s.joinDate;
                 if (i===3) {
                     return;
                 }

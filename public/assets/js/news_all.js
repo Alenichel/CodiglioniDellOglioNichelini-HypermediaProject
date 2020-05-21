@@ -1,6 +1,8 @@
 "use strict";
 
 $(document).ready(function() {
+    load_navbar();
+    load_footer();
     fetch('/api/v1/news').then(response => {
         return response.json();
     }).then(json => {

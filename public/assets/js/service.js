@@ -68,6 +68,13 @@ function append_person(firstName, lastName, picture, serviceDetail, id){
 }
 
 $(document).ready(function() {
+    load_navbar(() => {
+        $('#orientation-info').append(
+            $('<span>').text('> '),
+            $('<a href="/pages/services.html">').text('Services')
+        );
+    });
+    load_footer();
     let searchParams = new URLSearchParams(window.location.search);
     let id, servicesSize, name, infos, description, pictures, presentedInEventId, eventName;
     let servicePeople = [];

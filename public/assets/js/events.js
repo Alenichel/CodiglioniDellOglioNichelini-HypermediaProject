@@ -1,6 +1,7 @@
 "use strict";
 
 function getEvents(month) {
+    $('#events-title').text(`Events | ${months[month]}`);
     fetch(`/api/v1/events?month=${month}`).then(response => {
         response.json().then(json => {
             let eventsDiv = $('#event-cards');
@@ -24,7 +25,10 @@ const months = [
 ]
 
 $(document).ready(function() {
+    load_navbar();
+    load_footer();
     let month = new Date().getMonth();
+    $('#events-title').text(`Events | ${months[month]}`);
     let slider = $('.slider');
     for (let i = 0; i < 12; i++) {
         let m = (i + month) % 12;

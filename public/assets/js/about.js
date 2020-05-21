@@ -21,3 +21,8 @@ window.addEventListener('load', function() {
 }, false);
 
 document.getElementById("modalCloseButton").onclick = function() { window.location.href = '/pages/about.html' };
+
+$(document).ready(() => {
+  load_navbar();
+  load_footer();
+})

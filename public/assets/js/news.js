@@ -1,6 +1,13 @@
 "use strict";
 
 $(document).ready(function() {
+    load_navbar(() => {
+        $('#orientation-info').append(
+            $('<span>').text('> '),
+            $('<a href="/pages/news_all.html">').text('News')
+        );
+    });
+    load_footer();
     let searchParams = new URLSearchParams(window.location.search);
     let id;
     if (searchParams.has("id")) {
