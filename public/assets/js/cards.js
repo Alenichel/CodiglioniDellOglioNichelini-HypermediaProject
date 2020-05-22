@@ -36,3 +36,21 @@ function generate_card(id, title, body, img, cardType, date = null) {
         )
     );
 }
+
+
+function generateSearchResultCard(item) {
+    return $('<div class="col-12 col-md-6 mb-4">').append(
+        $('<div class="card">').append(
+            $('<div class="card-body row">').append(
+                $('<div class="col-sm-6">').append(
+                    $(`<img class="card-img" src="${item.media}" alt="">`)
+                ),
+                $('<div class="col-sm-6">').append(
+                    $('<h4 class="card-title mt-2 mt-md-0">').text(item.name),
+                    $('<p class="text-muted" style="font-variant: small-caps">').text(item.type)
+                )
+            ),
+            $(`<a class="stretched-link" href="/pages/${item.type}.html?id=${item.id}">`)
+        )
+    )
+}

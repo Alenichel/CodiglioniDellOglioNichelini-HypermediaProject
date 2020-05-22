@@ -54,9 +54,8 @@ exports.searchGET = function(query) {
       };
     })
     let data = people.concat(events).concat(services).concat(news);
-    console.log(query);
     data = data.filter(x => {
-      return x.name.includes(query);
+      return x.name.toLowerCase().includes(query.toLowerCase());
     })
     resolve(data);
   });
