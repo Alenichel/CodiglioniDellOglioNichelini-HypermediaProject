@@ -1,8 +1,7 @@
 "use strict";
 
-function build_person_row(id, name, img, join_date, i){
-    let person_row = $('<div class="row">')
-    person_row.append(
+function build_person_row(id, name, img, join_date, i) {
+    return $('<div class="row position-relative">').append(
         $('<div class="col col-md-auto align-self-center">').append(
             i % 2 === 0 ?
                 $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`) :
@@ -15,7 +14,6 @@ function build_person_row(id, name, img, join_date, i){
         ),
         $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
     )
-    return person_row;
 }
 
 
