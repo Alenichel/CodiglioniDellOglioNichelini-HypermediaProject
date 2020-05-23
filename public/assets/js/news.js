@@ -4,7 +4,7 @@ $(document).ready(function() {
     load_navbar(() => {
         $('#orientation-info').append(
             $('<span>').text('> '),
-            $('<a href="/pages/news_all.html">').text('News')
+            $('<a href="/pages/news_all.html" class="text-white">').text('News')
         );
     });
     load_footer();

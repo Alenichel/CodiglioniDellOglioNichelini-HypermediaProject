@@ -29,7 +29,7 @@ $(document).ready(function() {
     load_navbar(() => {
         $('#orientation-info').append(
             $('<span>').text('> '),
-            $('<a href="/pages/events.html">').text('Events')
+            $('<a href="/pages/events.html" class="text-white">').text('Events')
         );
     });
     load_footer();

@@ -71,7 +71,7 @@ $(document).ready(function() {
     load_navbar(() => {
         $('#orientation-info').append(
             $('<span>').text('> '),
-            $('<a href="/pages/services.html">').text('Services')
+            $('<a href="/pages/services.html" class="text-white">').text('Services')
         );
     });
     load_footer();

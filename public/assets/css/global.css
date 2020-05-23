@@ -4,7 +4,7 @@ html {
 }
 
 .light-blue-background {
-    background-color: #81d4fa;
+    background-color: #162447;
 }
 
 #orientation-info {
@@ -29,11 +29,23 @@ main > .container {
 }
 
 .img-profile {
-    border: 0.5rem solid rgba(150, 150, 150, 0.3);
+    border: 0.5rem solid #1f406840;
 }
 
 .text-wrap {
     float: left;
     margin: 10px;
+}
+
+.btn-blue {
+    background-color: #162447;
+    outline: none;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #1f4068;
+    outline: none;
+    color: white;
 }
 

@@ -50,7 +50,7 @@ $(document).ready(function() {
     load_navbar(() => {
         $('#orientation-info').append(
             $('<span>').text("> "),
-            $('<a href="/pages/people.html">').text('People')
+            $('<a href="/pages/people.html" class="text-white">').text('People')
         );
     });
     load_footer();
