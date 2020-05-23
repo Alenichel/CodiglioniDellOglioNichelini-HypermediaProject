@@ -7,6 +7,10 @@ html {
     background-color: #162447;
 }
 
+.blue-foreground {
+    color: #162447;
+}
+
 #orientation-info {
     width: 100%;
 }
