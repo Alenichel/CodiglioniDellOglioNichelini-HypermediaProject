@@ -4,10 +4,14 @@ function build_person_row(name, img, join_date, i){
     let person_row = $('<div class="row">')
     person_row.append(
         $('<div class="col col-md-auto align-self-center">').append(
-            $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`)
+            i % 2 === 0 ?
+                $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`) :
+                $(`<p class="text-right">${name}<br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`)
         ),
         $('<div class="col col-md-auto align-self-center">').append(
-            $(`<p>${name}<br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`)
+            i % 2 === 0 ?
+                $(`<p>${name}<br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`) :
+                $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`)
         )
     )
     return person_row;
