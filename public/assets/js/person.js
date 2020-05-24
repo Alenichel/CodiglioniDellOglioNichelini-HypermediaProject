@@ -48,10 +48,12 @@ function build_nd_column(first_name, last_name, description, event_id, event_nam
 
 $(document).ready(function() {
     load_navbar(() => {
-        $('#orientation-info').append(
+        let orientationInfo = $('#orientation-info');
+        orientationInfo.append(
             $('<span>').text("> "),
             $('<a href="/pages/people.html" class="text-white">').text('People')
         );
+        orientationInfo.addClass('pb-2');
     });
     load_footer();
     let searchParams = new URLSearchParams(window.location.search);

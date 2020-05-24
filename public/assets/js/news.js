@@ -2,10 +2,12 @@
 
 $(document).ready(function() {
     load_navbar(() => {
-        $('#orientation-info').append(
+        let orientationInfo = $('#orientation-info');
+        orientationInfo.append(
             $('<span>').text('> '),
             $('<a href="/pages/news_all.html" class="text-white">').text('News')
         );
+        orientationInfo.addClass('pb-2');
     });
     load_footer();
     let searchParams = new URLSearchParams(window.location.search);

@@ -28,7 +28,7 @@ main > .container {
 }
 
 .btn-default:hover {
-    background-color: #71c4ea;
+    background-color: #1f4068;
     transition: background-color 0.3s;
 }
 

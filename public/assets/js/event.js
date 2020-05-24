@@ -27,10 +27,12 @@ function build_nd_column(name, description, dateTime, place, contactName, contac
 
 $(document).ready(function() {
     load_navbar(() => {
-        $('#orientation-info').append(
+        let orientationInfo = $('#orientation-info');
+        orientationInfo.append(
             $('<span>').text('> '),
             $('<a href="/pages/events.html" class="text-white">').text('Events')
         );
+        orientationInfo.addClass('pb-2');
     });
     load_footer();
 

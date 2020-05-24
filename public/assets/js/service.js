@@ -69,10 +69,12 @@ function append_person(firstName, lastName, picture, serviceDetail, id){
 
 $(document).ready(function() {
     load_navbar(() => {
-        $('#orientation-info').append(
+        let orientationInfo = $('#orientation-info');
+        orientationInfo.append(
             $('<span>').text('> '),
             $('<a href="/pages/services.html" class="text-white">').text('Services')
         );
+        orientationInfo.addClass('pb-2');
     });
     load_footer();
     let searchParams = new URLSearchParams(window.location.search);
