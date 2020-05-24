@@ -53,3 +53,11 @@ main > .container {
     color: white;
 }
 
+.blue-link {
+    color: #162447;
+}
+
+.blue-link:hover {
+    color: #1f4068;
+}
+

@@ -5,10 +5,10 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
             )
         ),
         $('<div class="mt-3">').append(
@@ -27,7 +27,7 @@ function build_services(services) {
         services_row.append(
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
-                    $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social btn-instagram" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
+                    $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
                     $(`<p>${s.name}</p>`),
                     $(`<p>${s.serviceDetail}</p>`)
                 )
@@ -40,7 +40,7 @@ function build_services(services) {
 function build_nd_column(first_name, last_name, description, event_id, event_name, services) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(first_name + " " + last_name),
-        event_id ? $(`<p>Contact for: <a href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
+        event_id ? $(`<p>Contact for: <a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
         $('<p>').text(description),
         build_services(services)
     )

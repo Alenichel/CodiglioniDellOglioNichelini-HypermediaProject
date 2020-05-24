@@ -21,7 +21,7 @@ $(document).ready(function() {
             return response.json()
         }).then(json => {
             for (let s of json) {
-                let card = generate_card(s.id, s.name, s.description, s.pictures[0], CardType.service);
+                let card = generateCard(s.id, s.name, s.description, s.pictures[0], CardType.service);
                 $('#service-cards').append(card);
             }
         });

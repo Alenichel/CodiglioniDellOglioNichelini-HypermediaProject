@@ -9,7 +9,7 @@ function getEvents(month) {
             eventsDiv.empty();
             if (json.length > 0) {
                 for (let e of json) {
-                    let card = generate_card(e.id, e.name, e.description, e.picture, CardType.event, e.datetime);
+                    let card = generateCard(e.id, e.name, e.description, e.picture, CardType.event, e.datetime);
                     eventsDiv.append(card);
                 }
             } else {
@@ -36,7 +36,7 @@ $(document).ready(function() {
     let slider = $('.slider');
     for (let i = 0; i < 12; i++) {
         let m = (i + month) % 12;
-        let e = $('<button class="btn btn-link text-center" onclick="getEvents(' + m + ')">' + months[m] + '</button>')
+        let e = $('<button class="btn btn-link blue-link text-center" onclick="getEvents(' + m + ')">' + months[m] + '</button>')
         slider.append(e);
     }
     slider.slick({

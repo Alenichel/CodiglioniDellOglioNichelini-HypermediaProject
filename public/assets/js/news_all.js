@@ -8,7 +8,7 @@ $(document).ready(function() {
     }).then(json => {
         for (let n of json) {
             n.body = n.body.substring(0, 100) + "...";
-            let card = generate_card(n.id, n.title, n.body, n.media, CardType.news);
+            let card = generateCard(n.id, n.title, n.body, n.media, CardType.news);
             $('#news-cards').append(card);
         }
     });

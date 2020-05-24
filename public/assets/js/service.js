@@ -32,10 +32,10 @@ function build_st_column(pictures, id, servicesSize) {
         build_carousel(pictures),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/service.html?id=${id-1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/service.html?id=${id-1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== servicesSize ? $(`<a href="/pages/service.html?id=${id+1}" type="button" class="btn btn-primary btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== servicesSize ? $(`<a href="/pages/service.html?id=${id+1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
             )
         )
     )
@@ -44,7 +44,7 @@ function build_st_column(pictures, id, servicesSize) {
 function build_nd_column(name, description, infos, presentedInEventId, eventName) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(name),
-        eventName ? $(`<h5>Presented in: <a href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></h5>`) : $('<br>'),
+        eventName ? $(`<h5>Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></h5>`) : $('<br>'),
         $('<p>').text(description),
         $('<br>'),
         $('<p>').text(infos)

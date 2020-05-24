@@ -7,7 +7,7 @@ const CardType = {
     person: 4,
 }
 
-function generate_card(id, title, body, img, cardType, date = null) {
+function generateCard(id, title, body, img, cardType, date = null) {
     let link;
     if (cardType === CardType.service) {
         link = `/pages/service.html?id=${id}`;
@@ -29,7 +29,7 @@ function generate_card(id, title, body, img, cardType, date = null) {
                 $('<div class="col-sm-6">').append(
                     $('<h4 class="card-title mt-2 mt-md-0">').text(title),
                     date ? $('<small class="text-muted">').text(getDateTimeFormatter().format(new Date(date))) : null,
-                    $('<p class="card-text">').text(body),
+                    $('<p class="card-text mt-1">').text(body),
                 )
             ),
             $(`<a class="stretched-link" href="${link}"></a>`)

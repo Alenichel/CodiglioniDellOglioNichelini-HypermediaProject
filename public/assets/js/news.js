@@ -19,7 +19,7 @@ $(document).ready(function() {
         $('title').text(`QualityTimeBank | ${news.title}`);
         $('#news-title').text(news.title);
         $('#news-body').append(
-            $(`<img src="${news.media}" alt="" class="text-wrap" width="400">`),
+            $(`<img src="${news.media}" alt="" class="text-wrap mr-4" width="300">`),
             $(`<p class="text-justify">`).text(news.body)
         );
         if (news.personId != null || news.serviceId != null || news.eventId != null) {
@@ -46,7 +46,7 @@ function addRelatedPerson(id, div) {
     fetch(`/api/v1/people/${id}`).then(response => {
         return response.json();
     }).then(person => {
-        let card = generate_card(person.id, person.name, null, person.picture, CardType.person);
+        let card = generateCard(person.id, person.name, null, person.picture, CardType.person);
         div.append(card);
     });
 }
@@ -55,7 +55,7 @@ function addRelatedService(id, div) {
     fetch(`/api/v1/services/${id}`).then(response => {
         return response.json();
     }).then(service => {
-        let card = generate_card(service.id, service.name, null, service.pictures[0], CardType.service);
+        let card = generateCard(service.id, service.name, null, service.pictures[0], CardType.service);
         div.append(card);
     })
 }
@@ -64,7 +64,7 @@ function addRelatedEvent(id, div) {
     fetch(`/api/v1/events/${id}`).then(response => {
         return response.json();
     }).then(event => {
-        let card = generate_card(event.id, event.name, null, event.picture, CardType.event);
+        let card = generateCard(event.id, event.name, null, event.picture, CardType.event);
         div.append(card);
     })
 }

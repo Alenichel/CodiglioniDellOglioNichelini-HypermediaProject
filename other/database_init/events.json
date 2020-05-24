@@ -1,7 +1,7 @@
 [
     {
         "name": "Tech together",
-        "datetime": "2019-12-07T15:00:00.000Z",
+        "datetime": "2019-12-07T15:00:00.000",
         "place": "Headquarters",
         "picture": "/assets/img/elderly-computer.jpg",
         "description": "Presentation of the Tech Support service.",
@@ -9,7 +9,7 @@
     },
     {
         "name": "Christmas party",
-        "datetime": "2019-12-25T18:30:00.000Z",
+        "datetime": "2019-12-25T18:30:00.000",
         "place": "Fancy disco",
         "picture": "/assets/img/christmas-party.jpg",
         "description": "Come celebrate Christmas with us!",
@@ -17,7 +17,7 @@
     },
     {
         "name": "Talking together",
-        "datetime": "2020-01-14T10:00:00.000Z",
+        "datetime": "2020-01-14T10:00:00.000",
         "place": "Headquarters",
         "picture": "/assets/img/talking-together.jpg",
         "description": "We are proud to announce the launch of our new service, that will help ...",
@@ -25,10 +25,18 @@
     },
     {
         "name": "Caring together",
-        "datetime": "2020-01-23T16:00:00.000Z",
+        "datetime": "2020-01-23T16:00:00.000",
         "place": "Headquarters",
         "picture": "/assets/img/laughing-grandma.jpg",
         "description": "Presentation of the Carers Training service.",
         "contact": 9
+    },
+    {
+        "name": "Summer party",
+        "datetime": "2020-06-13T16:00:00.000",
+        "place": "Big green field",
+        "picture": "/assets/img/summer-party.png",
+        "description": "Come celebrate with us the beginning of the summer. Good food, good friends and good music awaits you!",
+        "contact": 2
     }
 ]
