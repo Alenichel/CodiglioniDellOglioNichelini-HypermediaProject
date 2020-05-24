@@ -37,6 +37,12 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
   // Serve the Swagger documents and Swagger UI
   app.use(middleware.swaggerUi());
 
+  // Serve API documentation also from /backend/swaggerui
+  app.use('/backend/swaggerui', function redirect(req, res, next) {
+    res.writeHead(301, {Location: '/docs'});
+    res.end();
+  });
+
   // Serve static files from the public directory
   app.use(serveStatic(__dirname + '/public'));
 
