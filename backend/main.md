@@ -4,11 +4,11 @@
 >
 ## General group information
 
-| Member n. | Role | First name | Last Name | Matricola | Email address | 
-|-----------|---------------|------------|-----------|-----------|-----------------| 
-| 1 | Team leader | Fabio | Codiglioni | 919897 | fabio.codiglioni@mail.polimi.it | 
-| 2 | member | Alessandro | Nichelini | 123456 | alessandro.nichelini@mail.polimi.it |
-| 3 | member | Luca | dell'Oglio | 123456 | luca1.delloglio@mail.polimi.it |
+| Member n. | Role        | First name | Last Name  | Matricola | Email address                       | 
+|-----------|-------------|------------|------------|-----------|-------------------------------------| 
+| 1         | Team leader | Fabio      | Codiglioni | 919897    | fabio.codiglioni@mail.polimi.it     | 
+| 2         | Member      | Alessandro | Nichelini  | 123456    | alessandro.nichelini@mail.polimi.it |
+| 3         | Member      | Luca       | dell'Oglio | 123456    | luca1.delloglio@mail.polimi.it      |
 
 ## Links to other deliverables
 
