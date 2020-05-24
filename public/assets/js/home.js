@@ -26,7 +26,7 @@ function build_news_carousel(news) {
             $(`<div class="carousel-item${i === 0 ? ' active' : ''}">`).append(
                 $('<div class="row">').append(
                     $('<div class="col-6">').append(
-                        $('<h3>').text(n.title)
+                        $('<h3 class="mt-3 ml-3">').text(n.title)
                     ),
                     $('<div class="col-6">').append(
                         $(`<img class="d-block w-100" src="${n.media}" alt="">`)
