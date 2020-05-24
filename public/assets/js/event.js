@@ -2,7 +2,7 @@
 
 function build_st_column(imgURL, id, eventsSize) {
     return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
-        $('<img class="img-profile rounded" alt="Missing" src="' + imgURL + '">'),
+        $('<img class="img-profile rounded w-100" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
                 id !== 1 ? $(`<a href="/pages/event.html?id=${id-1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
@@ -44,8 +44,6 @@ $(document).ready(function() {
         id = 1;
     }
 
-    console.log(id)
-
     fetch('/api/v1/events/' + String(id))
         .then( response => {
             return response.json();
@@ -83,6 +81,15 @@ $(document).ready(function() {
         })
         .catch(function (error) {
             console.log(error);
+        })
+        .then(() => {
+            return fetch('/api/v1/events');
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(json => {
+            eventsSize = json.length;
         })
         .finally( () =>{
             $('#event-row').append(
