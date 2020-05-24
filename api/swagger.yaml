@@ -184,7 +184,7 @@ paths:
       parameters:
       - name: "month"
         in: "query"
-        required: true
+        required: false
         type: "integer"
       responses:
         "200":
