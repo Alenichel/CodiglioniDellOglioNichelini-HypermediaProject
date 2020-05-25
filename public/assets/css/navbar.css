@@ -25,3 +25,8 @@
 #search-dropdown {
     width: 300px;
 }
+
+.navbar-dark .navbar-toggler {
+    color: #ffffff;
+    border-color: #ffffffc0;
+}
