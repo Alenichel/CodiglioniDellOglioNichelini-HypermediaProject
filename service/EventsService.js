@@ -13,7 +13,7 @@ let tables = databaseService.tables
  **/
 exports.eventsGET = function(month) {
   return database(tables.event).then(data => {
-    if (month) {
+    if (month != null) {
       return data.filter(e => {
         return e.datetime.getMonth() === month;
       });

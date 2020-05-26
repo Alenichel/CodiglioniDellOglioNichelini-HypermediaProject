@@ -25,5 +25,11 @@
         "description": "Our volunteers offer their knowledge to assist elderly people in using electronic devices.",
         "presentedInEvent": 1,
         "icon": "fas fa-microchip"
+    },
+    {
+        "name": "Baby-sitting",
+        "infos": "",
+        "description": "We offer babysitting services to help parents who are either looking for a regular babysitter, or a one-off.",
+        "icon": "fas fa-child"
     }
   ]
