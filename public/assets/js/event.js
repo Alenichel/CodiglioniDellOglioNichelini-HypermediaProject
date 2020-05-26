@@ -37,8 +37,7 @@ $(document).ready(function() {
     load_footer();
 
     let searchParams = new URLSearchParams(window.location.search);
-    let id, picture, name, description, dateTime, place, contactId, contactName, presentedServiceId, presentedServiceName;
-    let eventsSize = 4; //TODO obtain eventsSize from DB
+    let id, picture, name, description, dateTime, place, contactId, contactName, presentedServiceId, presentedServiceName, eventSize;
 
     if (searchParams.has("id")) {
         id = parseInt(searchParams.get("id"));
