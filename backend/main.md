@@ -8,7 +8,7 @@
 |-----------|-------------|------------|------------|-----------|-------------------------------------| 
 | 1         | Team leader | Fabio      | Codiglioni | 919897    | fabio.codiglioni@mail.polimi.it     | 
 | 2         | Member      | Alessandro | Nichelini  | 123456    | alessandro.nichelini@mail.polimi.it |
-| 3         | Member      | Luca       | dell'Oglio | 123456    | luca1.delloglio@mail.polimi.it      |
+| 3         | Member      | Luca       | dell'Oglio | 928445    | luca1.delloglio@mail.polimi.it      |
 
 ## Links to other deliverables
 
@@ -28,11 +28,36 @@ Describe here, with a diagram, the components of your web application and how th
 
 #### REST compliance
 
-Describe here to what extent did you follow REST principles and what are the reasons for which you might have decided to diverge. Note, you must not describe the whole API here, just the design decisions.
+The API follow the REST constraints:
+
+- **Client-server architecture**: 
+the client can only access the data storage using the provided API, allowing for independent evolution of the two components and deployment on different machines. 
+
+- **Statelessness**: 
+no client context is stored on the server between requests, and each request from any client contains all the information necessary to complete it.
+
+- **Cacheability**:
+as responses only depend on the request parameters, they may be cached by the browser to improve performances.
+
+- **Uniform interface**: 
+the interface is defined following the OpenAPI specification. Each resource is identified via a URI, and it can be accessed using HTTP. Messages are JSON-encoded and self-descriptive.
 
 #### OpenAPI Resource models
 
-Describe here synthetically, which models you have introduced for resources.
+- **Person**: 
+it contains anagraphic data, information related to the association, such as the join date, a picture and contact information such as e-mail address and phone number.
+
+- **Service**:
+it contains identification data, a description, one or more pictures, and the identifier of the event in which it was presented (if presented in an event).
+
+- **Event**:
+it contains identification data, a description, one picture, and the identifier of the person which is the contact for it.
+
+- **News**:
+it contains identification data, a description, one picture, and the identifiers of the person, service or event that may be related to it.
+
+- **SearchResult**:
+it contains the name, the type and a picture of the result of a search on the site. 
 
 ### Data model
 
@@ -40,10 +65,20 @@ Describe with an ER diagram the model used in the data layer of your web applica
 
 ## Implementation
 
-### Tools used
+- **Tools**
+  - Webstorm and Visual Studio Code;
+  - Google Chrome Developer Tools to debug and test; 
+  - Swagger Editor to write the API specification; 
+  - PgAdmin and psql to manage the PostgreSQL database.
 
-Describe here which tools, languages and frameworks did you use for the 
-backend of the application. ### Discussion
+- **Languages**
+  - JavaScript.
+
+- **Frameworks**
+  - Knex.js to access the database from the application server;
+  - Serve-static to serve static files over HTTP. 
+
+### Discussion
 Describe here:
 - How did you make sure your web application adheres to the provided OpenAPI specification? Which method did you use to test all APIs endpoints against the expected response?
 - Why do you think your web application adheres to common practices to partition a REST-based web application (static assets vs. application data)
