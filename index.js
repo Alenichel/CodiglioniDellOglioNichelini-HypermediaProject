@@ -49,6 +49,20 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     res.end();
   });
 
+  app.use('/backend/main.html', function(req, res) {
+    let showdown  = require('showdown');
+    let converter = new showdown.Converter({tables: true});
+    fs.readFile('backend/main.md', 'utf-8', (err, data) => {
+      if (err) {
+        return console.log(err);
+      } else {
+        let html = converter.makeHtml(data);
+        res.write(html);
+        res.end();
+      }
+    })
+  })
+
   database.setupDatabase();
 
   // Start the server
