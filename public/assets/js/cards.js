@@ -20,6 +20,12 @@ function generateCard(id, title, body, img, cardType, date = null) {
     } else {
         link = "#";
     }
+    if (date != null) {
+      date = $('<small class="text-muted">').append(
+        $('<i class="far fa-calendar-alt mr-2">'),
+        $('<span>').text(getDateTimeFormatter().format(new Date(date)))
+      );
+    }
     return $('<div class="col-12 col-md-6 mb-4">').append(
         $('<div class="card">').append(
             $('<div class="card-body row">').append(
@@ -28,7 +34,7 @@ function generateCard(id, title, body, img, cardType, date = null) {
                 ),
                 $('<div class="col-sm-6">').append(
                     $('<h4 class="card-title mt-2 mt-md-0">').text(title),
-                    date ? $('<small class="text-muted">').text(getDateTimeFormatter().format(new Date(date))) : null,
+                    date,
                     $('<p class="card-text mt-1">').text(body),
                 )
             ),
