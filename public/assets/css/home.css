@@ -8,3 +8,7 @@
     color: #1f4068;
     transition: 0.3s;
 }
+
+.homepage-section span .blue-foreground {
+    transition: 0.5s;
+}
