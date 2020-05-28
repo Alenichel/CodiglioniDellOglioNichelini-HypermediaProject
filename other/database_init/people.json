@@ -23,9 +23,12 @@
     {
         "firstName": "Luca",
         "lastName": "dell'Oglio",
-        "picture": "/assets/img/lucadll.png",
-        "description": "I'm a geek",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "picture": "/assets/img/lucadll.jpg",
+        "description": "CSE student @ Polimi, history fan, analog guy in a digital world.",
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "instagram": "https://www.instagram.com/lucdll/",
+        "twitter": "https://twitter.com/LucDLL",
+        "email": "ldll@qtb.it"
     },
     {
         "firstName": "Anthony",

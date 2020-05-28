@@ -55,9 +55,28 @@ main > .container {
 
 .blue-link {
     color: #162447;
+    text-decoration: underline;
 }
 
 .blue-link:hover {
     color: #1f4068;
 }
 
+.single-page-title {
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.single-page-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.single-page-content {
+    font-size: 18px;
+}
+
+.single-page-subcontent {
+    font-size: 14px;
+    font-style: italic;
+}

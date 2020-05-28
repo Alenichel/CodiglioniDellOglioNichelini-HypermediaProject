@@ -15,6 +15,11 @@
     padding-bottom: 25px;
 }
 
+.offered-by-name {
+    margin: 0;
+    font-weight: 550;
+}
+
 img {
     max-width: 100%;
 }
