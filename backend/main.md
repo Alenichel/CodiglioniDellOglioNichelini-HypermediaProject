@@ -20,7 +20,7 @@
 
 ## Specification
 
-### Web Architecture
+### Web Architecture TODO
 
 Describe here, with a diagram, the components of your web application and how they interact. Highlight which parts belong to the application layer, data layer or presentation layer. How did you ensure that HTML is not rendered server side?
 
@@ -59,7 +59,7 @@ it contains identification data, a description, one picture, and the identifiers
 - **SearchResult**:
 it contains the name, the type and a picture of the result of a search on the site. 
 
-### Data model
+### Data model TODO
 
 Describe with an ER diagram the model used in the data layer of your web application. How these map to the OpenAPI data model?
 
@@ -67,8 +67,9 @@ Describe with an ER diagram the model used in the data layer of your web applica
 
 - **Tools**
   - Webstorm and Visual Studio Code;
-  - Google Chrome Developer Tools to debug and test; 
+  - Google Chrome Developer Tools and Firefox to debug and test; 
   - Swagger Editor to write the API specification; 
+  - Postman to test the API;
   - PgAdmin and psql to manage the PostgreSQL database.
 
 - **Languages**
@@ -79,21 +80,49 @@ Describe with an ER diagram the model used in the data layer of your web applica
   - Serve-static to serve static files over HTTP. 
 
 ### Discussion
-Describe here:
-- How did you make sure your web application adheres to the provided OpenAPI specification? Which method did you use to test all APIs endpoints against the expected response?
-- Why do you think your web application adheres to common practices to partition a REST-based web application (static assets vs. application data)
-- Describe synthetically why and how did you manage session state, what are the state change triggering actions (e.g., POST to login etc..).
-- Which technology did you use (relational or a no-SQL database) for managing the data model?
+
+The endpoints were generated using the Swagger codegen tool. For each endpoint, we made sure that the data returned by the database mirrored the structure defined in OpenAPI. The API was tested using the browser and Postman.
+
+The web application is divided into three layers, according to the REST principles: 
+- The presentation layer, implemented by the frontend of the site. The static assets are all located here.
+- The business logic layer, implemented by the backend of the site.
+- The data layer, implemented by the database, which contains the application data.
+
+The presentation layer retrieves dynamic data only through the API offered by the business logic layer, which, in turn, is the only one that can access the data layer.
+
+The web application does not include any session state, so there's no need to manage it.
+
+The data model was managed using a relational database, namely PostgreSQL.
 
 ## Other information
 
 ### Task assignment
 
-Describe here how development tasks have been subdivided among members of the group, e.g.:
+During the development, we identified two kinds of tasks: group tasks, which have been carried out by all three members video conferencing together, and individual tasks, completed independently by the members.
 
-> - Foo worked on front end (80%) and OpenAPI Spec (20% of the time) > - Bar worked on ....
+#### Group tasks
 
-### Analysis of existing API
+- Design: database design, final document review.
+- Back end: API definition and testing, populating the database, deployment on Heroku.
+
+#### Fabio Codiglioni
+
+- Design: C-IDM and P-IDM diagrams
+- Pages: introductory services, introductory events, introductory news, single news and search pages, header.
+
+#### Luca dell'Oglio
+
+- Design: L-IDM, scenarios
+- Pages: about us, contact form, single service and single event pages.
+
+#### Alessandro Nichelini
+
+- Design: design in the small
+- Pages: introductory people and person pages, home page, footer.
+
+Each member handled both the front end and the back end parts of the pages they were assigned.
+
+### Analysis of existing API TODO
 
 Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the one implemented, that have possibly guided implementation choices (these should not be necessarily OpenAPI implementations). Toy APIs (such as the Swagger's Pet Store) or the example shown during lectures are not a valid response.
 
@@ -109,8 +138,10 @@ Or
 
 ### Learning outcome
 
-What was the most important thing all the members have learned while
-developing this part of the project, what questions remained unanswered, how you will use what you've learned in your everyday life?
-Examples:
-- Foo learned to write SQL queries and Javascript but wanted to know more about caching, he's probably going to create his own startup with what she has learned
-- Bar learned how to deploy on a cloud platform, he would have liked to know more about promises for asynchronous code..
+This was the first full web application project for all the members of the group, so we all learned the basics of the web development process, in particular, how to develop, integrate and deploy the front end and back end parts of a working web architecture.
+
+Fabio Codiglioni
+
+Luca dell'Oglio
+
+Alessandro Nichelini
