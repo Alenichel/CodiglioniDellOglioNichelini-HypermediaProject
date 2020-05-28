@@ -59,25 +59,27 @@ it contains identification data, a description, one picture, and the identifiers
 - **SearchResult**:
 it contains the name, the type and a picture of the result of a search on the site. 
 
-### Data model TODO
+### Data model
+
+<div style="text-align: center;"><img src="/assets/img/ER.png" width="75%" alt=""></div>
 
 Describe with an ER diagram the model used in the data layer of your web application. How these map to the OpenAPI data model?
 
 ## Implementation
 
 - **Tools**
-  - Webstorm and Visual Studio Code;
-  - Google Chrome Developer Tools and Firefox to debug and test; 
-  - Swagger Editor to write the API specification; 
-  - Postman to test the API;
-  - PgAdmin and psql to manage the PostgreSQL database.
+    - Webstorm and Visual Studio Code;
+    - Google Chrome Developer Tools and Firefox to debug and test; 
+    - Swagger Editor to write the API specification; 
+    - Postman to test the API;
+    - PgAdmin and psql to manage the PostgreSQL database.
 
 - **Languages**
-  - JavaScript.
+    - JavaScript.
 
 - **Frameworks**
-  - Knex.js to access the database from the application server;
-  - Serve-static to serve static files over HTTP. 
+    - Knex.js to access the database from the application server;
+    - Serve-static to serve static files over HTTP. 
 
 ### Discussion
 

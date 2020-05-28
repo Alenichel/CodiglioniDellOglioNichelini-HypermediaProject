@@ -63,6 +63,8 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     })
   })
 
+  app.use('/assets/img/ER.png', serveStatic(__dirname + '/DesignDocument/figures/DB/ER.png'))
+
   database.setupDatabase();
 
   // Start the server
