@@ -29,7 +29,7 @@ $(document).ready(function() {
     load_navbar(() => {
         let orientationInfo = $('#orientation-info');
         orientationInfo.append(
-            $('<span>').text('> '),
+            $('<i class="fas fa-chevron-right mr-1">'),
             $('<a href="/pages/events.html" class="text-white">').text('Events')
         );
         orientationInfo.addClass('pb-2');
