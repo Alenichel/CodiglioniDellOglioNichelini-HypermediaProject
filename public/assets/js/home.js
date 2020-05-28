@@ -1,35 +1,46 @@
 "use strict";
 
+let news;
+
 function build_person_row(id, name, img, join_date, i) {
     return $('<div class="row position-relative">').append(
-        $('<div class="col col-md-auto align-self-center">').append(
+        $('<div class="col col-md-auto align-self-center position-static">').append(
             i % 2 === 0 ?
                 $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`) :
-                $(`<p class="text-right">${name}<br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`)
+                $(`<p class="text-right"><a class="stretched-link blue-link" href="/pages/person.html?id=${id}">${name}</a><br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`)
         ),
-        $('<div class="col col-md-auto align-self-center">').append(
+        $('<div class="col col-md-auto align-self-center position-static">').append(
             i % 2 === 0 ?
-                $(`<p>${name}<br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`) :
+                $(`<p><a class="stretched-link blue-link" href="/pages/person.html?id=${id}">${name}</a><br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`) :
                 $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`)
-        ),
-        $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
-    )
+        )
+    );
 }
 
 
 function build_news_carousel(news) {
     let carousel = $('<div id="news-carousel" class="carousel slide col-12 m-auto" data-ride="carousel">');
     let carouselInner = $('<div class="carousel-inner">');
+    let titleSize;
+    if ($(window).width() < 576) {
+        titleSize = 'h6';
+    } else if ($(window).width() < 768) {
+        titleSize = 'h5';
+    } else {
+        titleSize = 'h2';
+    }
     for (let i = 0; i < news.length; i++) {
         let n = news[i];
         carouselInner.append(
             $(`<div class="carousel-item${i === 0 ? ' active' : ''}">`).append(
-                $('<div class="row">').append(
-                    $('<div class="col-6">').append(
-                        $('<h3 class="mt-3 ml-3">').text(n.title)
-                    ),
-                    $('<div class="col-6">').append(
-                        $(`<img class="d-block w-100" src="${n.media}" alt="">`)
+                $('<div class="container">').append(
+                    $('<div class="row justify-content-center">').append(
+                        $('<div class="col-5">').append(
+                            $(`<p class="mt-3 ml-3 ${titleSize}">`).text(n.title)
+                        ),
+                        $('<div class="col-5">').append(
+                            $(`<img class="d-block w-100" src="${n.media}" alt="">`)
+                        )
                     )
                 )
             )
@@ -75,7 +86,13 @@ $(document).ready(function() {
     });
     fetch('/api/v1/news').then(response => {
         return response.json();
-    }).then(news => {
+    }).then(json => {
+        news = json;
         $('#news-carousel-div').append(build_news_carousel(news));
-    })
+    });
+    $(window).resize(() => {
+        let div = $('#news-carousel-div');
+        div.empty();
+        div.append(build_news_carousel(news));
+    });
 })

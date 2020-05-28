@@ -33,12 +33,13 @@ function generateCard(id, title, body, img, cardType, date = null) {
                     $(`<img class="card-img" src="${img}" alt="">`)
                 ),
                 $('<div class="col-sm-6">').append(
-                    $('<h4 class="card-title mt-2 mt-md-0">').text(title),
+                    $('<h4 class="card-title mt-2 mt-md-0">').append(
+                        $(`<a class="blue-link stretched-link" href="${link}">`).text(title)
+                    ),
                     date,
                     $('<p class="card-text mt-1">').text(body),
                 )
             ),
-            $(`<a class="stretched-link" href="${link}"></a>`)
         )
     );
 }
@@ -52,11 +53,12 @@ function generateSearchResultCard(item) {
                     $(`<img class="card-img" src="${item.media}" alt="">`)
                 ),
                 $('<div class="col-sm-6">').append(
-                    $('<h4 class="card-title mt-2 mt-md-0">').text(item.name),
+                    $('<h4 class="card-title mt-2 mt-md-0">').append(
+                        $(`<a class="blue-link stretched-link" href="/pages/${item.type}.html?id=${item.id}">`).text(item.name)
+                    ),
                     $('<p class="text-muted" style="font-variant: small-caps">').text(item.type)
                 )
             ),
-            $(`<a class="stretched-link" href="/pages/${item.type}.html?id=${item.id}">`)
         )
     )
 }
