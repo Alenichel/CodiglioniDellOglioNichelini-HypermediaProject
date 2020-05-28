@@ -1,7 +1,7 @@
 # Documentation of the Backend part
 
 > Deliverable D1
->
+
 ## General group information
 
 | Member n. | Role        | First name | Last Name  | Matricola | Email address                       | 
@@ -127,7 +127,7 @@ During the development, we identified two kinds of tasks: group tasks, which hav
 Describe here how development tasks have been subdivided among members of the group, e.g.:
 
 > - Foo worked on front end (80%) and OpenAPI Spec (20% of the time) > - Bar worked on ....
->
+
 ### Analysis of existing API
 
 Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the one implemented, that have possibly guided implementation choices (these should not be necessarily OpenAPI implementations). Toy APIs (such as the Swagger's Pet Store) or the example shown during lectures are not a valid response.
