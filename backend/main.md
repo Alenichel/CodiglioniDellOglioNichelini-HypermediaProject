@@ -20,7 +20,7 @@
 
 ## Specification
 
-### Web Architecture
+### Web Architecture TODO
 
 Describe here, with a diagram, the components of your web application and how they interact. Highlight which parts belong to the application layer, data layer or presentation layer. How did you ensure that HTML is not rendered server side?
 
@@ -59,7 +59,7 @@ it contains identification data, a description, one picture, and the identifiers
 - **SearchResult**:
 it contains the name, the type and a picture of the result of a search on the site. 
 
-### Data model
+### Data model TODO
 
 Describe with an ER diagram the model used in the data layer of your web application. How these map to the OpenAPI data model?
 
@@ -102,33 +102,27 @@ During the development, we identified two kinds of tasks: group tasks, which hav
 
 #### Group tasks
 
-- Design: database design, final document review
-- Front end:
-- Back end:
+- Design: database design, final document review.
+- Back end: API definition and testing, populating the database, deployment on Heroku.
 
 #### Fabio Codiglioni
 
 - Design: C-IDM and P-IDM diagrams
-- Front end:
-- Back end:
+- Pages: introductory services, introductory events, introductory news, single news and search pages, header.
 
 #### Luca dell'Oglio
 
 - Design: L-IDM, scenarios
-- Front end:
-- Back end:
+- Pages: about us, contact form, single service and single event pages.
 
 #### Alessandro Nichelini
 
 - Design: design in the small
-- Front end:
-- Back end:
+- Pages: introductory people and person pages, home page, footer.
 
-Describe here how development tasks have been subdivided among members of the group, e.g.:
+Each member handled both the front end and the back end parts of the pages they were assigned.
 
-> - Foo worked on front end (80%) and OpenAPI Spec (20% of the time) > - Bar worked on ....
-
-### Analysis of existing API
+### Analysis of existing API TODO
 
 Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the one implemented, that have possibly guided implementation choices (these should not be necessarily OpenAPI implementations). Toy APIs (such as the Swagger's Pet Store) or the example shown during lectures are not a valid response.
 
@@ -144,8 +138,10 @@ Or
 
 ### Learning outcome
 
-What was the most important thing all the members have learned while
-developing this part of the project, what questions remained unanswered, how you will use what you've learned in your everyday life?
-Examples:
-- Foo learned to write SQL queries and Javascript but wanted to know more about caching, he's probably going to create his own startup with what she has learned
-- Bar learned how to deploy on a cloud platform, he would have liked to know more about promises for asynchronous code..
+This was the first full web application project for all the members of the group, so we all learned the basics of the web development process, in particular, how to develop, integrate and deploy the front end and back end parts of a working web architecture.
+
+Fabio Codiglioni
+
+Luca dell'Oglio
+
+Alessandro Nichelini
