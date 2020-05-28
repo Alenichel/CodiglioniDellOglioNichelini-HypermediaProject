@@ -17,7 +17,7 @@ function build_st_column(imgURL, id, eventsSize) {
 function build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(name),
-        presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}">${presentedServiceName}</a></h5>`) : $('<br>'),
+        presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></h5>`) : $('<br>'),
         $('<p>').text(description),
         $('<h5>').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
         $('<h5>').text("Place: " + place),

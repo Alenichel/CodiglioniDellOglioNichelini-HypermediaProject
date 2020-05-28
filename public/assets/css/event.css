@@ -1,5 +1,13 @@
-#event-container {
-    padding: 100px;
+@media (min-width: 992px) {
+    #event-container {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    #event-container {
+        padding-top: 100px;
+    }
 }
 
 img {

@@ -1,5 +1,13 @@
-#person-container {
-    padding: 100px;
+@media (min-width: 992px) {
+    #person-container {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    #person-container {
+        padding-top: 100px;
+    }
 }
 
 .service  p:nth-child(2) {

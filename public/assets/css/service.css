@@ -1,5 +1,13 @@
-#service-container {
-    padding: 100px;
+@media (min-width: 992px) {
+    #service-container {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    #service-container {
+        padding-top: 100px;
+    }
 }
 
 #service-offeredBy-header-row {
