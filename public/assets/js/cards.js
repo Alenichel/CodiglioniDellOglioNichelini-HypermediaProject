@@ -28,11 +28,11 @@ function generateCard(id, title, body, img, cardType, date = null) {
     }
     return $('<div class="col-12 col-md-6 mb-4">').append(
         $('<div class="card">').append(
-            $('<div class="card-body row">').append(
-                $('<div class="col-sm-6">').append(
+            $('<div class="card-body row position-relative">').append(
+                $('<div class="col-sm-6 position-static">').append(
                     $(`<img class="card-img" src="${img}" alt="">`)
                 ),
-                $('<div class="col-sm-6">').append(
+                $('<div class="col-sm-6 position-static">').append(
                     $('<h4 class="card-title mt-2 mt-md-0">').append(
                         $(`<a class="blue-link stretched-link" href="${link}">`).text(title)
                     ),

@@ -9,6 +9,12 @@ html {
 
 .blue-foreground {
     color: #162447;
+    transition: 0.5s;
+}
+
+.blue-foreground:hover {
+    color: #1f4068;
+    transition: 0.3s;
 }
 
 #orientation-info {
