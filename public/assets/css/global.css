@@ -68,21 +68,26 @@ main > .container {
     color: #1f4068;
 }
 
-.single-page-title {
+.page-title {
     font-size: 38px;
     font-weight: 900;
 }
 
-.single-page-subtitle {
-    font-size: 24px;
-    font-weight: 500;
+.page-subtitle {
+    font-size: 22px;
+    font-weight: 600;
 }
 
-.single-page-content {
-    font-size: 18px;
+.page-content {
+    font-size: 16px;
 }
 
-.single-page-subcontent {
+.no-margin-title {
+    margin: 0;
+    font-weight: 600;
+}
+
+.page-subcontent {
     font-size: 14px;
     font-style: italic;
 }

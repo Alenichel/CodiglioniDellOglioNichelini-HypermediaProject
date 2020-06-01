@@ -5,10 +5,10 @@ function build_st_column(imgURL, id, eventsSize) {
         $('<img class="img-profile rounded w-100" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0">').append(
-                id !== 1 ? $(`<a href="/pages/event.html?id=${id-1}" type="button" class="btn btn-blue btn-sm" aria-label="Prev" title="Prev"><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/event.html?id=${id - 1}" aria-label="Prev" title="Prev"><i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0">').append(
-                id !== eventsSize ? $(`<a href="/pages/event.html?id=${id+1}" type="button" class="btn btn-blue btn-sm" aria-label="Next" title="Next"><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== eventsSize ? $(`<a href="/pages/event.html?id=${id + 1}" aria-label="Next" title="Next"><i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i></a>`) : null
             )
         )
     )    
@@ -16,12 +16,12 @@ function build_st_column(imgURL, id, eventsSize) {
 
 function build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
-        $('<h2>').text(name),
-        presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></h5>`) : $('<br>'),
-        $('<p class="text-justify">').text(description),
-        $('<h5>').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
-        $('<h5>').text("Place: " + place),
-        $(`<h5>Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></h5>`)
+        $('<h2 class="page-title">').text(name),
+        presentedServiceName ? $(`<p class="page-subtitle">Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></p>`) : $('<br>'),
+        $('<p class="page-content text-justify">').text(description),
+        $('<p class="page-subtitle no-margin-title">').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
+        $('<p class="page-subtitle no-margin-title">').text("Place: " + place),
+        $(`<p class="page-subtitle no-margin-title">Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></p>`)
     )
 }
 

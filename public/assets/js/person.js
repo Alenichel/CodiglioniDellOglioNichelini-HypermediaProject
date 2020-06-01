@@ -28,8 +28,8 @@ function build_services(services) {
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
                     $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social stretched-link" aria-label="Service" title="Service" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
-                    $(`<p>${s.name}</p>`),
-                    $(`<p>${s.serviceDetail}</p>`)
+                    $(`<p class="page-content no-margin-title">${s.name}</p>`),
+                    $(`<p class="page-subcontent">${s.serviceDetail}</p>`)
                 )
             )
         )
@@ -39,9 +39,9 @@ function build_services(services) {
 
 function build_nd_column(first_name, last_name, description, event_id, event_name, services) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
-        $('<h2>').text(first_name + " " + last_name),
-        event_id ? $(`<p>Contact for: <a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
-        $('<p class="text-justify">').text(description),
+        $('<h2 class="page-title">').text(first_name + " " + last_name),
+        event_id ? $(`<p class="page-subtitle">Contact for: <a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
+        $('<p class="text-justify page-content">').text(description),
         build_services(services)
     )
 }
