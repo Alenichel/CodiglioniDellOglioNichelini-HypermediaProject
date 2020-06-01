@@ -32,10 +32,10 @@ function build_st_column(pictures, id, servicesSize) {
         build_carousel(pictures),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/service.html?id=${id-1}" type="button" class="btn btn-blue btn-sm" aria-label="Prev" title="Prev"><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}", aria-label="Prev" title="Next"><i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== servicesSize ? $(`<a href="/pages/service.html?id=${id+1}" type="button" class="btn btn-blue btn-sm" aria-label="Next" title="Next"><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== servicesSize ? $(`<a href="/pages/person.html?id=${id + 1}", aria-label="Next" title="Next"><i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i></a>`) : null
             )
         )
     )
