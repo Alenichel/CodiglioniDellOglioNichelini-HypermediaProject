@@ -134,7 +134,7 @@ In order to guide the implementation of the API, we didn't perform any explicit 
 
 This was the first full web application project for all the members of the group, so we all learned the basics of the web development process, in particular, how to develop, integrate and deploy the front end and back end parts of a working web architecture.
 
-Fabio learnt JavaScript and how to use jQuery to manipulate HTML and create dynamic pages. He also used and understood the Bootstrap grid system for the first time.
+Fabio learnt JavaScript and how to use jQuery to manipulate HTML and create dynamic pages. He also understood how to use the Bootstrap grid system in order to obtain responsive layouts.
 
 Luca learnt how to use Swagger to build RESTful APIs, how to serve static and dynamic content on a site, and how to use Javascript to serve content or to validate a form. He also took an interest on styling the content of a site using HTML and CSS, even if he didn't expect to.
 

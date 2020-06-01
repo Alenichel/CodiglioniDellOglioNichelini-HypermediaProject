@@ -5,18 +5,18 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}" type="button" class="btn btn-blue btn-sm" aria-label="Prev" title="Prev"><i class="fas fa-chevron-left"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}" type="button" class="btn btn-blue btn-sm" aria-label="Next" title="Next"><i class="fas fa-chevron-right"></i></a>`) : null
             )
         ),
         $('<div class="mt-3">').append(
-            instagram ? $(`<a href="${instagram}" target="_blank" class="btn-social btn-instagram"><i class="fab fa-instagram"></i></a>`) : null,
-            facebook ? $(`<a href="${facebook}" target="_blank" class="btn-social btn-facebook"><i class="fab fa-facebook-f"></i></a>`) : null,
-            twitter ? $(`<a href="${twitter}" target="_blank" class="btn-social btn-twitter"><i class="fab fa-twitter"></i></a>`) : null,
-            email ? $(`<a href="mailto:${email}" target="_blank" class="btn-social btn-email"><i class="far fa-envelope"></i></a>`) : null,
-            phone_number ? $(`<a href="#" target="_blank" class="btn-social btn-vimeo"><i class="fas fa-phone"></i></a>`) : null,
+            instagram ? $(`<a href="${instagram}" target="_blank" class="btn-social btn-instagram" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>`) : null,
+            facebook ? $(`<a href="${facebook}" target="_blank" class="btn-social btn-facebook" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>`) : null,
+            twitter ? $(`<a href="${twitter}" target="_blank" class="btn-social btn-twitter" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>`) : null,
+            email ? $(`<a href="mailto:${email}" target="_blank" class="btn-social btn-email" aria-label="Email" title="Email"><i class="far fa-envelope"></i></a>`) : null,
+            phone_number ? $(`<a href="#" target="_blank" class="btn-social btn-vimeo" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
         )
     )
 }
@@ -27,7 +27,7 @@ function build_services(services) {
         services_row.append(
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
-                    $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
+                    $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social stretched-link" aria-label="Service" title="Service" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
                     $(`<p>${s.name}</p>`),
                     $(`<p>${s.serviceDetail}</p>`)
                 )
@@ -41,7 +41,7 @@ function build_nd_column(first_name, last_name, description, event_id, event_nam
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(first_name + " " + last_name),
         event_id ? $(`<p>Contact for: <a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
-        $('<p>').text(description),
+        $('<p class="text-justify">').text(description),
         build_services(services)
     )
 }

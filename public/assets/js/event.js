@@ -5,10 +5,10 @@ function build_st_column(imgURL, id, eventsSize) {
         $('<img class="img-profile rounded w-100" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/event.html?id=${id-1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/event.html?id=${id-1}" type="button" class="btn btn-blue btn-sm" aria-label="Prev" title="Prev"><i class="fas fa-chevron-left"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== eventsSize ? $(`<a href="/pages/event.html?id=${id+1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== eventsSize ? $(`<a href="/pages/event.html?id=${id+1}" type="button" class="btn btn-blue btn-sm" aria-label="Next" title="Next"><i class="fas fa-chevron-right"></i></a>`) : null
             )
         )
     )    
@@ -18,7 +18,7 @@ function build_nd_column(name, description, dateTime, place, contactName, contac
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(name),
         presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></h5>`) : $('<br>'),
-        $('<p>').text(description),
+        $('<p class="text-justify">').text(description),
         $('<h5>').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
         $('<h5>').text("Place: " + place),
         $(`<h5>Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></h5>`)

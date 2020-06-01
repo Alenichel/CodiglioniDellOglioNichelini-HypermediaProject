@@ -5,7 +5,7 @@
         "picture": "/assets/img/alenichel.png",
         "description": "Geek, CSE student, Steve Jobs wanna be, temporarily math teacher. Unforgivable romantic.\n I can help with computers and with private lessons in scientific fields.",
         "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "ale.nichelg@gmail.com",
+        "email": "an@qtb.it",
         "phoneNumber": "3992345787",
         "facebook":"https://www.facebook.com/anichelini"
     },
@@ -35,76 +35,95 @@
         "lastName": "Stark",
         "picture": "/assets/img/tony.jpg",
         "description": "Anthony Edward \"Tony\" Stark was a billionaire industrialist, a founding member of the Avengers, and the former CEO of Stark Industries. A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and philanthropist.\nI can help with private lessons and with hardware.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "instagram": "https://www.instagram.com/robertdowneyjr",
+        "facebook": "https://www.facebook.com/robertdowneyjr",
+        "email": "rdj@qtb.it"
     },
     {
         "firstName": "Natasha",
         "lastName": "Romanoff",
         "picture": "/assets/img/natasha.jpg",
-        "description": "The most beautiful avengers",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "description": "La Vedova Nera (Black Widow; in russo: Чёрная вдова?, traslitterato: čërnaja vdova), il cui vero nome è Natalia Alianovna Romanova o Natasha Romanoff[3], è un personaggio dei fumetti creato da Stan Lee, N. Korok (testi) e Don Heck (disegni), pubblicato dalla Marvel Comics. La sua prima apparizione avviene in Tales of Suspense (vol. 1[1]) n. 52 (aprile 1964).\n\nAssassina biopotenziata arruolata nel servizio di sicurezza sovietico KGB[4] e punta di diamante dello spionaggio del suo paese durante la guerra fredda, la Vedova Nera è stata a lungo avversaria di Iron Man[5] e dei Vendicatori[6] prima di defezionare per gli Stati Uniti e divenire a sua volta una supereroina, membro sia dei Vendicatori che dello S.H.I.E.L.D.[7] di cui è la sola agente di livello 10[8] oltre a Nick Fury e Quake. Seppur dalla parte del bene, a differenza di molti suoi compagni supereroi, la Vedova Nera utilizza comunque dei metodi estremamente violenti e brutali contro i suoi avversari, non facendosi alcuno scrupolo a torturarli o addirittura ucciderli.\n\nSebbene la traslitterazione scientifica del suo nome sia Natal'ja Al'janovna Romanova (in russo: Наталья Альяновна Романова?) abbreviato in Nataša (in russo: Наташа?), nelle pubblicazioni in lingua italiana, è sempre stata adottata la forma anglicizzata.\n\nNella classifica stilata nel 2011 da IGN, si è posizionata al 74º posto come più grande eroina della storia dei fumetti, dopo Jonah Hex e prima di Marv[9], inoltre è risultata 31ª nella classifica di Comics Buyer's Guide «Le 100 donne più sexy dei fumetti».",
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "facebook": "https://www.facebook.com/BlackWidowNatashaRomanoffScarlettJohanssonOfficial",
+        "email": "nr@qtb.it"
     },
     {
         "firstName": "Bruce",
         "lastName": "Banner",
         "picture": "/assets/img/banner.png",
         "description": "Robert Bruce Banner is the son of Dr. Brian Banner, an atomic physicist, and his wife Rebecca. Although Rebecca deeply loved Bruce, who returned her affection, Brian hated their child. After graduating from Science High School, Bruce studied nuclear physics in Navapo, New Mexico, at Desert State University as the star student of Professor Herbert Josiah Weller.[45] He also studied for a time at Harvard University.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "facebook": "https://www.facebook.com/drhulkbanner",
+        "email": "bb@tbq.it"
     },
     {
         "firstName": "Steve",
         "lastName": "Rogers",
         "picture": "/assets/img/rogers.png",
         "description": "During the dark days of the early 1940's, a covert U.S. Military experiment turned Steve Rogers into America's first Super-Soldier, Captain America. Throughout the war, Cap and his partner, Bucky fought alongside infantry and with a group of heroes known as the Invaders. In the closing months of World War II, Captain America and Bucky were both presumed dead in an explosion. Decades later, Captain America was found trapped in ice and revived in the modern world. ",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "sr@qtb.it",
+        "facebook": "https://www.facebook.com/HandsomeRogers"
     },
     {
         "firstName": "Jane",
         "lastName": "Foster",
         "picture": "/assets/img/foster.png",
         "description": "Risultati di ricerca\nSnippet in primo piano dal Web\nJane Foster was a student at Culver University, where her father and Erik Selvig worked together. She later graduated and became an astronomer, dedicating her life to her research, where she built most of her equipment herself.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "jf@qtb.it",
+        "facebook": "https://www.facebook.com/Jane-Foster-426325594101594"
     },
     {
         "firstName": "Carol",
         "lastName": "Danvers",
         "picture": "/assets/img/danvers.png",
         "description": "CAPTAIN MARVEL. Former Air Force pilot and intelligence agent Carol Danvers pursued her dream of space exploration as a NASA employee, but her life forever changed when she was accidentally transformed into a human-Kree hybrid with extraordinary powers.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "cd@qtb.it",
+        "facebook": "https://www.facebook.com/carol.danvers.90834"
     },
     {
         "firstName": "Margaret",
         "lastName": "Carter",
         "picture": "/assets/img/carter.png",
         "description": "Margaret Elizabeth \"Peggy\" Carter was one of the most prominent agents of the Strategic Scientific Reserve during and after World War II and one of the founders of S.H.I.E.L.D.. Originally a code-breaker working at Bletchley Park, she joined the Special Operations Executive following her brother's death.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "mc@qtb.it",
     },
     {
         "firstName": "Pepper",
         "lastName": "Pots",
         "picture": "/assets/img/pots.png",
         "description": "Virginia \"Pepper\" Potts is the CEO of Stark Industries. Originally working as Tony Stark's personal assistant, she would take care of his schedule and perform any task he wished. During this time, Potts became good friends with Stark and soon, they had begun developing romantic feelings for each other. However, neither was able to act on these feelings, as they each feared that the other would not accept them. ",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "pp@qtb.it",
+        "facebook": "https://www.facebook.com/Pepper-Potts-224703247652830"
     },
     {
         "firstName": "Peter",
         "lastName": "Parker",
         "picture": "/assets/img/parker.png",
         "description": "Peter Parker was an orphaned teenage boy who lived in Queens, New York with his Aunt May and Uncle Ben. He was a shy boy, but highly intelligent and excelled in science. He was often teased by other more popular kids like longtime nemesis Flash Thompson, but his life was soon to change on a visit to the science museum.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "pp_2@qtb.it"
     },
     {
         "firstName": "Maria",
         "lastName": "Hill",
         "picture": "/assets/img/hill.png",
         "description": "Maria Hill is the former Deputy Director of S.H.I.E.L.D., and also held the title of \"Commander\". She enjoyed a well-deserved reputation as tough-minded and by the book. Her clearheaded pragmatism was a valued source of reason during the critical discourse surrounding the Avengers Initiative. After Nick Fury faked his death, Hill worked with him and was a part of the assault team that took down the Helicarriers from Project Insight. ",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "mh@qtb.it"
     },
     {
         "firstName": "Clint",
         "lastName": "Barton",
         "picture": "/assets/img/barton.png",
         "description": "Clinton Francis \"Clint\" Barton, also known as Hawkeye, is a skilled marksman, a former special agent of S.H.I.E.L.D. and one of the founding members of the Avengers.",
-        "joinDate": "2020-05-11T00:00:00.000Z"
+        "joinDate": "2020-05-11T00:00:00.000Z",
+        "email": "cb@qtb.it"
     }
 ]

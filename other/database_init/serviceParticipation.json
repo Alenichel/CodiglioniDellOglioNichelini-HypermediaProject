@@ -20,9 +20,39 @@
     "description": "Entrepreneurship"
   },
   {
+    "serviceId": 1,
+    "personId": 6,
+    "description": "I'm good in everything"
+  },
+  {
     "serviceId": 2,
     "personId": 3,
     "description": "Level C1"
+  },
+  {
+    "serviceId": 2,
+    "personId": 14,
+    "description": "Level C2"
+  },
+  {
+    "serviceId": 2,
+    "personId": 13,
+    "description": "Native speaker"
+  },
+  {
+    "serviceId": 2,
+    "personId": 7,
+    "description": "Native speaker"
+  },
+  {
+    "serviceId": 2,
+    "personId": 14,
+    "description": "Native speaker"
+  },
+  {
+    "serviceId": 3,
+    "personId": 4,
+    "description": "How to become a rockstar"
   },
   {
     "serviceId": 3,
@@ -30,13 +60,63 @@
     "description": "Thoughtful"
   },
   {
+    "serviceId": 3,
+    "personId": 8,
+    "description": "Academic career"
+  },
+  {
+    "serviceId": 3,
+    "personId": 11,
+    "description": "Managerial career"
+  },
+  {
+    "serviceId": 3,
+    "personId": 7,
+    "description": "How to become a captain"
+  },
+  {
+    "serviceId": 4,
+    "personId": 1,
+    "description": "Cybersecurity expert"
+  },
+  {
+    "serviceId": 4,
+    "personId": 2,
+    "description": "Not the best, but still a good sys admin"
+  },
+  {
     "serviceId": 4,
     "personId": 4,
     "description": "High-tech devices"
   },
   {
+    "serviceId": 4,
+    "personId": 12,
+    "description": "High-tech devices especially smart armors"
+  },
+  {
+    "serviceId": 4,
+    "personId": 13,
+    "description": "Especially spying devices"
+  },
+  {
     "serviceId": 5,
-    "personId": 5,
+    "personId": 8,
+    "description": "Babies and teens"
+  },
+  {
+    "serviceId": 5,
+    "personId": 8,
+    "description": "Babies and teens"
+  },
+  {
+    "serviceId": 5,
+    "personId": 11,
+    "description": "Babies and teens"
+  },
+  {
+    "serviceId": 5,
+    "personId": 12,
     "description": "Babies and teens"
   },
   {

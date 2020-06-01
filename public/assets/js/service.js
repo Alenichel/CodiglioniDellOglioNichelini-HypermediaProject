@@ -32,10 +32,10 @@ function build_st_column(pictures, id, servicesSize) {
         build_carousel(pictures),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/service.html?id=${id-1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/service.html?id=${id-1}" type="button" class="btn btn-blue btn-sm" aria-label="Prev" title="Prev"><i class="fas fa-chevron-left"></i></a>`) : null
             ),
             $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== servicesSize ? $(`<a href="/pages/service.html?id=${id+1}" type="button" class="btn btn-blue btn-sm "><i class="fas fa-chevron-right"></i></a>`) : null
+                id !== servicesSize ? $(`<a href="/pages/service.html?id=${id+1}" type="button" class="btn btn-blue btn-sm" aria-label="Next" title="Next"><i class="fas fa-chevron-right"></i></a>`) : null
             )
         )
     )
@@ -45,12 +45,12 @@ function build_nd_column(name, description, infos, presentedInEventId, eventName
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2 class="single-page-title">').text(name),
         eventName ? $(`<p class="single-page-subtitle">Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></p>`) : $('<br>'),
-        $('<p class="single-page-content">').text(description),
-        $('<p class="single-page-content">').text(infos),
+        $('<p class="single-page-content text-justify">').text(description),
+        $('<p class="single-page-content text-justify">').text(infos),
     )
 }
 
-function build_nd_row_header(servicePeople) {
+function build_nd_row_header() {
     return $('<div>').append(
         $('<p class="single-page-subtitle">').text("Offered by:"),
     )
