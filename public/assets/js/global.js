@@ -43,3 +43,8 @@ function getDateFormatter() {
     };
     return new Intl.DateTimeFormat('default', formatterOptions);
 }
+
+
+function stringCutOff(str, maxChars) {
+    return str.substring(0, maxChars) + "..."
+}
