@@ -5,10 +5,10 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3">').append(
             $('<div class="col text-left ml-0 ml-md-5">').append(
-                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}" type="button" class="btn btn-blue btn-sm" aria-label="Prev" title="Prev"><i class="fas fa-chevron-left"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}", aria-label="Prev" title="Next"><i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i></a>`) : null
             ),
-            $('<div class="col text-right mr-0 mr-md-5">').append(
-                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}" type="button" class="btn btn-blue btn-sm" aria-label="Next" title="Next"><i class="fas fa-chevron-right"></i></a>`) : null
+            $('<div class="col-4 text-right align-bottom">').append(
+                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}", aria-label="Next" title="Next"><i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i></a>`) : null
             )
         ),
         $('<div class="mt-3">').append(
@@ -16,7 +16,7 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
             facebook ? $(`<a href="${facebook}" target="_blank" class="btn-social btn-facebook" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>`) : null,
             twitter ? $(`<a href="${twitter}" target="_blank" class="btn-social btn-twitter" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>`) : null,
             email ? $(`<a href="mailto:${email}" target="_blank" class="btn-social btn-email" aria-label="Email" title="Email"><i class="far fa-envelope"></i></a>`) : null,
-            phone_number ? $(`<a href="#" target="_blank" class="btn-social btn-vimeo" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
+            phone_number ? $(`<a href="tel:${phone_number}" target="_blank" class="btn-social btn-vimeo" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
         )
     )
 }

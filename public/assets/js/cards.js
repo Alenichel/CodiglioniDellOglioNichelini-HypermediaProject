@@ -7,6 +7,7 @@ const CardType = {
     person: 4,
 }
 
+
 function generateCard(id, title, body, img, cardType, date = null) {
     let link;
     if (cardType === CardType.service) {
@@ -47,14 +48,14 @@ function generateCard(id, title, body, img, cardType, date = null) {
 
 function generateSearchResultCard(item) {
     return $('<div class="col-12 col-md-6 mb-4">').append(
-        $('<div class="card">').append(
-            $('<div class="card-body row">').append(
-                $('<div class="col-sm-6">').append(
+        $('<div class="card search-card">').append(
+            $('<div class="card-body row position-relative">').append(
+                $('<div class="col-lg-6 col-12 position-static">').append(
                     $(`<img class="card-img" src="${item.media}" alt="">`)
                 ),
-                $('<div class="col-sm-6">').append(
-                    $('<h4 class="card-title page-subtitle mt-2 mt-md-0">').append(
-                        $(`<a class="blue-link stretched-link" href="/pages/${item.type}.html?id=${item.id}">`).text(item.name)
+                $('<div class="col-lg-6 col-12 position-static">').append(
+                    $('<h4 class="card-title page-subtitle mt-2 mt-lg-0">').append(
+                        $(`<a class="blue-link stretched-link" href="/pages/${item.type}.html?id=${item.id}">`).text(stringCutOff(item.name, 1000))
                     ),
                     $('<p class="text-muted" style="font-variant: small-caps">').text(item.type)
                 )
