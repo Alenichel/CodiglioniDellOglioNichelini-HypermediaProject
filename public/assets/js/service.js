@@ -45,12 +45,12 @@ function build_nd_column(name, description, infos, presentedInEventId, eventName
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2 class="single-page-title">').text(name),
         eventName ? $(`<p class="single-page-subtitle">Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></p>`) : $('<br>'),
-        $('<p class="single-page-content">').text(description),
-        $('<p class="single-page-content">').text(infos),
+        $('<p class="single-page-content text-justify">').text(description),
+        $('<p class="single-page-content text-justify">').text(infos),
     )
 }
 
-function build_nd_row_header(servicePeople) {
+function build_nd_row_header() {
     return $('<div>').append(
         $('<p class="single-page-subtitle">').text("Offered by:"),
     )

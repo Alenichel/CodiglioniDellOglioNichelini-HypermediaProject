@@ -18,7 +18,7 @@ function build_nd_column(name, description, dateTime, place, contactName, contac
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(name),
         presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></h5>`) : $('<br>'),
-        $('<p>').text(description),
+        $('<p class="text-justify">').text(description),
         $('<h5>').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
         $('<h5>').text("Place: " + place),
         $(`<h5>Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></h5>`)

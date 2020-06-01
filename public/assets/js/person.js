@@ -41,7 +41,7 @@ function build_nd_column(first_name, last_name, description, event_id, event_nam
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2>').text(first_name + " " + last_name),
         event_id ? $(`<p>Contact for: <a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
-        $('<p>').text(description),
+        $('<p class="text-justify">').text(description),
         build_services(services)
     )
 }
