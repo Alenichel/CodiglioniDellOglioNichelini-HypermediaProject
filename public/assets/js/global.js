@@ -46,5 +46,9 @@ function getDateFormatter() {
 
 
 function stringCutOff(str, maxChars) {
-    return str.substring(0, maxChars) + "..."
+    if (str.length > maxChars) {
+        return str.substring(0, maxChars) + "...";
+    } else {
+        return str;
+    }
 }

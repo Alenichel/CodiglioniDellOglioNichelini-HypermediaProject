@@ -16,7 +16,7 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
             facebook ? $(`<a href="${facebook}" target="_blank" class="btn-social btn-facebook" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>`) : null,
             twitter ? $(`<a href="${twitter}" target="_blank" class="btn-social btn-twitter" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>`) : null,
             email ? $(`<a href="mailto:${email}" target="_blank" class="btn-social btn-email" aria-label="Email" title="Email"><i class="far fa-envelope"></i></a>`) : null,
-            phone_number ? $(`<a href="#" target="_blank" class="btn-social btn-vimeo" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
+            phone_number ? $(`<a href="tel:${phone_number}" target="_blank" class="btn-social btn-vimeo" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
         )
     )
 }
