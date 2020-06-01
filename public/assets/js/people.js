@@ -10,9 +10,10 @@ function img_dimension(){
 function append_person(img, name, surname, id){
     return $('<div class="gicol-md-4 col-lg-2 col-6 text-center magic-column mt-3">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + img + '">'),
-        $('<p class="page-content no-margin-title">').text(name),
-        $('<p class="page-content no-margin-title">').text(surname),
-        $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
+        $(`<a class="stretched-link blue-link" href="/pages/person.html?id=${id}"></a>`).append(
+            $('<p class="page-content no-margin-title">').text(name),
+            $('<p class="page-content no-margin-title">').text(surname),
+        )
     );
 }
 

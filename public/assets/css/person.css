@@ -10,16 +10,6 @@
     }
 }
 
-.service  p:nth-child(2) {
-    font-size: 15px;
-    margin: auto;
-}
-
-.service  p:nth-child(3) {
-    font-size: 12px;
-    margin: auto;
-}
-
 img {
     max-width: 266px;
     max-height: 266px;

@@ -27,8 +27,10 @@ function build_services(services) {
         services_row.append(
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
-                    $(`<a href="/pages/service.html?id=${s.id}" target="_blank" class="btn-social stretched-link" aria-label="Service" title="Service" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
-                    $(`<p class="page-content no-margin-title">${s.name}</p>`),
+                    $(`<a class="stretched-link blue-link" href="/pages/service.html?id=${s.id}"></a>`).append(
+                        $(`<a target="_blank" class="btn-social" aria-label="Service" title="Service" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
+                        $(`<p class="page-content no-margin-title">${s.name}</p>`),
+                    ),
                     $(`<p class="page-subcontent">${s.serviceDetail}</p>`)
                 )
             )
