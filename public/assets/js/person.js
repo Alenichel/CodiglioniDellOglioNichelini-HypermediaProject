@@ -28,7 +28,12 @@ function build_services(services) {
             $('<div class="col-sm-12 col-md-4 col-12 col text-center">').append(
                 $('<div class="service">').append(
                     $(`<a class="stretched-link blue-link" href="/pages/service.html?id=${s.id}"></a>`).append(
-                        $(`<a target="_blank" class="btn-social" aria-label="Service" title="Service" style="background-color: lightgray"><i class="${s.icon}"></i></a>`),
+                        $('<a class="" aria-label="Service" title="Service">').append(
+                            $('<span class="fa-stack fa-lg">').append(
+                                $('<i class="fas fa-circle fa-stack-2x blue-foreground">'),
+                                $(`<i class="${s.icon} fa-stack-1x fa-inverse">`),
+                            ),
+                        ),
                         $(`<p class="page-content no-margin-title">${s.name}</p>`),
                     ),
                     $(`<p class="page-subcontent">${s.serviceDetail}</p>`)
