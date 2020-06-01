@@ -7,7 +7,7 @@ $(document).ready(function() {
         return response.json();
     }).then(json => {
         for (let n of json) {
-            n.body = n.body.substring(0, 100) + "...";
+            n.body = stringCutOff(n.body, 100);
             let card = generateCard(n.id, n.title, n.body, n.media, CardType.news);
             $('#news-cards').append(card);
         }

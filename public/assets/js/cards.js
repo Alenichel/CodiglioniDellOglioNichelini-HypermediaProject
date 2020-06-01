@@ -29,15 +29,15 @@ function generateCard(id, title, body, img, cardType, date = null) {
     return $('<div class="col-12 col-md-6 mb-4">').append(
         $('<div class="card">').append(
             $('<div class="card-body row position-relative">').append(
-                $('<div class="col-sm-6 position-static">').append(
+                $('<div class="col-lg-6 col-12 position-static">').append(
                     $(`<img class="card-img" src="${img}" alt="">`)
                 ),
-                $('<div class="col-sm-6 position-static">').append(
-                    $('<h4 class="card-title mt-2 mt-md-0">').append(
+                $('<div class="col-lg-6 col-12 position-static">').append(
+                    $('<h4 class="card-title mt-2 mt-lg-0">').append(
                         $(`<a class="blue-link stretched-link" href="${link}">`).text(title)
                     ),
                     date,
-                    $('<p class="card-text mt-1">').text(body),
+                    $('<p class="card-text mt-1">').text(stringCutOff(body, 100)),
                 )
             ),
         )
