@@ -1,13 +1,13 @@
 "use strict";
 
 function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, instagram, twitter) {
-    return $('<div class="col-sm-12 col-md-6 col-12  text-center">').append(
+    return $('<div class="col-sm-12 col-md-6 col-12 text-center">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + imgURL + '">'),
-        $('<div class="row mt-3">').append(
-            $('<div class="col text-left ml-0 ml-md-5">').append(
+        $('<div class="row mt-3 justify-content-center">').append(
+            $('<div class="col-4 text-left">').append(
                 id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}", aria-label="Prev" title="Next"><i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i></a>`) : null
             ),
-            $('<div class="col-4 text-right align-bottom">').append(
+            $('<div class="col-4 text-right">').append(
                 id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}", aria-label="Next" title="Next"><i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i></a>`) : null
             )
         ),
