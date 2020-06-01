@@ -38,7 +38,7 @@ function generateCard(id, title, body, img, cardType, date = null) {
                         $(`<a class="blue-link stretched-link" href="${link}">`).text(title)
                     ),
                     date,
-                    $('<p class="card-text page-content mt-1">').text(stringCutOff(body, 100)),
+                    $('<p class="card-text page-content mt-1">').text(body != null ? stringCutOff(body, 100) : null),
                 )
             ),
         )
@@ -55,7 +55,7 @@ function generateSearchResultCard(item) {
                 ),
                 $('<div class="col-lg-6 col-12 position-static">').append(
                     $('<h4 class="card-title page-subtitle mt-2 mt-lg-0">').append(
-                        $(`<a class="blue-link stretched-link" href="/pages/${item.type}.html?id=${item.id}">`).text(stringCutOff(item.name, 1000))
+                        $(`<a class="blue-link stretched-link" href="/pages/${item.type}.html?id=${item.id}">`).text(item.name)
                     ),
                     $('<p class="text-muted" style="font-variant: small-caps">').text(item.type)
                 )
