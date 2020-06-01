@@ -16,12 +16,12 @@ function build_st_column(imgURL, id, eventsSize) {
 
 function build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
-        $('<h2>').text(name),
-        presentedServiceName ? $(`<h5>Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></h5>`) : $('<br>'),
-        $('<p class="text-justify">').text(description),
-        $('<h5>').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
-        $('<h5>').text("Place: " + place),
-        $(`<h5>Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></h5>`)
+        $('<h2 class="page-title">').text(name),
+        presentedServiceName ? $(`<p class="page-subtitle">Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></p>`) : $('<br>'),
+        $('<p class="page-content text-justify">').text(description),
+        $('<p class="page-subtitle no-margin-title">').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
+        $('<p class="page-subtitle no-margin-title">').text("Place: " + place),
+        $(`<p class="page-subtitle no-margin-title">Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></p>`)
     )
 }
 

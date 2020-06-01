@@ -43,25 +43,25 @@ function build_st_column(pictures, id, servicesSize) {
 
 function build_nd_column(name, description, infos, presentedInEventId, eventName) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
-        $('<h2 class="single-page-title">').text(name),
-        eventName ? $(`<p class="single-page-subtitle">Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></p>`) : $('<br>'),
-        $('<p class="single-page-content text-justify">').text(description),
-        $('<p class="single-page-content text-justify">').text(infos),
+        $('<h2 class="page-title">').text(name),
+        eventName ? $(`<p class="page-subtitle">Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></p>`) : $('<br>'),
+        $('<p class="page-content text-justify">').text(description),
+        $('<p class="page-content text-justify">').text(infos),
     )
 }
 
 function build_nd_row_header() {
     return $('<div>').append(
-        $('<p class="single-page-subtitle">').text("Offered by:"),
+        $('<p class="page-subtitle">').text("Offered by:"),
     )
 }
 
 function append_person(firstName, lastName, picture, serviceDetail, id){
     return $('<div class=" col-12 col-sm-6 col-md-4 col-lg-2 text-center magic-column">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + picture + '">'),
-        $('<p class="single-page-content offered-by-name">').text(firstName),
-        $('<p class="single-page-content offered-by-name">').text(lastName),
-        $('<p class="single-page-subcontent">').text(serviceDetail),
+        $('<p class="page-content no-margin-title">').text(firstName),
+        $('<p class="page-content no-margin-title">').text(lastName),
+        $('<p class="page-subcontent">').text(serviceDetail),
         $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
     );
 }
