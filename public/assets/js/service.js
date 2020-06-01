@@ -43,7 +43,7 @@ function build_st_column(pictures, id, servicesSize) {
 
 function build_nd_column(name, description, infos, presentedInEventId, eventName) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
-        $('<h2 class="page-title">').text(name),
+        $('<h2 class="page-title mt-md-0 mt-4">').text(name),
         eventName ? $(`<p class="page-subtitle">Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></p>`) : $('<br>'),
         $('<p class="page-content text-justify">').text(description),
         $('<p class="page-content text-justify">').text(infos),

@@ -5,10 +5,10 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + imgURL + '">'),
         $('<div class="row mt-3 justify-content-center">').append(
             $('<div class="col-4 text-left">').append(
-                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}", aria-label="Prev" title="Next"><i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i></a>`) : null
+                id !== 1 ? $(`<a href="/pages/person.html?id=${id - 1}" aria-label="Prev" title="Next"><i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i></a>`) : null
             ),
             $('<div class="col-4 text-right">').append(
-                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}", aria-label="Next" title="Next"><i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i></a>`) : null
+                id !== peopleSize ? $(`<a href="/pages/person.html?id=${id + 1}" aria-label="Next" title="Next"><i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i></a>`) : null
             )
         ),
         $('<div class="mt-3">').append(
@@ -39,7 +39,7 @@ function build_services(services) {
 
 function build_nd_column(first_name, last_name, description, event_id, event_name, services) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
-        $('<h2 class="page-title">').text(first_name + " " + last_name),
+        $('<h2 class="page-title mt-md-0 mt-4">').text(first_name + " " + last_name),
         event_id ? $(`<p class="page-subtitle">Contact for: <a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a></p>`) : null,
         $('<p class="text-justify page-content">').text(description),
         build_services(services)
