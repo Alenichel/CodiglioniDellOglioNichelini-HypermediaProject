@@ -4,12 +4,12 @@ let news;
 
 function build_person_row(id, name, img, join_date, i) {
     return $('<div class="row position-relative">').append(
-        $('<div class="col col-md-auto align-self-center position-static">').append(
+        $('<div class="col-6 col-md-auto align-self-center position-static text-right">').append(
             i % 2 === 0 ?
                 $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`) :
                 $(`<p class="text-right"><a class="stretched-link blue-link" href="/pages/person.html?id=${id}">${name}</a><br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`)
         ),
-        $('<div class="col col-md-auto align-self-center position-static">').append(
+        $('<div class="col-6 col-md-auto align-self-center position-static">').append(
             i % 2 === 0 ?
                 $(`<p><a class="stretched-link blue-link" href="/pages/person.html?id=${id}">${name}</a><br>Joined ${getDateFormatter().format(new Date(join_date))}</p>`) :
                 $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`)
