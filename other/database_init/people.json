@@ -53,7 +53,7 @@
         "firstName": "Bruce",
         "lastName": "Banner",
         "picture": "/assets/img/banner.png",
-        "description": "Robert Bruce Banner is the son of Dr. Brian Banner, an atomic physicist, and his wife Rebecca. Although Rebecca deeply loved Bruce, who returned her affection, Brian hated their child. After graduating from Science High School, Bruce studied nuclear physics in Navapo, New Mexico, at Desert State University as the star student of Professor Herbert Josiah Weller.[45] He also studied for a time at Harvard University.",
+        "description": "Robert Bruce Banner is the son of Dr. Brian Banner, an atomic physicist, and his wife Rebecca. Although Rebecca deeply loved Bruce, who returned her affection, Brian hated their child. After graduating from Science High School, Bruce studied nuclear physics in Navapo, New Mexico, at Desert State University as the star student of Professor Herbert Josiah Weller. He also studied for a time at Harvard University.",
         "joinDate": "2020-05-11T00:00:00.000Z",
         "facebook": "https://www.facebook.com/drhulkbanner",
         "email": "bb@tbq.it"
@@ -71,7 +71,7 @@
         "firstName": "Jane",
         "lastName": "Foster",
         "picture": "/assets/img/foster.png",
-        "description": "Risultati di ricerca\nSnippet in primo piano dal Web\nJane Foster was a student at Culver University, where her father and Erik Selvig worked together. She later graduated and became an astronomer, dedicating her life to her research, where she built most of her equipment herself.",
+        "description": "Jane Foster was a student at Culver University, where her father and Erik Selvig worked together. She later graduated and became an astronomer, dedicating her life to her research, where she built most of her equipment herself. Foster also briefly dated M.D. Donald Blake, but eventually broke up with him. When looking back at him, Foster would note that while Blake was a great doctor, he sucked at being a boyfriend.",
         "joinDate": "2020-05-11T00:00:00.000Z",
         "email": "jf@qtb.it",
         "facebook": "https://www.facebook.com/Jane-Foster-426325594101594"
@@ -80,7 +80,7 @@
         "firstName": "Carol",
         "lastName": "Danvers",
         "picture": "/assets/img/danvers.png",
-        "description": "CAPTAIN MARVEL. Former Air Force pilot and intelligence agent Carol Danvers pursued her dream of space exploration as a NASA employee, but her life forever changed when she was accidentally transformed into a human-Kree hybrid with extraordinary powers.",
+        "description": "Carol Danvers, also known as Captain Marvel, is a former United States Air Force pilot who, upon being exposed to the energy of the Tesseract via the destruction of the Light-Speed Engine, obtained cosmic powers. She was made into a Kree-human hybrid via the blood transfusion from Yon-Rogg, while having all of her old memories removed, turning her into the Kree's weapon and a member of Starforce.",
         "joinDate": "2020-05-11T00:00:00.000Z",
         "email": "cd@qtb.it",
         "facebook": "https://www.facebook.com/carol.danvers.90834"
@@ -122,7 +122,7 @@
         "firstName": "Clint",
         "lastName": "Barton",
         "picture": "/assets/img/barton.png",
-        "description": "Clinton Francis \"Clint\" Barton, also known as Hawkeye, is a skilled marksman, a former special agent of S.H.I.E.L.D. and one of the founding members of the Avengers. Known for his use of the bow and arrow as his primary weapon, Barton had become one of the best agents of S.H.I.E.L.D.",
+        "description": "Clinton Francis \"Clint\" Barton, also known as Hawkeye, is a skilled marksman, a former special agent of S.H.I.E.L.D. and one of the founding members of the Avengers. Known for his use of the bow and arrow as his primary weapon, Barton had become one of the best agents of the group. Assigned by Nick Fury into watching over the Tesseract, he was brainwashed by Loki and used as his pawn for all his evil schemes.",
         "joinDate": "2020-05-11T00:00:00.000Z",
         "email": "cb@qtb.it"
     }
