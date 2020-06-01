@@ -38,7 +38,7 @@
     <!-- Nav items -->
     <ul class="nav justify-content-center">
       <li class="nav-item"> 
-        <a class="nav-link active" id="about-item" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About Us</a>
+        <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About Us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact Us</a>
@@ -76,7 +76,7 @@
           </div>
           <div class="form-group">
             <label for="contactsEmail">Email Address</label>
-            <input type="email" class="form-control" id="contactsEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input type="email" class="form-control" id="contactsEmail" placeholder="Enter email" required>
             <div class="invalid-feedback">
               Please enter a valid email address.
             </div>
@@ -100,14 +100,14 @@
           
         </form>
         
-        <div class="modal fade" id="submittedPopup" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="submittedPopupLabel" aria-hidden="true">
+        <div class="modal fade" id="submittedPopup" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-body">
                 Thank you for contacting us!
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalCloseButton"> Close</button>
+                <button type="button" class="btn btn-blue" data-dismiss="modal" id="modalCloseButton"> Close</button>
               </div>
             </div>
           </div>
