@@ -20,9 +20,11 @@
 
 ## Specification
 
-### Web Architecture TODO
+### Web Architecture
 
-Describe here, with a diagram, the components of your web application and how they interact. Highlight which parts belong to the application layer, data layer or presentation layer. How did you ensure that HTML is not rendered server side?
+<div style="text-align: center;"><img src="/assets/img/WebArchitecture.png" width="75%" alt=""></div>
+
+No HTML is rendered server side: the dynamic content of the pages is rendered by the client itself, using the data fetched via the API.
 
 ### API
 
@@ -124,19 +126,9 @@ During the development, we identified two kinds of tasks: group tasks, which hav
 
 Each member handled both the front end and the back end parts of the pages they were assigned.
 
-### Analysis of existing API TODO
+### Analysis of existing API
 
-Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the one implemented, that have possibly guided implementation choices (these should not be necessarily OpenAPI implementations). Toy APIs (such as the Swagger's Pet Store) or the example shown during lectures are not a valid response.
-
-Use TWO or more items of the form:
-
-> We took (full/partial) inspiration from API <XYZ>(link) for the part of the 
-> API that manages <ABC> because of <REASON>.
-
-Or
-
-> For the part of the API that manages <ABC> we considered/studied <XYZ>(link)
-> because of <REASON> but wasn't completely fitting to our purpose because of > <REASON>.
+In order to guide the implementation of the API, we didn't perform any explicit analysis of an existing API; instead we based our choices on various API we worked on in past years, such as the ones provided by Netatmo and Google Maps.
 
 ### Learning outcome
 
