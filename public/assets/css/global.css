@@ -13,7 +13,7 @@ html {
 }
 
 .blue-foreground:hover {
-    color: #1f4068;
+    color: #3c88e4;
     transition: 0.3s;
 }
 
@@ -33,11 +33,6 @@ main > .container {
     box-shadow: none;
 }
 
-.btn-default:hover {
-    background-color: #1f4068;
-    transition: background-color 0.3s;
-}
-
 .img-profile {
     border: 0.5rem solid #1f406840;
 }
@@ -54,7 +49,7 @@ main > .container {
 }
 
 .btn-blue:hover {
-    background-color: #1f4068;
+    background-color: #3c88e4;
     outline: none;
     color: white;
 }
@@ -65,7 +60,7 @@ main > .container {
 }
 
 .blue-link:hover {
-    color: #1f4068;
+    color: #3c88e4;
 }
 
 .page-title {

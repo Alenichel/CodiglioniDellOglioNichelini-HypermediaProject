@@ -59,10 +59,11 @@ function build_nd_row_header() {
 function append_person(firstName, lastName, picture, serviceDetail, id){
     return $('<div class=" col-12 col-sm-6 col-md-4 col-lg-2 text-center magic-column">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + picture + '">'),
-        $('<p class="page-content no-margin-title">').text(firstName),
-        $('<p class="page-content no-margin-title">').text(lastName),
-        $('<p class="page-subcontent">').text(serviceDetail),
-        $(`<a class="stretched-link" href="/pages/person.html?id=${id}"></a>`)
+        $(`<a class="stretched-link blue-link" href="/pages/person.html?id=${id}"></a>`).append(
+            $('<p class="page-content no-margin-title">').text(firstName),
+            $('<p class="page-content no-margin-title">').text(lastName),
+        ),
+        $('<p class="page-subcontent">').text(serviceDetail)
     );
 }
 
