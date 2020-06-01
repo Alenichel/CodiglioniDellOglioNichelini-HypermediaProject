@@ -123,5 +123,30 @@
     "serviceId": 5,
     "personId": 13,
     "description": "Teens only"
+  },
+  {
+    "serviceId": 6,
+    "personId": 5,
+    "description": "How not to be stigmatized"
+  },
+  {
+    "serviceId": 6,
+    "personId": 6,
+    "description": "How not to loose your temper"
+  },
+  {
+    "serviceId": 6,
+    "personId": 8,
+    "description": "How to be an independent woman"
+  },
+  {
+    "serviceId": 6,
+    "personId": 10,
+    "description": "Mental health"
+  },
+  {
+    "serviceId": 6,
+    "personId": 12,
+    "description": "How to handle celebrity"
   }
 ]
