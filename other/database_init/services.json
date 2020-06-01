@@ -22,7 +22,7 @@
     {
         "name": "Tech support",
         "infos": "",
-        "description": "There is a belief that the elderly don’t like to use computers, and we can assure you that’s not the case.  There is a technology gap between seniors and younger people, however, the belief that computers are only for the young is not correct. A surprising fact is that computer usage is increasing rapidly with seniors over the age of sixty. Our society is fueled by information, and there are more and more ways to connect to family and friends with common interest. Sooner or later, as a result of all of this, everyone needs tech support. Tech support was created as in 2015 with the goal of empowering older adults to learn technology, thanks to the help of our volunteers.",
+        "description": "There is a belief that the elderly don’t like to use computers, and we can assure you that’s not the case.  There is a technology gap between seniors and younger people, however, the belief that computers are only for the young is not correct. A surprising fact is that computer usage is increasing rapidly with seniors over the age of sixty. Our society is fueled by information, and there are more and more ways to connect to family and friends with common interest. Sooner or later, as a result of all of this, everyone needs tech support. Tech support was created with the goal of empowering older adults to learn technology, thanks to the help of our volunteers.",
         "presentedInEvent": 1,
         "icon": "fas fa-microchip"
     },
@@ -31,5 +31,13 @@
         "infos": "",
         "description": "Strong communities are made up of strong families. Whether a family is rich or poor, they could provide a high quality of life for their children. Childcare is super expensive, and some parents often have to work more than one job to help pay for childcare. Our volunteers offer their services and provide quality childcare for families in need, allowing the parents to spend less time working and more time with their kids. Parents benefit when their child is provided for this way. When their child is learning and feels well cared for, they thrive. This helps parents with their most important job; to raise productive citizens within their community.",
         "icon": "fas fa-child"
+    },
+    {
+        "name": "Looking Ahead Pilot",
+        "infos": "",
+        "description": "Even if the COVID-19 pandemic make it difficult to offer in-place courses, we don't think it's an excuse to stop helping our youth. Looking Ahead is a new online video mentoring pilot project to support young people aged 18-25 who are not in education, employment or training (NEET). This will help them make informed decisions about their future education and career.  QualityTimeBank will deliver online volunteer training and will provide a range of support and guidance documents, as well as suggested topics to cover each session. Topics will include applications to apprenticeships, courses and job roles, interview preparation and goal setting.",
+        "icon": "fas fa-network-wired"
+
     }
+    
   ]
