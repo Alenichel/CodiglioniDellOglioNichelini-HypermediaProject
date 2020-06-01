@@ -46,8 +46,8 @@
   },
   {
     "serviceId": 2,
-    "personId": 14,
-    "description": "Native speaker"
+    "personId": 9,
+    "description": "(Almost) Native speaker"
   },
   {
     "serviceId": 3,
@@ -106,7 +106,7 @@
   },
   {
     "serviceId": 5,
-    "personId": 8,
+    "personId": 9,
     "description": "Babies and teens"
   },
   {
