@@ -12,7 +12,7 @@
   {
     "serviceId": 1,
     "personId": 3,
-    "description": "History and Maths"
+    "description": "History and Math"
   },
   {
     "serviceId": 1,
@@ -22,7 +22,7 @@
   {
     "serviceId": 1,
     "personId": 6,
-    "description": "I'm good in everything"
+    "description": "I'm good at everything"
   },
   {
     "serviceId": 2,
@@ -132,7 +132,7 @@
   {
     "serviceId": 6,
     "personId": 6,
-    "description": "How not to loose your temper"
+    "description": "How not to lose your temper"
   },
   {
     "serviceId": 6,
