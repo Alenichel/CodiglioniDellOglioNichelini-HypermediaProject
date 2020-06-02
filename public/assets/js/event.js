@@ -17,8 +17,8 @@ function build_st_column(imgURL, id, eventsSize) {
 function build_nd_column(name, description, dateTime, place, contactName, contactId, presentedServiceName, presentedServiceId) {
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2 class="page-title mt-md-0 mt-4">').text(name),
-        presentedServiceName ? $(`<p class="page-subtitle">Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></p>`) : $('<br>'),
-        $('<p class="page-content text-justify">').text(description),
+        presentedServiceName ? $(`<span><p class="page-subtitle" style="display: inline">Presenting:</p> <p class="page-subtitle-thin" style="display: inline"><a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></p></span>`) : $('<br>'),
+        $('<p class="page-content text-justify" style="margin-top: 12px">').text(description),
         $(`<p><p class="page-subtitle no-margin-title"><i class="far fa-calendar-alt mr-2"></i> Date</p> <p class="page-subtitle-thin">${getDateTimeFormatter().format(new Date(dateTime))}</p></p>`),
         $(`<p><p class="page-subtitle no-margin-title"><i class="fas fa-map-marker-alt mr-2"></i> Place</p> <p class="page-subtitle-thin">${place}</p></p>`),
         $(`<p><p class="page-subtitle no-margin-title"><i class="far fa-address-book mr-2"></i> Contact</p> <p class="page-subtitle-thin"><a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></p></p>`),

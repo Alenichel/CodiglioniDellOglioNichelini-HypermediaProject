@@ -38,7 +38,7 @@ function generateCard(id, title, body, img, cardType, date = null) {
                         $(`<a class="blue-link stretched-link" href="${link}">`).text(title)
                     ),
                     date,
-                    $('<p class="card-text page-content mt-1">').text(body != null ? stringCutOff(body, 100) : null),
+                    $('<p class="card-text page-content mt-1">').text(body != null ? stringCutOff(body, 90) : null),
                 )
             ),
         )

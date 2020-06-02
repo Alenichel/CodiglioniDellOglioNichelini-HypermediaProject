@@ -1,5 +1,5 @@
 .nav-link.active{
-    color: #3c88e4;
+    text-decoration: underline;
 }
 
 .nav-link{
