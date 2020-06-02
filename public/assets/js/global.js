@@ -1,5 +1,10 @@
 "use strict";
 
+const smBreakpoint = 576;
+const mdBreakpoint = 768;
+const lgBreakpoint = 992;
+const xlBreakpoint = 1200;
+
 function load_navbar(callback = null) {
     $('header').load('/pages/snippets/navbar.html', function() {
         let dropdown = $('.dropdown');

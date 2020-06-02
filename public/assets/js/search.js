@@ -15,6 +15,19 @@ $(document).ready(() => {
       let card = generateSearchResultCard(r);
       $('#search-cards').append(card);
     }
+    resizeCards();
   });
   $('#search-query').text(`You searched for "${query}"`)
 });
+
+
+function resizeCards() {
+  const windowWidth = $(window).width();
+  if (windowWidth >= mdBreakpoint && windowWidth < lgBreakpoint) {
+    $('.search-card').height(450);
+  } else {
+    $('.search-card').height('auto');
+  }
+}
+
+window.onresize = resizeCards;
