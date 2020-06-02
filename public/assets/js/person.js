@@ -46,7 +46,7 @@ function build_services(services) {
 
 function build_nd_column(first_name, last_name, description, event_id, event_name, services) {
     let event = $('<span>').append(
-        $(`<span><p class="page-subtitle" style="display: inline">Contact for:</p><p class="page-subtitle-thin" style="display: inline"><a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a>&nbsp;&nbsp;<i class="far fa-calendar-alt mr-2"></p></span>`),
+        $(`<span><p class="page-subtitle" style="display: inline">Contact for: </p><p class="page-subtitle-thin" style="display: inline"><a class="blue-link" href="/pages/event.html?id=${event_id}">${event_name}</a>&nbsp;&nbsp;<i class="far fa-calendar-alt mr-2"></p></span>`),
     )
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2 class="page-title mt-md-0 mt-4">').text(first_name + " " + last_name),
