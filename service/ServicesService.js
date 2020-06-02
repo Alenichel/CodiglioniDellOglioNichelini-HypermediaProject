@@ -47,7 +47,6 @@ exports.servicesIdGET = function(id) {
       let s = data[0];
       let pictures = await database.select('filename').from(tables.servicePicture).where('serviceId', s.id);
       s.pictures = pictures.map(p => { return p.filename });
-      console.log(s);
       resolve(s);
     } catch(error) {
       reject({code: 404});
