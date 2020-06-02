@@ -1,42 +1,42 @@
 [
-    {
-        "name": "Tech together",
-        "datetime": "2019-12-07T15:00:00.000",
-        "place": "Headquarters",
-        "picture": "/assets/img/elderly-computer.jpg",
-        "description": "We are proud to announce the new Tech support service, which has the goal of empowering older adults to learn technology, thanks to the help of our volunteers. Not only do computers help to stay connected, they offer services that make life easier, as well as opportunities to remain active members of the community. In addition, computer usage promotes brain health as well as improves cognitive skills. Seniors that feel left behind by technology are encouraged to sign up for this services. The learning is just part of it. Tech support for seniors rounds it off.",
-        "contact": 4
-    },
-    {
-        "name": "Christmas party",
-        "datetime": "2019-12-25T18:30:00.000",
-        "place": "Fancy disco",
-        "picture": "/assets/img/christmas-party.jpg",
-        "description": "Volunteers are the lifeblood of QualityTimeBank, across all services and projects from our children’s creche to our befriending schemes. Equally important are the individuals who give up their time to keep the organization running day-to-day - covering reception, working in the garden, doing small DIY and administrative bits and bobs to keep us going. Over the last year we have had approximately 150 volunteers in total, some of whom have been with us for years. It would be impossible to keep going without them so it was only right that we threw them an amazing Xmas bash! Complete with minibar, mulled wine, nibbles, a visit from Santa (amazing how much he manages to drop by the centre this time of year…) and a bit of a boogie.",
-        "contact": 1
-    },
-    {
-        "name": "Talking together",
-        "datetime": "2020-01-14T10:00:00.000",
-        "place": "Headquarters",
-        "picture": "/assets/img/talking-together.jpg",
-        "description": "We are proud to announce the launch of our new service, which will offer informal, functional English teaching to marginalised UK residents with little or no knowledge of the language - mostly women. Our Talking Groups gave 300 learners the chance to develop their English further with a focus on setting goals for future learning and using English to improve health and well-being, job prospects and engagement with children’s education. We’re hugely proud of the achievements of our learners and volunteers, and thank them all for their hard work and dedication to the project. Now, with this new service, we hope to do even better.",
-        "contact": 8
-    },
-    {
-        "name": "Caring together",
-        "datetime": "2020-01-23T16:00:00.000",
-        "place": "Headquarters",
-        "picture": "/assets/img/laughing-grandma.jpg",
-        "description": "We are proud to announce the launch of our new service. Our plan is to offer a range of care-related training courses, delivered by our friendly team of experienced healthcare professionals. All of our courses are also available to private carers and even people looking after friends or relatives. Each training course you sign up for, except for our distance learning courses, is delivered at our head office in Tonbridge Kent. And if you need to stay overnight, the Consultus Carer House is an affordable and convenient place to stay. We are sure that new carers will find the training helpful and enjoyable, especially as it provides an opportunity to meet with other carers.",
-        "contact": 9
-    },
-    {
-        "name": "Summer party",
-        "datetime": "2020-06-13T16:00:00.000",
-        "place": "Big green field",
-        "picture": "/assets/img/summer-party.png",
-        "description": "Volunteering for QualityTimeBank is a rich and rewarding experience that allows individuals, friends, co-workers, and families to participate by ushering, greeting guests, distributing information, collecting donations, and performing other helpful tasks. All volunteers are invited to attend the annual 'thank you' celebration on the stunning hospice grounds. With live music, buffet lunch, and hospice tours, we look back at the last year in volunteering and look forward to the year ahead.",
-        "contact": 2
-    }
+  {
+    "name": "Tech together",
+    "datetime": "2019-12-07T15:00:00.000",
+    "place": "Headquarters",
+    "picture": "/assets/img/elderly-computer.jpg",
+    "description": "We are proud to announce the new Tech support service, which has the goal of empowering older adults to learn technology, thanks to the help of our volunteers. Not only do computers help to stay connected, they offer services that make life easier, as well as opportunities to remain active members of the community. In addition, computer usage promotes brain health as well as improves cognitive skills. Seniors that feel left behind by technology are encouraged to sign up for this services. The learning is just part of it. Tech support for seniors rounds it off.",
+    "contact": 4
+  },
+  {
+    "name": "Christmas party",
+    "datetime": "2019-12-25T18:30:00.000",
+    "place": "Fancy disco",
+    "picture": "/assets/img/christmas-party.jpg",
+    "description": "Volunteers are the lifeblood of QualityTimeBank, across all services and projects from our children’s creche to our befriending schemes. Equally important are the individuals who give up their time to keep the organization running day-to-day - covering reception, working in the garden, doing small DIY and administrative bits and bobs to keep us going. Over the last year we have had approximately 150 volunteers in total, some of whom have been with us for years. It would be impossible to keep going without them so it was only right that we threw them an amazing Xmas bash! Complete with minibar, mulled wine, nibbles, a visit from Santa (amazing how much he manages to drop by the centre this time of year…) and a bit of a boogie.",
+    "contact": 1
+  },
+  {
+    "name": "Talking together",
+    "datetime": "2020-01-14T10:00:00.000",
+    "place": "Headquarters",
+    "picture": "/assets/img/talking-together.jpg",
+    "description": "We are proud to announce the launch of our new service, which will offer informal, functional English teaching to marginalised UK residents with little or no knowledge of the language - mostly women. Our Talking Groups gave 300 learners the chance to develop their English further with a focus on setting goals for future learning and using English to improve health and well-being, job prospects and engagement with children’s education. We’re hugely proud of the achievements of our learners and volunteers, and thank them all for their hard work and dedication to the project. Now, with this new service, we hope to do even better.",
+    "contact": 8
+  },
+  {
+    "name": "Caring together",
+    "datetime": "2020-01-23T16:00:00.000",
+    "place": "Headquarters",
+    "picture": "/assets/img/laughing-grandma.jpg",
+    "description": "We are proud to announce the launch of our new service. Our plan is to offer a range of care-related training courses, delivered by our friendly team of experienced healthcare professionals. All of our courses are also available to private carers and even people looking after friends or relatives. Each training course you sign up for, except for our distance learning courses, is delivered at our head office in Tonbridge Kent. And if you need to stay overnight, the Consultus Carer House is an affordable and convenient place to stay. We are sure that new carers will find the training helpful and enjoyable, especially as it provides an opportunity to meet with other carers.",
+    "contact": 9
+  },
+  {
+    "name": "Summer party",
+    "datetime": "2020-06-13T16:00:00.000",
+    "place": "Big green field",
+    "picture": "/assets/img/summer-party.png",
+    "description": "Volunteering for QualityTimeBank is a rich and rewarding experience that allows individuals, friends, co-workers, and families to participate by ushering, greeting guests, distributing information, collecting donations, and performing other helpful tasks. All volunteers are invited to attend the annual 'thank you' celebration on the stunning hospice grounds. With live music, buffet lunch, and hospice tours, we look back at the last year in volunteering and look forward to the year ahead.",
+    "contact": 2
+  }
 ]

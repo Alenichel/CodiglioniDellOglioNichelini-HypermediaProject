@@ -1,43 +1,41 @@
 [
-    {
-        "name": "Private tutoring",
-        "infos": "To decide when and where to meet, contact a tutor.",
-        "description": "QualityTimeBank groups volunteers who have been offering tutoring to young people for multiple years. Each tutor tries to tailor the lessons to the individual student’s learning requirements. We allow the student to freely decide on the number and time of the lessons, with a wide range of availability; for the best results however, we do suggest a maximum of 3 lessons per day.",
-        "icon": "fas fa-chalkboard-teacher"
-    },
-    {
-        "name": "English lessons",
-        "infos": "",
-        "description": "Talking Together is QualityTimeBank’s extensive volunteer-led project offering informal, functional English teaching to marginalised UK residents with little or no knowledge of the language - mostly women. The goal of our volunteers is to give learners confidence, a safe space to practice and an opportunity to meet new people in their area, helping to combat the isolation many of our learners face to do everyday things we take for granted, like visiting the doctor, talking to children’s teachers or using public transport.",
-        "presentedInEvent": 3,
-        "icon": "fas fa-chalkboard-teacher"
-    },
-    {
-        "name": "Carers training",
-        "infos": "",
-        "description": "There are more than six million carers across the UK - and one in four Birmingham homes is home to a carer. But many people don’t classify themselves as a carer and so miss out on vital help and support. Carers training is our West Midlands volunteering project that recognises that carers don’t always realise that they are a caregiver. They may be caring for a friend, relative or neighbour and need to improve their confidence and skills in English to access support. The goal is to recruit and trains volunteers to deliver one day interactive workshops to help carers understand their role and rights, to feel part of a social support network and to be aware of services to improve and maintain their wellbeing.",
-        "presentedInEvent": 4,
-        "icon": "fas fa-briefcase"
-    },
-    {
-        "name": "Tech support",
-        "infos": "",
-        "description": "There is a belief that the elderly don’t like to use computers, and we can assure you that’s not the case.  There is a technology gap between seniors and younger people, however, the belief that computers are only for the young is not correct. A surprising fact is that computer usage is increasing rapidly with seniors over the age of sixty. Our society is fueled by information, and there are more and more ways to connect to family and friends with common interest. Sooner or later, as a result of all of this, everyone needs tech support. Tech support was created with the goal of empowering older adults to learn technology, thanks to the help of our volunteers.",
-        "presentedInEvent": 1,
-        "icon": "fas fa-microchip"
-    },
-    {
-        "name": "Baby-sitting",
-        "infos": "",
-        "description": "Strong communities are made up of strong families. Whether a family is rich or poor, they could provide a high quality of life for their children. Childcare is super expensive, and some parents often have to work more than one job to help pay for childcare. Our volunteers offer their services and provide quality childcare for families in need, allowing the parents to spend less time working and more time with their kids. Parents benefit when their child is provided for this way. When their child is learning and feels well cared for, they thrive. This helps parents with their most important job; to raise productive citizens within their community.",
-        "icon": "fas fa-child"
-    },
-    {
-        "name": "Looking ahead pilot",
-        "infos": "",
-        "description": "Even if the COVID-19 pandemic make it difficult to offer in-place courses, we don't think it's an excuse to stop helping our youth. Looking ahead is a new online video mentoring pilot project to support young people aged 18-25 who are not in education, employment or training (NEET). This will help them make informed decisions about their future education and career.  QualityTimeBank will deliver online volunteer training and will provide a range of support and guidance documents, as well as suggested topics to cover each session. Topics will include applications to apprenticeships, courses and job roles, interview preparation and goal setting.",
-        "icon": "fas fa-network-wired"
-
-    }
-    
-  ]
+  {
+    "name": "Private tutoring",
+    "infos": "In order to decide when and where to meet, contact a tutor.",
+    "description": "QualityTimeBank groups volunteers who have been offering tutoring to young people for multiple years. Each tutor tries to tailor the lessons to the individual student’s learning requirements. We allow the student to freely decide on the number and time of the lessons, with a wide range of availability; for the best results however, we do suggest a maximum of 3 lessons per day.",
+    "icon": "fas fa-chalkboard-teacher"
+  },
+  {
+    "name": "English lessons",
+    "infos": "Lessons will be held in our headquarters, on Tuesday and Friday, from 6 PM to 7:30 PM.",
+    "description": "Talking Together is QualityTimeBank’s extensive volunteer-led project offering informal, functional English teaching to marginalised UK residents with little or no knowledge of the language - mostly women. The goal of our volunteers is to give learners confidence, a safe space to practice and an opportunity to meet new people in their area, helping to combat the isolation many of our learners face to do everyday things we take for granted, like visiting the doctor, talking to children’s teachers or using public transport.",
+    "presentedInEvent": 3,
+    "icon": "fas fa-chalkboard-teacher"
+  },
+  {
+    "name": "Carers training",
+    "infos": "One-day workshops will be organized based on enrollments.",
+    "description": "There are more than six million carers across the UK - and one in four Birmingham homes is home to a carer. But many people don’t classify themselves as a carer and so miss out on vital help and support. Carers training is our West Midlands volunteering project that recognises that carers don’t always realise that they are a caregiver. They may be caring for a friend, relative or neighbour and need to improve their confidence and skills in English to access support. The goal is to recruit and train volunteers to deliver one day interactive workshops to help carers understand their role and rights, to feel part of a social support network and to be aware of services to improve and maintain their well-being.",
+    "presentedInEvent": 4,
+    "icon": "fas fa-briefcase"
+  },
+  {
+    "name": "Tech support",
+    "infos": "Lessons will be held in our headquarters, on Monday and Thursday, from 10:30 AM to 12 PM.",
+    "description": "There is a belief that the elderly don’t like to use computers, and we can assure you that’s not the case. There is a technology gap between seniors and younger people, however, the belief that computers are only for the young is not correct. A surprising fact is that computer usage is increasing rapidly with seniors over the age of sixty. Our society is fueled by information, and there are more and more ways to connect to family and friends with common interest. Sooner or later, as a result of all of this, everyone needs tech support. Tech support was created with the goal of empowering older adults to learn technology, thanks to the help of our volunteers.",
+    "presentedInEvent": 1,
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "Baby-sitting",
+    "infos": "Please make sure you mention to the volunteer any particular need that your child may have.",
+    "description": "Strong communities are made up of strong families. Whether a family is rich or poor, they could provide a high quality of life for their children. Childcare is super expensive, and some parents often have to work more than one job to help pay for childcare. Our volunteers offer their services and provide quality childcare for families in need, allowing the parents to spend less time working and more time with their kids. Parents benefit when their child is provided for this way. When their child is learning and feels well cared for, they thrive. This helps parents with their most important job; to raise productive citizens within their community.",
+    "icon": "fas fa-child"
+  },
+  {
+    "name": "Looking ahead pilot",
+    "infos": "In addition to pre-recorded videos, there will be live chats with trainers on Microsoft Teams.",
+    "description": "Even if the COVID-19 pandemic makes it difficult to offer in-place courses, we don't think it's an excuse to stop helping our youth. Looking ahead is a new online video mentoring pilot project to support young people aged 18-25 who are not in education, employment or training (NEET). This will help them make informed decisions about their future education and career. QualityTimeBank will deliver online volunteer training and will provide a range of support and guidance documents, as well as suggested topics to cover each session. Topics will include applications to apprenticeships, courses and job roles, interview preparation and goal setting.",
+    "icon": "fas fa-network-wired"
+  }
+]

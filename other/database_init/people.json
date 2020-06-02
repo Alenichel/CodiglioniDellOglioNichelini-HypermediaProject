@@ -1,129 +1,129 @@
 [
-    {
-        "firstName": "Alessandro",
-        "lastName": "Nichelini",
-        "picture": "/assets/img/alenichel.png",
-        "description": "Geek, CSE student, Steve Jobs wanna be, temporarily math teacher. Unforgivable romantic.\n I can help with computers and with private lessons in scientific fields.  After a positive high school volunteering experience and an inspiring conference, I decided, along with Luca dell'Oglio and Fabio Codiglioni, to create QualityTimeBank, with the goal of helping the community around us.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "an@qtb.it",
-        "phoneNumber": "3992345787",
-        "facebook":"https://www.facebook.com/anichelini"
-    },
-    {
-        "firstName": "Fabio",
-        "lastName": "Codiglioni",
-        "picture": "/assets/img/fabiocody.jpeg",
-        "description": "Senior CSE student @ POLIMI. Math tutor since 2014. Always learning new stuff and trying to step up my game.  After a positive high school volunteering experience and an inspiring conference, I decided, along with Luca dell'Oglio and Alessandro Nichelini, to create QualityTimeBank, with the goal of helping the community around us.",
-        "joinDate": "2020-05-11T00:00:00.000",
-        "facebook":  "https://www.facebook.com/fabiocody96",
-        "instagram": "https://www.instagram.com/fabiocody/",
-        "twitter": "https://twitter.com/fabiocody",
-        "email": "fc@qtb.it"
-    },
-    {
-        "firstName": "Luca",
-        "lastName": "dell'Oglio",
-        "picture": "/assets/img/lucadll.jpg",
-        "description": "CSE student @ Polimi, history fan, analog guy in a digital world. Still trying to explain that when I look out the window I'm working. After a positive high school volunteering experience and an inspiring conference, I decided, along with Fabio Codiglioni and Alessandro Nichelini, to create QualityTimeBank, with the goal of helping the community around us.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "instagram": "https://www.instagram.com/lucdll/",
-        "twitter": "https://twitter.com/LucDLL",
-        "email": "ldll@qtb.it"
-    },
-    {
-        "firstName": "Anthony",
-        "lastName": "Stark",
-        "picture": "/assets/img/tony.jpg",
-        "description": "Anthony Edward \"Tony\" Stark was a billionaire industrialist, a founding member of the Avengers, and the former CEO of Stark Industries. A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and philanthropist.\nI can help with private lessons and with hardware.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "instagram": "https://www.instagram.com/robertdowneyjr",
-        "facebook": "https://www.facebook.com/robertdowneyjr",
-        "email": "rdj@qtb.it"
-    },
-    {
-        "firstName": "Natasha",
-        "lastName": "Romanoff",
-        "picture": "/assets/img/natasha.jpg",
-        "description": "Natalia Alianovna \"Natasha\" Romanova (Russian: Наталья Альяновна \"Наташа\" Романова; alias: Natasha Romanoff; Russian: Наташа Романоф), colloquial: Black Widow (Russian: Чёрная Вдова; transliterated Chyornaya Vdova) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by editor and plotter Stan Lee, scripter Don Rico, and artist Don Heck, the character debuted in Tales of Suspense #52 (April 1964). The character was introduced as a Russian spy, an antagonist of the superhero Iron Man. She later defected to the United States, becoming an agent of the fictional spy agency S.H.I.E.L.D. and a member of the superhero team the Avengers.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "facebook": "https://www.facebook.com/BlackWidowNatashaRomanoffScarlettJohanssonOfficial",
-        "email": "nr@qtb.it"
-    },
-    {
-        "firstName": "Bruce",
-        "lastName": "Banner",
-        "picture": "/assets/img/banner.png",
-        "description": "Robert Bruce Banner is the son of Dr. Brian Banner, an atomic physicist, and his wife Rebecca. Although Rebecca deeply loved Bruce, who returned her affection, Brian hated their child. After graduating from Science High School, Bruce studied nuclear physics in Navapo, New Mexico, at Desert State University as the star student of Professor Herbert Josiah Weller. He also studied for a time at Harvard University.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "facebook": "https://www.facebook.com/drhulkbanner",
-        "email": "bb@tbq.it"
-    },
-    {
-        "firstName": "Steve",
-        "lastName": "Rogers",
-        "picture": "/assets/img/rogers.png",
-        "description": "During the dark days of the early 1940's, a covert U.S. Military experiment turned Steve Rogers into America's first Super-Soldier, Captain America. Throughout the war, Cap and his partner, Bucky fought alongside infantry and with a group of heroes known as the Invaders. In the closing months of World War II, Captain America and Bucky were both presumed dead in an explosion. Decades later, Captain America was found trapped in ice and revived in the modern world. ",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "sr@qtb.it",
-        "facebook": "https://www.facebook.com/HandsomeRogers"
-    },
-    {
-        "firstName": "Jane",
-        "lastName": "Foster",
-        "picture": "/assets/img/foster.png",
-        "description": "Jane Foster was a student at Culver University, where her father and Erik Selvig worked together. She later graduated and became an astronomer, dedicating her life to her research, where she built most of her equipment herself. Foster also briefly dated M.D. Donald Blake, but eventually broke up with him. When looking back at him, Foster would note that while Blake was a great doctor, he sucked at being a boyfriend.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "jf@qtb.it",
-        "facebook": "https://www.facebook.com/Jane-Foster-426325594101594"
-    },
-    {
-        "firstName": "Carol",
-        "lastName": "Danvers",
-        "picture": "/assets/img/danvers.png",
-        "description": "Carol Danvers, also known as Captain Marvel, is a former United States Air Force pilot who, upon being exposed to the energy of the Tesseract via the destruction of the Light-Speed Engine, obtained cosmic powers. She was made into a Kree-human hybrid via the blood transfusion from Yon-Rogg, while having all of her old memories removed, turning her into the Kree's weapon and a member of Starforce.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "cd@qtb.it",
-        "facebook": "https://www.facebook.com/carol.danvers.90834"
-    },
-    {
-        "firstName": "Margaret",
-        "lastName": "Carter",
-        "picture": "/assets/img/carter.png",
-        "description": "Margaret Elizabeth \"Peggy\" Carter was one of the most prominent agents of the Strategic Scientific Reserve during and after World War II and one of the founders of S.H.I.E.L.D.. Originally a code-breaker working at Bletchley Park, she joined the Special Operations Executive following her brother's death.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "mc@qtb.it"
-    },
-    {
-        "firstName": "Pepper",
-        "lastName": "Pots",
-        "picture": "/assets/img/pots.png",
-        "description": "Virginia \"Pepper\" Potts is the CEO of Stark Industries. Originally working as Tony Stark's personal assistant, she would take care of his schedule and perform any task he wished. During this time, Potts became good friends with Stark and soon, they had begun developing romantic feelings for each other. However, neither was able to act on these feelings, as they each feared that the other would not accept them. ",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "pp@qtb.it",
-        "facebook": "https://www.facebook.com/Pepper-Potts-224703247652830"
-    },
-    {
-        "firstName": "Peter",
-        "lastName": "Parker",
-        "picture": "/assets/img/parker.png",
-        "description": "Peter Parker was an orphaned teenage boy who lived in Queens, New York with his Aunt May and Uncle Ben. He was a shy boy, but highly intelligent and excelled in science. He was often teased by other more popular kids like longtime nemesis Flash Thompson, but his life was soon to change on a visit to the science museum.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "pp_2@qtb.it"
-    },
-    {
-        "firstName": "Maria",
-        "lastName": "Hill",
-        "picture": "/assets/img/hill.png",
-        "description": "Maria Hill is the former Deputy Director of S.H.I.E.L.D., and also held the title of \"Commander\". She enjoyed a well-deserved reputation as tough-minded and by the book. Her clearheaded pragmatism was a valued source of reason during the critical discourse surrounding the Avengers Initiative. After Nick Fury faked his death, Hill worked with him and was a part of the assault team that took down the Helicarriers from Project Insight. ",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "mh@qtb.it"
-    },
-    {
-        "firstName": "Clint",
-        "lastName": "Barton",
-        "picture": "/assets/img/barton.png",
-        "description": "Clinton Francis \"Clint\" Barton, also known as Hawkeye, is a skilled marksman, a former special agent of S.H.I.E.L.D. and one of the founding members of the Avengers. Known for his use of the bow and arrow as his primary weapon, Barton had become one of the best agents of the group. Assigned by Nick Fury into watching over the Tesseract, he was brainwashed by Loki and used as his pawn for all his evil schemes.",
-        "joinDate": "2020-05-11T00:00:00.000Z",
-        "email": "cb@qtb.it"
-    }
+  {
+    "firstName": "Alessandro",
+    "lastName": "Nichelini",
+    "picture": "/assets/img/alenichel.png",
+    "description": "Geek, CSE student, Steve Jobs wanna be, temporarily math teacher. Unforgivable romantic.\n I can help with computers and with private lessons in scientific fields.  After a positive high school volunteering experience and an inspiring conference, I decided, along with Luca dell'Oglio and Fabio Codiglioni, to create QualityTimeBank, with the goal of helping the community around us.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "an@qtb.it",
+    "phoneNumber": "3992345787",
+    "facebook": "https://www.facebook.com/anichelini"
+  },
+  {
+    "firstName": "Fabio",
+    "lastName": "Codiglioni",
+    "picture": "/assets/img/fabiocody.jpeg",
+    "description": "Senior CSE student @ POLIMI. Math tutor since 2014. Always learning new stuff and trying to step up my game.  After a positive high school volunteering experience and an inspiring conference, I decided, along with Luca dell'Oglio and Alessandro Nichelini, to create QualityTimeBank, with the goal of helping the community around us.",
+    "joinDate": "2020-05-11T00:00:00.000",
+    "facebook": "https://www.facebook.com/fabiocody96",
+    "instagram": "https://www.instagram.com/fabiocody/",
+    "twitter": "https://twitter.com/fabiocody",
+    "email": "fc@qtb.it"
+  },
+  {
+    "firstName": "Luca",
+    "lastName": "dell'Oglio",
+    "picture": "/assets/img/lucadll.jpg",
+    "description": "CSE student @ Polimi, history fan, analog guy in a digital world. Still trying to explain that when I look out the window I'm working. After a positive high school volunteering experience and an inspiring conference, I decided, along with Fabio Codiglioni and Alessandro Nichelini, to create QualityTimeBank, with the goal of helping the community around us.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "instagram": "https://www.instagram.com/lucdll/",
+    "twitter": "https://twitter.com/LucDLL",
+    "email": "ldll@qtb.it"
+  },
+  {
+    "firstName": "Anthony",
+    "lastName": "Stark",
+    "picture": "/assets/img/tony.jpg",
+    "description": "Anthony Edward \"Tony\" Stark was a billionaire industrialist, a founding member of the Avengers, and the former CEO of Stark Industries. A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and philanthropist.\nI can help with private lessons and with hardware.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "instagram": "https://www.instagram.com/robertdowneyjr",
+    "facebook": "https://www.facebook.com/robertdowneyjr",
+    "email": "rdj@qtb.it"
+  },
+  {
+    "firstName": "Natasha",
+    "lastName": "Romanoff",
+    "picture": "/assets/img/natasha.jpg",
+    "description": "Natalia Alianovna \"Natasha\" Romanova (Russian: Наталья Альяновна \"Наташа\" Романова; alias: Natasha Romanoff; Russian: Наташа Романоф), colloquial: Black Widow (Russian: Чёрная Вдова; transliterated Chyornaya Vdova) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by editor and plotter Stan Lee, scripter Don Rico, and artist Don Heck, the character debuted in Tales of Suspense #52 (April 1964). The character was introduced as a Russian spy, an antagonist of the superhero Iron Man. She later defected to the United States, becoming an agent of the fictional spy agency S.H.I.E.L.D. and a member of the superhero team the Avengers.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "facebook": "https://www.facebook.com/BlackWidowNatashaRomanoffScarlettJohanssonOfficial",
+    "email": "nr@qtb.it"
+  },
+  {
+    "firstName": "Bruce",
+    "lastName": "Banner",
+    "picture": "/assets/img/banner.png",
+    "description": "Robert Bruce Banner is the son of Dr. Brian Banner, an atomic physicist, and his wife Rebecca. Although Rebecca deeply loved Bruce, who returned her affection, Brian hated their child. After graduating from Science High School, Bruce studied nuclear physics in Navapo, New Mexico, at Desert State University as the star student of Professor Herbert Josiah Weller. He also studied for a time at Harvard University.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "facebook": "https://www.facebook.com/drhulkbanner",
+    "email": "bb@tbq.it"
+  },
+  {
+    "firstName": "Steve",
+    "lastName": "Rogers",
+    "picture": "/assets/img/rogers.png",
+    "description": "During the dark days of the early 1940's, a covert U.S. Military experiment turned Steve Rogers into America's first Super-Soldier, Captain America. Throughout the war, Cap and his partner, Bucky fought alongside infantry and with a group of heroes known as the Invaders. In the closing months of World War II, Captain America and Bucky were both presumed dead in an explosion. Decades later, Captain America was found trapped in ice and revived in the modern world. ",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "sr@qtb.it",
+    "facebook": "https://www.facebook.com/HandsomeRogers"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Foster",
+    "picture": "/assets/img/foster.png",
+    "description": "Jane Foster was a student at Culver University, where her father and Erik Selvig worked together. She later graduated and became an astronomer, dedicating her life to her research, where she built most of her equipment herself. Foster also briefly dated M.D. Donald Blake, but eventually broke up with him. When looking back at him, Foster would note that while Blake was a great doctor, he sucked at being a boyfriend.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "jf@qtb.it",
+    "facebook": "https://www.facebook.com/Jane-Foster-426325594101594"
+  },
+  {
+    "firstName": "Carol",
+    "lastName": "Danvers",
+    "picture": "/assets/img/danvers.png",
+    "description": "Carol Danvers, also known as Captain Marvel, is a former United States Air Force pilot who, upon being exposed to the energy of the Tesseract via the destruction of the Light-Speed Engine, obtained cosmic powers. She was made into a Kree-human hybrid via the blood transfusion from Yon-Rogg, while having all of her old memories removed, turning her into the Kree's weapon and a member of Starforce.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "cd@qtb.it",
+    "facebook": "https://www.facebook.com/carol.danvers.90834"
+  },
+  {
+    "firstName": "Margaret",
+    "lastName": "Carter",
+    "picture": "/assets/img/carter.png",
+    "description": "Margaret Elizabeth \"Peggy\" Carter was one of the most prominent agents of the Strategic Scientific Reserve during and after World War II and one of the founders of S.H.I.E.L.D.. Originally a code-breaker working at Bletchley Park, she joined the Special Operations Executive following her brother's death.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "mc@qtb.it"
+  },
+  {
+    "firstName": "Pepper",
+    "lastName": "Pots",
+    "picture": "/assets/img/pots.png",
+    "description": "Virginia \"Pepper\" Potts is the CEO of Stark Industries. Originally working as Tony Stark's personal assistant, she would take care of his schedule and perform any task he wished. During this time, Potts became good friends with Stark and soon, they had begun developing romantic feelings for each other. However, neither was able to act on these feelings, as they each feared that the other would not accept them. ",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "pp@qtb.it",
+    "facebook": "https://www.facebook.com/Pepper-Potts-224703247652830"
+  },
+  {
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "picture": "/assets/img/parker.png",
+    "description": "Peter Parker was an orphaned teenage boy who lived in Queens, New York with his Aunt May and Uncle Ben. He was a shy boy, but highly intelligent and excelled in science. He was often teased by other more popular kids like longtime nemesis Flash Thompson, but his life was soon to change on a visit to the science museum.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "pp_2@qtb.it"
+  },
+  {
+    "firstName": "Maria",
+    "lastName": "Hill",
+    "picture": "/assets/img/hill.png",
+    "description": "Maria Hill is the former Deputy Director of S.H.I.E.L.D., and also held the title of \"Commander\". She enjoyed a well-deserved reputation as tough-minded and by the book. Her clearheaded pragmatism was a valued source of reason during the critical discourse surrounding the Avengers Initiative. After Nick Fury faked his death, Hill worked with him and was a part of the assault team that took down the Helicarriers from Project Insight. ",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "mh@qtb.it"
+  },
+  {
+    "firstName": "Clint",
+    "lastName": "Barton",
+    "picture": "/assets/img/barton.png",
+    "description": "Clinton Francis \"Clint\" Barton, also known as Hawkeye, is a skilled marksman, a former special agent of S.H.I.E.L.D. and one of the founding members of the Avengers. Known for his use of the bow and arrow as his primary weapon, Barton had become one of the best agents of the group. Assigned by Nick Fury into watching over the Tesseract, he was brainwashed by Loki and used as his pawn for all his evil schemes.",
+    "joinDate": "2020-05-11T00:00:00.000Z",
+    "email": "cb@qtb.it"
+  }
 ]
