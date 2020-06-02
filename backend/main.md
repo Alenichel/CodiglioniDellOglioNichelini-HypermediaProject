@@ -136,6 +136,6 @@ This was the first full web application project for all the members of the group
 
 Fabio learnt JavaScript and how to use jQuery to manipulate HTML and create dynamic pages. He also understood how to use the Bootstrap grid system in order to obtain responsive layouts.
 
-Luca learnt how to use Swagger to build RESTful APIs, how to serve static and dynamic content on a site, and how to use Javascript to serve content or to validate a form. He also took an interest on styling the content of a site using HTML and CSS, even if he didn't expect to.
+Luca learnt how to use Swagger to build RESTful APIs, how to serve static and dynamic content on a site, and how to use Javascript to serve content or to validate a form. He also took an interest on styling the content of a site using HTML and CSS, and he'd like look more into it. 
 
 Alessandro Nichelini
