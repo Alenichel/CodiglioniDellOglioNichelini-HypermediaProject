@@ -21,9 +21,10 @@ $(document).ready(function() {
         $('title').text(`QualityTimeBank | ${news.title}`);
         $('#news-title').text(news.title);
         $('#news-body').append(
-            $(`<img src="${news.media}" alt="" class="text-wrap mr-4" width="300">`),
+            $(`<img src="${news.media}" alt="" class="text-wrap mr-4">`),
             $(`<p class="text-justify">`).text(news.body)
         );
+        resizeImg();
         if (news.personId != null || news.serviceId != null || news.eventId != null) {
             let related = $('#news-related');
             related.append(
@@ -70,3 +71,17 @@ function addRelatedEvent(id, div) {
         div.append(card);
     })
 }
+
+function resizeImg() {
+    const windowWidth = $(window).width();
+    let img = $('.text-wrap')
+    if (windowWidth >= lgBreakpoint) {
+        img.css('width', '35%');
+    } else if (windowWidth >= mdBreakpoint) {
+        img.css('width', '50%');
+    } else {
+        img.css('width', '95%');
+    }
+}
+
+window.onresize = resizeImg;
