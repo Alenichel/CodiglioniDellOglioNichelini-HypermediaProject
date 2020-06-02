@@ -35,16 +35,22 @@
 
     <hr>
 
-    <div id="month-picker" class="row mt-4 mb-4">
-      <button id="slider-prev" type="button" data-role="none" class="btn col-1" aria-label="Prev" title="Prev">
-        <i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i>
-      </button>
-      <div class="slider col-10" style="margin-top: 7px">
-        <!-- Filled with jQuery -->
+    <div class="container-fluid">
+      <div id="month-picker" class="row my-4 align-items-center">
+        <div class="col-2 col-lg-1">
+          <a id="slider-prev" aria-label="Prev" title="Prev">
+            <i class="fas fa-chevron-circle-left fa-2x blue-foreground"></i>
+          </a>
+        </div>
+        <div class="slider col-8 col-lg-10">
+          <!-- Filled with jQuery -->
+        </div>
+        <div class="col-2 col-lg-1">
+          <a id="slider-next" aria-label="Next" title="Next">
+            <i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i>
+          </a>
+        </div>
       </div>
-      <button id="slider-next" type="button" data-role="none" class="btn col-1" aria-label="Next" title="Next">
-        <i class="fas fa-chevron-circle-right fa-2x blue-foreground"></i>
-      </button>
     </div>
 
     <div id="event-cards" class="row">

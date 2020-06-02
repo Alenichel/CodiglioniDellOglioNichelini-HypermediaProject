@@ -59,7 +59,7 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 991,
+                breakpoint: lgBreakpoint,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -67,7 +67,7 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: mdBreakpoint,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
