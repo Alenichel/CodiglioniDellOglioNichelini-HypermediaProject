@@ -19,9 +19,9 @@ function build_nd_column(name, description, dateTime, place, contactName, contac
         $('<h2 class="page-title mt-md-0 mt-4">').text(name),
         presentedServiceName ? $(`<p class="page-subtitle">Presenting: <a href="/pages/service.html?id=${presentedServiceId}" class="blue-link">${presentedServiceName}</a></p>`) : $('<br>'),
         $('<p class="page-content text-justify">').text(description),
-        $('<p class="page-subtitle no-margin-title">').text("Date: " + getDateTimeFormatter().format(new Date(dateTime))),
-        $('<p class="page-subtitle no-margin-title">').text("Place: " + place),
-        $(`<p class="page-subtitle no-margin-title">Contact: <a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></p>`)
+        $(`<p><p class="page-subtitle no-margin-title"><i class="far fa-calendar-alt mr-2"></i> Date</p> <p class="page-subtitle-thin">${getDateTimeFormatter().format(new Date(dateTime))}</p></p>`),
+        $(`<p><p class="page-subtitle no-margin-title"><i class="fas fa-map-marker-alt mr-2"></i> Place</p> <p class="page-subtitle-thin">${place}</p></p>`),
+        $(`<p><p class="page-subtitle no-margin-title"><i class="far fa-address-book mr-2"></i> Contact</p> <p class="page-subtitle-thin"><a class="blue-link" href="/pages/person.html?id=${contactId}">${contactName}</a></p></p>`),
     )
 }
 

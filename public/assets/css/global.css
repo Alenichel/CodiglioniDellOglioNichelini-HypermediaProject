@@ -73,6 +73,11 @@ main > .container {
     font-weight: 600;
 }
 
+.page-subtitle-thin {
+    font-size: 20px;
+    font-weight: 200;
+}
+
 .page-content {
     font-size: 16px;
 }
