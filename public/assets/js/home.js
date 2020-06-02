@@ -65,9 +65,19 @@ function build_news_carousel(news) {
 }
 
 
+function centerNewMembersTitle() {
+    if ($(window).width() < mdBreakpoint) {
+        $('#new-members-title').addClass('text-center');
+    } else {
+        $('#new-members-title').removeClass('text-center');
+    }
+}
+
+
 $(document).ready(function() {
     load_navbar();
     load_footer();
+    centerNewMembersTitle();
     fetch('/api/v1/people').then(response => {
         response.json().then( json => {
             let i = 0;
@@ -96,5 +106,6 @@ $(document).ready(function() {
         let div = $('#news-carousel-div');
         div.empty();
         div.append(build_news_carousel(news));
+        centerNewMembersTitle();
     });
 })
