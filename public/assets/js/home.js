@@ -34,12 +34,14 @@ function build_news_carousel(news) {
         carouselInner.append(
             $(`<div class="carousel-item${i === 0 ? ' active' : ''}">`).append(
                 $('<div class="container">').append(
-                    $('<div class="row justify-content-center">').append(
-                        $('<div class="col-5">').append(
-                            $(`<p class="mt-3 ml-3 ${titleSize}">`).text(n.title)
-                        ),
-                        $('<div class="col-5">').append(
-                            $(`<img class="d-block w-100" src="${n.media}" alt="">`)
+                    $(`<a href="/pages/news.html?id=${n.id}" class="blue-link">`).append(
+                        $('<div class="row justify-content-center">').append(
+                            $('<div class="col-5">').append(
+                                $(`<p class="mt-3 ml-3 ${titleSize}">`).text(n.title)
+                            ),
+                            $('<div class="col-5">').append(
+                                $(`<img class="d-block w-100" src="${n.media}" alt="">`)
+                            )
                         )
                     )
                 )
