@@ -46,6 +46,7 @@ function build_nd_column(name, description, infos, presentedInEventId, eventName
         $('<h2 class="page-title mt-md-0 mt-4">').text(name),
         eventName ? $(`<p class="page-subtitle">Presented in: <a class="blue-link" href="/pages/event.html?id=${presentedInEventId}">${eventName}</a></p>`) : $('<br>'),
         $('<p class="page-content text-justify">').text(description),
+        $('<p class="page-subtitle text-justify">').text("Pratical information"),
         $('<p class="page-content text-justify">').text(infos),
     )
 }
