@@ -61,7 +61,7 @@ $(document).ready(function() {
     load_navbar(() => {
         let orientationInfo = $('#orientation-info');
         orientationInfo.append(
-            $('<i class="fas fa-chevron-right mr-1">'),
+            $('<i class="fas fa-chevron-left mr-1">'),
             $('<a href="/pages/people.html" class="text-white">').text('People')
         );
         orientationInfo.addClass('pb-2');

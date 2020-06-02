@@ -51,28 +51,18 @@
   },
   {
     "serviceId": 3,
-    "personId": 4,
-    "description": "How to become a rockstar"
-  },
-  {
-    "serviceId": 3,
     "personId": 5,
-    "description": "Thoughtful"
-  },
-  {
-    "serviceId": 3,
-    "personId": 8,
-    "description": "Academic career"
+    "description": "Night-time caring"
   },
   {
     "serviceId": 3,
     "personId": 11,
-    "description": "Managerial career"
+    "description": "How to take care of you grandparents"
   },
   {
     "serviceId": 3,
     "personId": 7,
-    "description": "How to become a captain"
+    "description": "Making a difference in someone else's life"
   },
   {
     "serviceId": 4,
@@ -82,7 +72,7 @@
   {
     "serviceId": 4,
     "personId": 2,
-    "description": "Not the best, but still a good sys admin"
+    "description": "Smartphones and tablets"
   },
   {
     "serviceId": 4,
