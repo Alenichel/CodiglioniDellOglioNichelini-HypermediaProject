@@ -50,12 +50,6 @@ function build_nd_column(name, description, infos, presentedInEventId, eventName
     )
 }
 
-function build_nd_row_header() {
-    return $('<div>').append(
-        $('<p class="page-subtitle">').text("Offered by:"),
-    )
-}
-
 function append_person(firstName, lastName, picture, serviceDetail, id){
     return $('<div class=" col-12 col-sm-6 col-md-4 col-lg-2 text-center magic-column">').append(
         $('<img class="img-profile rounded-circle" alt="Missing" src="' + picture + '">'),
@@ -123,9 +117,6 @@ $(document).ready(function() {
             $('#service-info-row').append(
                 build_st_column(pictures, id, servicesSize),
                 build_nd_column(name, description, infos, presentedInEventId, eventName)
-            );
-            $('#service-offeredBy-header-row').append(
-                build_nd_row_header(),
             );
             for (let s of servicePeople){
                 let personId = s.id;
