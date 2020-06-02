@@ -50,7 +50,7 @@ function build_nd_column(first_name, last_name, description, event_id, event_nam
     )
     return $('<div class="col-sm-12 col-md-6 col-12">').append(
         $('<h2 class="page-title mt-md-0 mt-4">').text(first_name + " " + last_name),
-        event_id ? event : null,
+        event_id ? event : $('<br>'),
         $('<p class="text-justify page-content">').text(description),
         $('<p class="page-subtitle">').text("Offered services"),
         build_services(services)
