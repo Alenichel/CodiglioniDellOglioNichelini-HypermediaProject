@@ -28,7 +28,7 @@ $(document).ready(function() {
         if (news.personId != null || news.serviceId != null || news.eventId != null) {
             let related = $('#news-related');
             related.append(
-                $('<h3 class="mt-5">').text("Related"),
+                $('<p class="page-subtitle" id="related-to-header">').text("Related"),
             )
             let relatedRow = $('<div class="row">')
             related.append(relatedRow);
