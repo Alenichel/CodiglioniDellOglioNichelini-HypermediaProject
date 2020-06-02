@@ -38,5 +38,23 @@
     "picture": "/assets/img/summer-party.png",
     "description": "Volunteering for QualityTimeBank is a rich and rewarding experience that allows individuals, friends, co-workers, and families to participate by ushering, greeting guests, distributing information, collecting donations, and performing other helpful tasks. All volunteers are invited to attend the annual 'thank you' celebration on the stunning hospice grounds. With live music, buffet lunch, and hospice tours, we look back at the last year in volunteering and look forward to the year ahead.",
     "contact": 2
+  },
+  {
+    "name": "Corporate mentoring",
+    "datetime": "2020-08-19T16:00:00.000",
+    "place": "Headquarters",
+    "picture": "/assets/img/corporate.png",
+    "description": "TimeBank has a strong history of working closely with corporates to help them deliver their CSR and company objectives. As well as the traditional one-off volunteering days, TimeBank can offer organisations that are looking for a more targeted, longer term mentoring project opportunities to work with beneficiaries who are in need of one to one help. This can take the form of sponsoring an existing TimeBank project, putting your organisation central to helping beneficiaries such as asylum seekers, refugees, carers, ex-service veterans and NEET young people. In addition, you may want to design a mentoring project specifically for your employees and with years of experience TimeBank will work with you to develop something that meets your needs, as well as the beneficiaries and communities you would like to target.",
+    "contact": 5
+  },
+  {
+    "name": "Golf for charity",
+    "datetime": "2020-09-05T16:00:00.000",
+    "place": "Great golf course",
+    "picture": "/assets/img/golf.jpg",
+    "description": "A charity golf tournament can be a great way to raise a significant amount of money for a good cause. You’ve watched as other tournaments that seem to run like well-oiled machines, raising hundreds of thousands of dollars for charities. While a love for golf is a must, the real secret behind a fundraising tournament is people. Have a passion for helping others. Put together a great team. Build relationships and network with new people. And work together to make the tournament a great experience.",
+    "contact": 10
   }
+
+  
 ]
