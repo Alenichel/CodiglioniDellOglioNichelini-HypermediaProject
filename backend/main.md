@@ -7,7 +7,7 @@
 | Member n. | Role        | First name | Last Name  | Matricola | Email address                       | 
 |-----------|-------------|------------|------------|-----------|-------------------------------------| 
 | 1         | Team leader | Fabio      | Codiglioni | 919897    | fabio.codiglioni@mail.polimi.it     | 
-| 2         | Member      | Alessandro | Nichelini  | 123456    | alessandro.nichelini@mail.polimi.it |
+| 2         | Member      | Alessandro | Nichelini  | 919880    | alessandro.nichelini@mail.polimi.it |
 | 3         | Member      | Luca       | dell'Oglio | 928445    | luca1.delloglio@mail.polimi.it      |
 
 ## Links to other deliverables
@@ -138,4 +138,4 @@ Fabio learnt JavaScript and how to use jQuery to manipulate HTML and create dyna
 
 Luca learnt how to use Swagger to build RESTful APIs, how to serve static and dynamic content on a site, and how to use Javascript to serve content or to validate a form. He also took an interest on styling the content of a site using HTML and CSS, and he'd like look more into it. 
 
-Alessandro Nichelini
+Alessandro Nichelini learnt how to build a reliable website using Javascript and Bootstrap. He is now able to design and implement dynamic websites from scratches and to integrate them with the backend using the RESTful paradigm.
