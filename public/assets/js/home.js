@@ -3,7 +3,7 @@
 let news;
 
 function build_person_row(id, name, img, join_date, i) {
-    return $('<div class="row position-relative">').append(
+    return $('<div class="row position-relative mb-4">').append(
         $('<div class="col-6 col-md-auto align-self-center position-static text-right">').append(
             i % 2 === 0 ?
                 $(`<img class="img-profile rounded-circle person-img" alt="Missing img" src="${img}">`) :

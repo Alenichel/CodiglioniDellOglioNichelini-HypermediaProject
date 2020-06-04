@@ -36,7 +36,7 @@ $(document).ready(function() {
     let slider = $('.slider');
     for (let i = 0; i < 12; i++) {
         let m = (i + month) % 12;
-        let e = $('<button class="btn btn-link blue-link text-center" onclick="getEvents(' + m + ')">' + months[m] + '</button>')
+        let e = $('<button class="btn btn-link blue-link text-center page-subtitle-thin" onclick="getEvents(' + m + ')">' + months[m] + '</button>')
         slider.append(e);
     }
     slider.slick({

@@ -12,11 +12,11 @@ function build_st_column(imgURL, id, peopleSize, email, phone_number, facebook, 
             )
         ),
         $('<div class="mt-3">').append(
-            instagram ? $(`<a href="${instagram}" target="_blank" class="btn-social btn-instagram" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>`) : null,
-            facebook ? $(`<a href="${facebook}" target="_blank" class="btn-social btn-facebook" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>`) : null,
-            twitter ? $(`<a href="${twitter}" target="_blank" class="btn-social btn-twitter" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>`) : null,
-            email ? $(`<a href="mailto:${email}" target="_blank" class="btn-social btn-email" aria-label="Email" title="Email"><i class="far fa-envelope"></i></a>`) : null,
-            phone_number ? $(`<a href="tel:${phone_number}" target="_blank" class="btn-social btn-vimeo" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
+            instagram ? $(`<a href="${instagram}" target="_blank" class="btn-social btn-instagram mx-3" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>`) : null,
+            facebook ? $(`<a href="${facebook}" target="_blank" class="btn-social btn-facebook mx-3" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>`) : null,
+            twitter ? $(`<a href="${twitter}" target="_blank" class="btn-social btn-twitter mx-3" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>`) : null,
+            email ? $(`<a href="mailto:${email}" target="_blank" class="btn-social btn-email mx-3" aria-label="Email" title="Email"><i class="far fa-envelope"></i></a>`) : null,
+            phone_number ? $(`<a href="tel:${phone_number}" target="_blank" class="btn-social btn-vimeo mx-3" aria-label="Phone" title="Phone"><i class="fas fa-phone"></i></a>`) : null,
         )
     )
 }
