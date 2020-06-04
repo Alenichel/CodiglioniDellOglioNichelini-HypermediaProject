@@ -7,6 +7,13 @@ const xlBreakpoint = 1200;
 
 function load_navbar(callback = null) {
     $('header').load('/pages/snippets/navbar.html', function() {
+        if ($(window).width() >= mdBreakpoint) {
+            $('.navbar-div').addClass('fixed-top');
+            let navHeight = $('nav').height();
+            $('main').css('padding-top', navHeight + 20);
+        } else {
+            $('.navbar-div').addClass('sticky-top');
+        }
         let dropdown = $('.dropdown');
         dropdown.on('show.bs.dropdown', function() {
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -14,8 +21,6 @@ function load_navbar(callback = null) {
         dropdown.on('hide.bs.dropdown', function() {
             $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
         });
-        let navHeight = $('nav').height();
-        $('main').css('padding-top', navHeight + 20);
         if (callback) {
             callback();
         }
