@@ -61,9 +61,11 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
         res.end();
       }
     })
-  })
+  });
 
-  app.use('/assets/img/ER.png', serveStatic(__dirname + '/DesignDocument/figures/DB/ER.png'))
+  app.use('/backend/app.zip', serveStatic(__dirname + '/backend/app.zip'));
+
+  app.use('/assets/img/ER.png', serveStatic(__dirname + '/DesignDocument/figures/DB/ER.png'));
 
   database.setupDatabase();
 
