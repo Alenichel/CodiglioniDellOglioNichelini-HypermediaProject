@@ -317,9 +317,9 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title{Hypermedia Applications\\Design Document}
+\title{Hypermedia Applications\\Design Document - v1.1}
 \author{Fabio Codiglioni - 10484720\\fabio.codiglioni@mail.polimi.it\\\\Luca dell'Oglio - 10497928\\luca1.delloglio@mail.polimi.it\\\\Alessandro Nichelini - 10497404\\alessandro.nichelini@mail.polimi.it}
-\date{April 24$^{th}$, 2020}
+\date{June 16$^{th}$, 2020}
 \publishers{
     \begin{figure}[t]
         \centering
@@ -347,6 +347,24 @@
 
 \chapter{Abstract}
 The subject of this document is the design of a website for a voluntary association, specifically a time bank. Section 2 contains the C, L, and P sub-models of the Interactive Dialogue Model (IDM). Section 3 lists 3 possible scenarios of use. Section 4 shows the design in the small for different pages. Finally, Section 5 contains the conceptual and logical database design.
+
+\section{Version history}
+
+\begin{table}[H]
+    \centering
+    \def\arraystretch{1.25}
+    \begin{tabular}{|l|l|m{7cm}|}
+        \hline
+        \textbf{Version} & \textbf{Date} & \textbf{Description} \\ \hline
+        1.0 & April 24th, 2020 & First release. \\ \hline
+        \multirow{5}{*}{1.1} & \multirow{5}{*}{June 16th, 2020} & Updated wireframes in order to make the design compliant with the prototype. \\
+        & & Replaced mockups with actual screenshots. \\
+        & & Updated DB design diagram to include \texttt{icon} in \texttt{Service} table. \\
+        & & Fix typo in ER diagram (TalksAbout is now a 0:N relationship). \\
+        & & In HomePage's design in the small, changed some transition links to group links after the meeting with the teacher. \\ \hline
+    \end{tabular}
+\end{table}
+
 
 \chapter{Graphical representations}
 
@@ -543,7 +561,7 @@ The organizer of the annual Christmas party of the association has lost the phon
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth, keepaspectratio]{mockups/ConcreteEventChristmas}
+    \includegraphics[width=1\linewidth, keepaspectratio]{mockups/ConcreteEventTalking}
     \caption{Mockup}
 \end{figure}
 
